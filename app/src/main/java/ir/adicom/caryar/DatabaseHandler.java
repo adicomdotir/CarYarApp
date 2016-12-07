@@ -45,13 +45,13 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     //---------------------------------------------------------------------
  
     /**
-     * CRUD operations (create "add", read "get", update, delete) book + get all books + delete all books
+     * CRUD operations (create "add", read "get", update, delete)
      */
  
-    // Books table name
+    // CarInformations table name
     private static final String TABLE_CAR = "info";
  
-    // Books Table Columns names
+    // CarInformations Table Columns names
     private static final String KEY_ID = "id";
     private static final String KEY_TYPE = "type";
     private static final String KEY_PRICE = "price";
@@ -108,7 +108,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return i;
     }
  
-    // Get All Books
+    // Get All CarInfo
     public List<CarInfo> getAllInfo() {
         List<CarInfo> info = new LinkedList<CarInfo>();
  
@@ -144,16 +144,19 @@ public class DatabaseHandler extends SQLiteOpenHelper {
  
         // 2. create ContentValues to add key "column"/value
         ContentValues values = new ContentValues();
+        values.put(KEY_PRICE, linfo.getPrice());
+        values.put(KEY_TYPE, linfo.getType());
+        values.put(KEY_KM, linfo.getKilometer());
+        values.put(KEY_DATE, linfo.getDate());
  
         // 3. updating row
         int i = db.update(TABLE_CAR, //table
                 values, // column/value
-                KEY_ID+" = ?", // selections
-                new String[] { String.valueOf(linfo.getId()) }); //selection args
+                KEY_ID + " = " + String.valueOf(linfo.getId()), // selections
+                null); //selection args
  
         // 4. close
         db.close();
- 
         return i;
  
     }

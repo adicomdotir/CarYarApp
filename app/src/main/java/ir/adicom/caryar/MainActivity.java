@@ -44,7 +44,7 @@ public class MainActivity extends Activity {
 		mMonth = calendar.get(Calendar.MONTH);
 		mDay = calendar.get(Calendar.DAY_OF_MONTH);
 
-		custom_font = Typeface.createFromAsset(getAssets(), "BZar.ttf");
+		custom_font = Typeface.createFromAsset(getAssets(), "BTraffic.ttf");
 
 		HelperUI.setFont((ViewGroup) getWindow().getDecorView());
 
@@ -121,54 +121,8 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onClick(View arg0) {
-				List<CarInfo> list = db.getAllInfo();
-				if(list != null) {
-					String[] arr = new String[list.size()];
-					for (int i = 0; i < arr.length; i++) {
-						Calendar mydate = Calendar.getInstance();
-						mydate.setTimeInMillis(list.get(i).getDate()*1000);
-						CalendarTool irDate = new CalendarTool();
-						irDate.setGregorianDate(
-								mydate.get(Calendar.YEAR),
-								mydate.get(Calendar.MONTH)+1,
-								mydate.get(Calendar.DAY_OF_MONTH)
-						);
-						arr[i] = "تاریخ :‌ " + irDate.getIranianDate() + "   " +
-								"نوع سوخت : " + list.get(i).getType() + "\n" +
-								"هزینه : " + list.get(i).getPrice() + " تومان\n" +
-								"کیلومتر : " + list.get(i).getKilometer();
-					}
-					intent.putExtra("Array", arr);
 					startActivity(intent);
-				}
 			}
 		});
 	}
-	
-	private DatePickerDialog.OnDateSetListener mDateSetListener =
-		    new DatePickerDialog.OnDateSetListener() {
-		        public void onDateSet(DatePicker view, int year, 
-		                              int monthOfYear, int dayOfMonth) {
-		        	CalendarTool irDate = new CalendarTool(year, monthOfYear+1, dayOfMonth);
-		        	btnChert.setText(irDate.getIranianDate());
-		        	mYear = year;
-		        	mMonth = monthOfYear;
-		        	mDay = dayOfMonth;
-		        }
-		    };
-		    
-    @Override
-    protected Dialog onCreateDialog(int id) {
-    	Calendar mydate = Calendar.getInstance();
-    	switch (id) {
-    	case 0:
-    		return new DatePickerDialog(this,
-    				mDateSetListener,
-                    mydate.get(Calendar.YEAR), 
-                    mydate.get(Calendar.MONTH), 
-                    mydate.get(Calendar.DAY_OF_MONTH));
-    	}
-    	return null;
-    }
-
 }

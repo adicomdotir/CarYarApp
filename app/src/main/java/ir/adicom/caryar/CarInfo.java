@@ -1,7 +1,7 @@
 package ir.adicom.caryar;
 
 public class CarInfo {
-	
+
 	private int id;
 	private String type;
 	private int price;
@@ -52,6 +52,15 @@ public class CarInfo {
 
 	public CarInfo(String t, int p, int k, long d) {
 		super();
+		this.type = t;
+		this.price = p;
+		this.kilometer = k;
+		this.date = d;
+	}
+
+	public CarInfo(int id, String t, int p, int k, long d) {
+		super();
+		this.id = id;
 		this.type = t;
 		this.price = p;
 		this.kilometer = k;
