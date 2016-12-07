@@ -13,6 +13,7 @@
 		android:background="@drawable/bg_edittext_normal"
 		android:gravity="center"
 		android:padding="5dp"
+		android:textSize="18sp"
 		android:textColor="#000" >
 	</TextView>
 

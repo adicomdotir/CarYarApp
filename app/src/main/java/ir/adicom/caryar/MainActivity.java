@@ -18,49 +18,80 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
+	private static final String TAG = "TAG";
 	public CarInfo c;
 	public static Typeface custom_font;
 	Button btnChert;
-	
+
 	private int mYear;
 	private int mMonth;
 	private int mDay;
-	
+
 	RadioButton rbtn;
-	
+	CustomControl customBtn1, customBtn2, customBtn3;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
-		Calendar calendar = Calendar.getInstance(); 
+
+		Calendar calendar = Calendar.getInstance();
 		mYear = calendar.get(Calendar.YEAR);
 		mMonth = calendar.get(Calendar.MONTH);
 		mDay = calendar.get(Calendar.DAY_OF_MONTH);
-		
+
 		custom_font = Typeface.createFromAsset(getAssets(), "BZar.ttf");
-		
+
 		HelperUI.setFont((ViewGroup) getWindow().getDecorView());
+
+		customBtn1 = (CustomControl) findViewById(R.id.custom_btn_1);
+		customBtn2 = (CustomControl) findViewById(R.id.custom_btn_2);
+		customBtn3 = (CustomControl) findViewById(R.id.custom_btn_3);
+		try {
+			CalendarTool irDate = new CalendarTool(mYear, mMonth+1, mDay);
+			customBtn1.setNumber(irDate.getIranianYear());
+			customBtn1.setMinMax(1395, 1499);
+			customBtn1.setLen(4);
+			customBtn1.setUp();
+			customBtn2.setNumber(irDate.getIranianMonth());
+			customBtn2.setMinMax(1, 12);
+			customBtn2.setLen(2);
+			customBtn2.setUp();
+			customBtn3.setNumber(irDate.getIranianDay());
+			customBtn3.setMinMax(1, 31);
+			customBtn3.setLen(2);
+			customBtn3.setUp();
+		} catch (Exception e) {
+			Log.e(TAG, "" + e.getMessage());
+		}
+
 		
 		final DatabaseHandler db = new DatabaseHandler(this);
 		
 		final RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radioGroup1);
 		final EditText edtKilo = (EditText) findViewById(R.id.editText1);
 		final EditText edtprice = (EditText) findViewById(R.id.editText2);
-		Button btn = (Button) findViewById(R.id.button1);
-		btn.setTypeface(custom_font);
-		btn.setOnClickListener(new OnClickListener() {
+		Button btnInsert = (Button) findViewById(R.id.btnInsert);
+		btnInsert.setTypeface(custom_font);
+		btnInsert.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View arg0) {
 				rbtn = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
 				Calendar calendar = Calendar.getInstance();
-				calendar.set(mYear, mMonth, mDay, 0, 0, 0);
+
+				mYear = Integer.parseInt(customBtn1.getText());
+				mMonth = Integer.parseInt(customBtn2.getText());
+				mDay = Integer.parseInt(customBtn3.getText());
+				CalendarTool irDate = new CalendarTool();
+				irDate.setIranianDate(mYear, mMonth, mDay);
+				calendar.set(irDate.getGregorianYear(),
+						irDate.getGregorianMonth()-1,
+						irDate.getGregorianDay(), 0, 0, 0);
 				long startTime = calendar.getTimeInMillis();
 				Log.e("MYTAG", "" + startTime);
 				if(edtKilo.getText().toString().trim().length() == 0
@@ -79,19 +110,8 @@ public class MainActivity extends Activity {
 				}
 			}
 		});
-		// FIXME
-		// XXX
-		// TODO
-		final TextView tv1 = (TextView) findViewById(R.id.textView4);
-		tv1.setTypeface(custom_font);
-		final TextView tv2 = (TextView) findViewById(R.id.textView5);
-		tv2.setTypeface(custom_font);
-		final TextView tv3 = (TextView) findViewById(R.id.textView6);
-		tv3.setTypeface(custom_font);
-		
-		tv1.setVisibility(View.INVISIBLE);
-		tv2.setVisibility(View.INVISIBLE);
-		tv3.setVisibility(View.INVISIBLE);
+		// FIXME: 12/7/16 WTF?
+		// TODO: 12/7/16 WTF?
 		
 		final Intent intent = new Intent(getApplicationContext(), ReportActivity.class);
 		
@@ -102,90 +122,27 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View arg0) {
 				List<CarInfo> list = db.getAllInfo();
-				Log.e("TAG", "" + list.get(0).getPrice());
-				String[] arr = new String[list.size()];
-				for (int i = 0; i < arr.length; i++) {
-					Calendar mydate = Calendar.getInstance();
-					mydate.setTimeInMillis(list.get(i).getDate()*1000);
-					CalendarTool irDate = new CalendarTool();
-					irDate.setGregorianDate(
-							mydate.get(Calendar.YEAR), 
-							mydate.get(Calendar.MONTH)+1, 
-							mydate.get(Calendar.DAY_OF_MONTH)
-							);
-					arr[i] = "تاریخ :‌ " + irDate.getIranianDate() + "   " +
-							"نوع سوخت : " + list.get(i).getType() + "\n" + 
-							"هزینه : " + list.get(i).getPrice() + " تومان\n" + 
-							"کیلومتر : " + list.get(i).getKilometer();
+				if(list != null) {
+					String[] arr = new String[list.size()];
+					for (int i = 0; i < arr.length; i++) {
+						Calendar mydate = Calendar.getInstance();
+						mydate.setTimeInMillis(list.get(i).getDate()*1000);
+						CalendarTool irDate = new CalendarTool();
+						irDate.setGregorianDate(
+								mydate.get(Calendar.YEAR),
+								mydate.get(Calendar.MONTH)+1,
+								mydate.get(Calendar.DAY_OF_MONTH)
+						);
+						arr[i] = "تاریخ :‌ " + irDate.getIranianDate() + "   " +
+								"نوع سوخت : " + list.get(i).getType() + "\n" +
+								"هزینه : " + list.get(i).getPrice() + " تومان\n" +
+								"کیلومتر : " + list.get(i).getKilometer();
+					}
+					intent.putExtra("Array", arr);
+					startActivity(intent);
 				}
-				
-				c = db.getInfo(0);
-				if(c!=null) {
-					Calendar mydate = Calendar.getInstance();
-					mydate.setTimeInMillis(c.getDate()*1000);
-					CalendarTool irDate = new CalendarTool();
-					irDate.setGregorianDate(
-							mydate.get(Calendar.YEAR), 
-							mydate.get(Calendar.MONTH)+1, 
-							mydate.get(Calendar.DAY_OF_MONTH)
-							);
-					tv1.setText("تاریخ :‌ " + irDate.getIranianDate() + "   " +
-								"نوع سوخت : " + c.getType() + "\n" + 
-								"هزینه : " + c.getPrice() + " تومان\n" + 
-								"کیلومتر : " + c.getKilometer());
-					tv1.setVisibility(View.VISIBLE);
-				}
-				c = db.getInfo(1);
-				if(c!=null) {
-					Calendar mydate = Calendar.getInstance();
-					mydate.setTimeInMillis(c.getDate()*1000);
-					CalendarTool irDate = new CalendarTool();
-					irDate.setGregorianDate(
-							mydate.get(Calendar.YEAR), 
-							mydate.get(Calendar.MONTH)+1, 
-							mydate.get(Calendar.DAY_OF_MONTH)
-							);
-					tv2.setText("تاریخ :‌ " + irDate.getIranianDate() + "   " +
-								"نوع سوخت : " + c.getType() + "\n" + 
-								"هزینه : " + c.getPrice() + " تومان\n" + 
-								"کیلومتر : " + c.getKilometer());
-					tv2.setVisibility(View.VISIBLE);
-				}
-				c = db.getInfo(2);
-				if(c!=null) {
-					Calendar mydate = Calendar.getInstance();
-					mydate.setTimeInMillis(c.getDate()*1000);
-					CalendarTool irDate = new CalendarTool();
-					irDate.setGregorianDate(
-							mydate.get(Calendar.YEAR), 
-							mydate.get(Calendar.MONTH)+1, 
-							mydate.get(Calendar.DAY_OF_MONTH)
-							);
-					tv3.setText("تاریخ :‌ " + irDate.getIranianDate() + "   " +
-								"نوع سوخت : " + c.getType() + "\n" + 
-								"هزینه : " + c.getPrice() + " تومان\n" + 
-								"کیلومتر : " + c.getKilometer());
-					tv3.setVisibility(View.VISIBLE);
-				}
-				intent.putExtra("Array", arr);
-				startActivity(intent);
 			}
 		});
-				
-		btnChert = (Button) findViewById(R.id.btn_date);
-		btnChert.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View arg0) {
-				showDialog(0);
-			}
-		});
-		
-		CalendarTool irDate = new CalendarTool();
-		btnChert.setTypeface(custom_font);
-		btnChert.setText(irDate.getIranianDate());
-		
-		
 	}
 	
 	private DatePickerDialog.OnDateSetListener mDateSetListener =
@@ -214,22 +171,4 @@ public class MainActivity extends Activity {
     	return null;
     }
 
-//	@Override
-//	public boolean onCreateOptionsMenu(Menu menu) {
-//		// Inflate the menu; this adds items to the action bar if it is present.
-//		getMenuInflater().inflate(R.menu.main, menu);
-//		return true;
-//	}
-//
-//	@Override
-//	public boolean onOptionsItemSelected(MenuItem item) {
-//		// Handle action bar item clicks here. The action bar will
-//		// automatically handle clicks on the Home/Up button, so long
-//		// as you specify a parent activity in AndroidManifest.xml.
-//		int id = item.getItemId();
-//		if (id == R.id.action_settings) {
-//			return true;
-//		}
-//		return super.onOptionsItemSelected(item);
-//	}
 }
