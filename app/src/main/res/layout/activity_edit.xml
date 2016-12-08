@@ -145,6 +145,16 @@
         android:gravity="center"
         android:paddingBottom="3dp" >
 
+        <Button
+            android:textColor="#FFF"
+            android:id="@+id/btnDelete"
+            android:layout_width="96dp"
+            android:layout_height="48dp"
+            android:layout_margin="7dp"
+            android:background="@drawable/button_delete"
+            android:text="حذف"
+            android:textSize="20sp" />
+
     </LinearLayout>
 
 </LinearLayout>

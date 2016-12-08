@@ -77,6 +77,8 @@ public class CustomControl extends LinearLayout {
             public void onClick(View v) {
                 if(number<max)
                     number++;
+                else
+                    number = min;
                 tvText.setText(getFormat());
             }
         });
@@ -86,6 +88,8 @@ public class CustomControl extends LinearLayout {
             public void onClick(View v) {
                 if(number>min)
                     number--;
+                else
+                    number = max;
                 tvText.setText(getFormat());
             }
         });

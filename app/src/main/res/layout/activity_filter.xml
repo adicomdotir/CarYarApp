@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_filter"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fffcf1"
+    tools:context="ir.adicom.caryar.FilterActivity">
+
+    <RadioGroup
+        android:id="@+id/rg_filter1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <RadioButton
+            android:button="@null"
+            android:drawableRight="@android:drawable/btn_radio"
+            android:text="همه"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbAll"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:checked="true" />
+
+        <RadioButton
+            android:button="@null"
+            android:drawableRight="@android:drawable/btn_radio"
+            android:text="گاز"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbGas1"
+            android:gravity="center"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:button="@null"
+            android:drawableRight="@android:drawable/btn_radio"
+            android:text="بنزین"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbGas2"
+            android:gravity="center"
+            android:layout_weight="1" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <Button
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_margin="7dp"
+            android:textSize="20sp"
+            android:background="@drawable/button_shape"
+            android:text="جستجو"
+            android:layout_width="0dp"
+            android:id="@+id/btn_search_filter"
+            android:layout_weight="0.33" />
+
+        <RadioGroup
+            android:id="@+id/rg_filter2"
+            android:layout_weight="0.66"
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <RadioButton
+                android:gravity="center"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="ماهانه"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/rb_month"
+                android:layout_weight="0.5" />
+
+            <RadioButton
+                android:gravity="center"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="کل"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/rb_alltime"
+                android:layout_weight="0.5"
+                android:checked="true" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/new_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -132,7 +132,7 @@
             android:layout_gravity="center"
             android:layout_margin="7dp"
             android:background="@drawable/button_shape"
-            android:text="گزارش"
+            android:text="مدیریت"
             android:textSize="20sp" />
 
         <Button
@@ -153,13 +153,13 @@
         android:paddingBottom="3dp" >
 
         <Button
-            android:id="@+id/btnSearch"
+            android:id="@+id/btnReport"
             android:layout_width="96dp"
             android:layout_height="48dp"
             android:layout_gravity="center"
             android:layout_margin="7dp"
             android:background="@drawable/button_shape"
-            android:text="جستجو"
+            android:text="گزارش"
             android:textSize="20sp" />
 
     </LinearLayout>

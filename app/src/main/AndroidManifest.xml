@@ -29,8 +29,9 @@
         </activity>
         <activity
             android:name=".ReportActivity"
-            android:label="@string/app_name"></activity>
-        <activity android:name=".EditAcitivity"></activity>
+            android:label="@string/app_name" />
+        <activity android:name=".EditAcitivity" />
+        <activity android:name=".FilterActivity"></activity>
     </application>
 
 </manifest>

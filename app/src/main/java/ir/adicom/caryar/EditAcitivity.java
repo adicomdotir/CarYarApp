@@ -1,6 +1,8 @@
 package ir.adicom.caryar;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
@@ -60,7 +62,7 @@ public class EditAcitivity extends Activity {
             );
             try {
                 customBtn1.setNumber(irDate.getIranianYear());
-                customBtn1.setMinMax(1395, 1499);
+                customBtn1.setMinMax(1390, 1499);
                 customBtn1.setLen(4);
                 customBtn1.setUp();
                 customBtn2.setNumber(irDate.getIranianMonth());
@@ -113,6 +115,30 @@ public class EditAcitivity extends Activity {
                     edtCost.setText("");
                     finish();
                 }
+            }
+        });
+
+        Button btnDelete = (Button) findViewById(R.id.btnDelete);
+        btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(EditAcitivity.this);
+                builder.setMessage("آیا مطمئن هستید که می خواهید این رکورد حذف کنید؟")
+                        .setCancelable(false)
+                        .setPositiveButton("بله", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                db.deleteInfo(new CarInfo(list.get(index).getId(), null, 0, 0, 0));
+                                EditAcitivity.this.finish();
+                            }
+                        })
+                        .setNegativeButton("خیر", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        });
+                AlertDialog alert = builder.create();
+                alert.show();
+
             }
         });
     }

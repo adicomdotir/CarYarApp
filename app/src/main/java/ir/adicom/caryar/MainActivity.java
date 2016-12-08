@@ -54,7 +54,7 @@ public class MainActivity extends Activity {
 		try {
 			CalendarTool irDate = new CalendarTool(mYear, mMonth+1, mDay);
 			customBtn1.setNumber(irDate.getIranianYear());
-			customBtn1.setMinMax(1395, 1499);
+			customBtn1.setMinMax(1390, 1499);
 			customBtn1.setLen(4);
 			customBtn1.setUp();
 			customBtn2.setNumber(irDate.getIranianMonth());
@@ -83,11 +83,11 @@ public class MainActivity extends Activity {
 			public void onClick(View arg0) {
 				rbtn = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
 				Calendar calendar = Calendar.getInstance();
+				CalendarTool irDate = new CalendarTool();
 
 				mYear = Integer.parseInt(customBtn1.getText());
 				mMonth = Integer.parseInt(customBtn2.getText());
 				mDay = Integer.parseInt(customBtn3.getText());
-				CalendarTool irDate = new CalendarTool();
 				irDate.setIranianDate(mYear, mMonth, mDay);
 				calendar.set(irDate.getGregorianYear(),
 						irDate.getGregorianMonth()-1,
@@ -124,5 +124,15 @@ public class MainActivity extends Activity {
 					startActivity(intent);
 			}
 		});
+
+
+        Button btnReport = (Button) findViewById(R.id.btnReport);
+        btnReport.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, FilterActivity.class));
+            }
+        });
+
 	}
 }
