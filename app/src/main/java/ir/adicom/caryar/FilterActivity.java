@@ -2,8 +2,8 @@ package ir.adicom.caryar;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.RadioButton;
@@ -11,7 +11,10 @@ import android.widget.RadioGroup;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ExecutionException;
 
 public class FilterActivity extends Activity {
 
@@ -26,6 +29,8 @@ public class FilterActivity extends Activity {
             "مهر","ابان","اذر",
             "دی","بهمن","اسفند"
     };
+    private Map<String, Long> monthPriceMap = new HashMap<String, Long>();
+    private Map<String, Long> monthPriceGusMap = new HashMap<String, Long>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +69,8 @@ public class FilterActivity extends Activity {
                 ArrayList<String> stringArrayList = new ArrayList<String>();
                 long[] sumPrice = new long[12];
                 long[] sumPriceForGus = new long[12];
+                monthPriceGusMap.clear();
+                monthPriceMap.clear();
                 if(arrayList != null) {
                     for (int i = 0; i < arrayList.size(); i++) {
                         mydate.setTimeInMillis(arrayList.get(i).getDate() * 1000);
@@ -73,9 +80,23 @@ public class FilterActivity extends Activity {
                                 mydate.get(Calendar.DAY_OF_MONTH)
                         );
                         int id = irDate.getIranianMonth()-1;
+
+                        // TODO: 4/23/17
+                        String key = irDate.getIranianYear() + "," + id;
+                        long priceTemp = 0;
+                        if(monthPriceMap.containsKey(key)) {
+                            priceTemp = monthPriceMap.get(key);
+                        }
+                        monthPriceMap.put(key, priceTemp + arrayList.get(i).getPrice());
                         sumPrice[id] += arrayList.get(i).getPrice();
-                        if(arrayList.get(i).getType().equals("گاز"))
+                        if(arrayList.get(i).getType().equals("گاز")) {
                             sumPriceForGus[id] += arrayList.get(i).getPrice();
+                            long priceTempGus = 0;
+                            if(monthPriceGusMap.containsKey(key)) {
+                                priceTempGus = monthPriceGusMap.get(key);
+                            }
+                            monthPriceGusMap.put(key, priceTempGus + arrayList.get(i).getPrice());
+                        }
                     }
                     RadioButton rbAlltime = (RadioButton) findViewById(rgTwo.getCheckedRadioButtonId());
                     if(rbAlltime.getText().equals("کل")) {
@@ -95,13 +116,30 @@ public class FilterActivity extends Activity {
                         }
                     } else {
                         RadioButton rb = (RadioButton) findViewById(rgOne.getCheckedRadioButtonId());
-                        for (int j=0; j<12; j++) {
+//                        for (int j=0; j<12; j++) {
+//                            if(rb.getText().equals("همه")) {
+//                                stringArrayList.add("کل هزینه " + monthName[j] + " : " + sumPrice[j] + " تومان");
+//                            } else if(rb.getText().equals("گاز")) {
+//                                stringArrayList.add("هزینه گاز " + monthName[j] + " : " +  sumPriceForGus[j] + " تومان");
+//                            } else {
+//                                stringArrayList.add("هزینه بنزین " + monthName[j] + " : " +  (sumPrice[j]-sumPriceForGus[j]) + " تومان");
+//                            }
+//                        }
+                        for (Map.Entry<String, Long> entry : monthPriceMap.entrySet()) {
+                            String[] key = entry.getKey().split(",");
+                            int j = Integer.parseInt(key[1]);
+                            Long value = entry.getValue();
+                            long gus = 0;
+                            try {
+                                gus = monthPriceGusMap.get(entry.getKey());
+                            } catch (Exception e) {
+                            }
                             if(rb.getText().equals("همه")) {
-                                stringArrayList.add("کل هزینه " + monthName[j] + " : " + sumPrice[j] + " تومان");
+                                stringArrayList.add("کل هزینه " + monthName[j] + " " + key[0] + " : " + value + " تومان");
                             } else if(rb.getText().equals("گاز")) {
-                                stringArrayList.add("هزینه گاز " + monthName[j] + " : " +  sumPriceForGus[j] + " تومان");
+                                stringArrayList.add("هزینه گاز " + monthName[j] + " " + key[0] + " : " + gus + " تومان");
                             } else {
-                                stringArrayList.add("هزینه بنزین " + monthName[j] + " : " +  (sumPrice[j]-sumPriceForGus[j]) + " تومان");
+                                stringArrayList.add("هزینه بنزین " + monthName[j] + " " + key[0] + " : " + (value - gus) + " تومان");
                             }
                         }
                     }
