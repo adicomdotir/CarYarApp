@@ -171,9 +171,6 @@ public class FilterActivity extends Activity {
                         if(m1 < mTemp) {
                             stringList.add(i, key);
                             break;
-                        } else {
-                            stringList.add(i+1, key);
-                            break;
                         }
                     }
                     i++;

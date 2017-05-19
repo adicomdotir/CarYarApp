@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri May 19 11:37:47 IRDT 2017
+#Fri May 19 17:08:18 IRDT 2017
 25.file=/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/assets/debug/BZar.ttf
 25.base=/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/assets/debug
 22.set=ANDROID_RESOURCE
