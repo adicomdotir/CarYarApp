@@ -113,7 +113,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         List<CarInfo> info = new LinkedList<CarInfo>();
  
         // 1. build the query
-        String query = "SELECT  * FROM " + TABLE_CAR;
+        String query = "SELECT  * FROM " + TABLE_CAR + " ORDER By date ASC";
  
         // 2. get reference to writable DB
         SQLiteDatabase db = this.getWritableDatabase();

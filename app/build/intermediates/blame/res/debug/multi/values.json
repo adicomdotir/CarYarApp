@@ -7,8 +7,46 @@
                     "startLine": 2,
                     "startColumn": 4,
                     "startOffset": 55,
+                    "endColumn": 44,
+                    "endOffset": 95
+                },
+                "from": {
+                    "file": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/values/my_colors.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 44,
+                        "endOffset": 95
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 100,
+                    "endColumn": 51,
+                    "endOffset": 147
+                },
+                "from": {
+                    "file": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/values/my_colors.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 100,
+                        "endColumn": 51,
+                        "endOffset": 147
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 152,
                     "endColumn": 57,
-                    "endOffset": 108
+                    "endOffset": 205
                 },
                 "from": {
                     "file": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/values/dimens.xml",
@@ -23,11 +61,11 @@
             },
             {
                 "to": {
-                    "startLine": 3,
+                    "startLine": 5,
                     "startColumn": 4,
-                    "startOffset": 113,
+                    "startOffset": 210,
                     "endColumn": 55,
-                    "endOffset": 164
+                    "endOffset": 261
                 },
                 "from": {
                     "file": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/values/dimens.xml",
@@ -42,11 +80,11 @@
             },
             {
                 "to": {
-                    "startLine": 4,
+                    "startLine": 6,
                     "startColumn": 4,
-                    "startOffset": 169,
+                    "startOffset": 266,
                     "endColumn": 52,
-                    "endOffset": 217
+                    "endOffset": 314
                 },
                 "from": {
                     "file": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/values/strings.xml",
@@ -61,11 +99,11 @@
             },
             {
                 "to": {
-                    "startLine": 5,
+                    "startLine": 7,
                     "startColumn": 4,
-                    "startOffset": 222,
+                    "startOffset": 319,
                     "endColumn": 43,
-                    "endOffset": 261
+                    "endOffset": 358
                 },
                 "from": {
                     "file": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/values/strings.xml",
@@ -80,11 +118,11 @@
             },
             {
                 "to": {
-                    "startLine": 6,
+                    "startLine": 8,
                     "startColumn": 4,
-                    "startOffset": 266,
+                    "startOffset": 363,
                     "endColumn": 52,
-                    "endOffset": 314
+                    "endOffset": 411
                 },
                 "from": {
                     "file": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/values/strings.xml",
@@ -99,12 +137,12 @@
             },
             {
                 "to": {
-                    "startLine": 7,
+                    "startLine": 9,
                     "startColumn": 4,
-                    "startOffset": 319,
-                    "endLine": 9,
+                    "startOffset": 416,
+                    "endLine": 11,
                     "endColumn": 12,
-                    "endOffset": 408
+                    "endOffset": 505
                 },
                 "from": {
                     "file": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/values/styles.xml",
@@ -120,12 +158,12 @@
             },
             {
                 "to": {
-                    "startLine": 10,
+                    "startLine": 12,
                     "startColumn": 4,
-                    "startOffset": 413,
-                    "endLine": 12,
+                    "startOffset": 510,
+                    "endLine": 14,
                     "endColumn": 12,
-                    "endOffset": 568
+                    "endOffset": 665
                 },
                 "from": {
                     "file": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/values/styles.xml",

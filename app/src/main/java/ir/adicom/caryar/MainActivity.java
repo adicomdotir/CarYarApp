@@ -3,7 +3,9 @@ package ir.adicom.caryar;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.media.audiofx.BassBoost;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -15,6 +17,7 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import java.util.Calendar;
+import java.util.Locale;
 
 public class MainActivity extends Activity {
 

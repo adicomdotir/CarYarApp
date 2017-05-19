@@ -51,7 +51,6 @@ public class CarInfo {
 	public CarInfo(){}
 
 	public CarInfo(String t, int p, int k, long d) {
-		super();
 		this.type = t;
 		this.price = p;
 		this.kilometer = k;
@@ -59,7 +58,6 @@ public class CarInfo {
 	}
 
 	public CarInfo(int id, String t, int p, int k, long d) {
-		super();
 		this.id = id;
 		this.type = t;
 		this.price = p;

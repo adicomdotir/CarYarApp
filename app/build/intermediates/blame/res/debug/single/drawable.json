@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/drawable/gradient_bg_hover.xml",
+        "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/drawable/gradient_bg_hover.xml"
+    },
+    {
         "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/drawable/button_shape.xml",
         "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/drawable/button_shape.xml"
     },
@@ -12,6 +16,10 @@
         "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/drawable/bg_edittext_normal.xml"
     },
     {
+        "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/drawable/list_selector.xml",
+        "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/drawable/list_selector.xml"
+    },
+    {
         "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/drawable/button_shape_normal.xml",
         "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/drawable/button_shape_normal.xml"
     },
@@ -22,6 +30,10 @@
     {
         "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/drawable/bg_edittext_focused.xml",
         "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/drawable/bg_edittext_focused.xml"
+    },
+    {
+        "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/drawable/gradient_bg.xml",
+        "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/drawable/gradient_bg.xml"
     },
     {
         "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/drawable/button_delete_pressed.xml",

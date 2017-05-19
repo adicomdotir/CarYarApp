@@ -12,6 +12,7 @@ import android.widget.RadioGroup;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
@@ -31,6 +32,7 @@ public class FilterActivity extends Activity {
     };
     private Map<String, Long> monthPriceMap = new HashMap<String, Long>();
     private Map<String, Long> monthPriceGusMap = new HashMap<String, Long>();
+    List<String> sortedList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,6 +90,7 @@ public class FilterActivity extends Activity {
                             priceTemp = monthPriceMap.get(key);
                         }
                         monthPriceMap.put(key, priceTemp + arrayList.get(i).getPrice());
+
                         sumPrice[id] += arrayList.get(i).getPrice();
                         if(arrayList.get(i).getType().equals("گاز")) {
                             sumPriceForGus[id] += arrayList.get(i).getPrice();
@@ -98,6 +101,8 @@ public class FilterActivity extends Activity {
                             monthPriceGusMap.put(key, priceTempGus + arrayList.get(i).getPrice());
                         }
                     }
+                    // Sorting by year and month
+                    sortedList = sortByYearAndMonth(monthPriceMap);
                     RadioButton rbAlltime = (RadioButton) findViewById(rgTwo.getCheckedRadioButtonId());
                     if(rbAlltime.getText().equals("کل")) {
                         long sp = 0;
@@ -116,22 +121,14 @@ public class FilterActivity extends Activity {
                         }
                     } else {
                         RadioButton rb = (RadioButton) findViewById(rgOne.getCheckedRadioButtonId());
-//                        for (int j=0; j<12; j++) {
-//                            if(rb.getText().equals("همه")) {
-//                                stringArrayList.add("کل هزینه " + monthName[j] + " : " + sumPrice[j] + " تومان");
-//                            } else if(rb.getText().equals("گاز")) {
-//                                stringArrayList.add("هزینه گاز " + monthName[j] + " : " +  sumPriceForGus[j] + " تومان");
-//                            } else {
-//                                stringArrayList.add("هزینه بنزین " + monthName[j] + " : " +  (sumPrice[j]-sumPriceForGus[j]) + " تومان");
-//                            }
-//                        }
-                        for (Map.Entry<String, Long> entry : monthPriceMap.entrySet()) {
-                            String[] key = entry.getKey().split(",");
+                        // for (Map.Entry<String, Long> entry : monthPriceMap.entrySet()) {
+                        for (String keyFromList : sortedList) {
+                            String[] key = keyFromList.split(",");
                             int j = Integer.parseInt(key[1]);
-                            Long value = entry.getValue();
+                            Long value = monthPriceMap.get(keyFromList);
                             long gus = 0;
                             try {
-                                gus = monthPriceGusMap.get(entry.getKey());
+                                gus = monthPriceGusMap.get(keyFromList);
                             } catch (Exception e) {
                             }
                             if(rb.getText().equals("همه")) {
@@ -151,5 +148,41 @@ public class FilterActivity extends Activity {
                 listView.setAdapter(myAdapter);
             }
         });
+    }
+
+    private List<String> sortByYearAndMonth(Map<String, Long> map) {
+        List<String> stringList = new ArrayList<String>();
+        for (String key : map.keySet()) {
+            String[] arr = key.split(",");
+            if(stringList.isEmpty()) {
+                stringList.add(key);
+            } else {
+                int i = 0;
+                for (String str : stringList) {
+                    String[] arrTemp = str.split(",");
+                    int y1 = Integer.valueOf(arr[0]);
+                    int yTemp = Integer.valueOf(arrTemp[0]);
+                    if(y1 < yTemp) {
+                        stringList.add(i, key);
+                        break;
+                    } else if(y1 == yTemp) {
+                        int m1 = Integer.valueOf(arr[1]);
+                        int mTemp = Integer.valueOf(arrTemp[1]);
+                        if(m1 < mTemp) {
+                            stringList.add(i, key);
+                            break;
+                        } else {
+                            stringList.add(i+1, key);
+                            break;
+                        }
+                    }
+                    i++;
+                    if(stringList.size() == i) {
+                        stringList.add(key);
+                    }
+                }
+            }
+        }
+        return stringList;
     }
 }
