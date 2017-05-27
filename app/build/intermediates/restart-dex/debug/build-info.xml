@@ -4,22 +4,22 @@
     density="hdpi"
     format="8"
     plugin-version="2.2.0"
-    timestamp="24330520197112"
+    timestamp="17386421298522"
     token="-3055290093380250998"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="150" />
+        duration="877" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="7" />
+        duration="26" />
     <task
         name="verifier"
-        duration="1" />
+        duration="38" />
 
     <artifact
         location="/home/adicom/AndroidStudioProjects/CarYar/app/build/outputs/apk/app-debug.apk"

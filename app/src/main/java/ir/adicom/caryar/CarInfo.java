@@ -8,6 +8,35 @@ public class CarInfo {
 	private int kilometer;
 	private long date;
 
+	public CarInfo(){}
+
+	public CarInfo(String t, int p, int k, long d, String date2) {
+		this.type = t;
+		this.price = p;
+		this.kilometer = k;
+		this.date = d;
+		this.date2 = date2;
+	}
+
+	public CarInfo(int id, String t, int p, int k, long d, String date2) {
+		this.id = id;
+		this.type = t;
+		this.price = p;
+		this.kilometer = k;
+		this.date = d;
+		this.date2 = date2;
+	}
+
+	public String getDate2() {
+		return date2;
+	}
+
+	public void setDate2(String date2) {
+		this.date2 = date2;
+	}
+
+	private String date2;
+
 	public long getDate() {
 		return date;
 	}
@@ -46,22 +75,5 @@ public class CarInfo {
 
 	public void setKilometer(int kilometer) {
 		this.kilometer = kilometer;
-	}
-
-	public CarInfo(){}
-
-	public CarInfo(String t, int p, int k, long d) {
-		this.type = t;
-		this.price = p;
-		this.kilometer = k;
-		this.date = d;
-	}
-
-	public CarInfo(int id, String t, int p, int k, long d) {
-		this.id = id;
-		this.type = t;
-		this.price = p;
-		this.kilometer = k;
-		this.date = d;
 	}
 }

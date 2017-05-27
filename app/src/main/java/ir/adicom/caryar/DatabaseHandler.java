@@ -1,4 +1,5 @@
 package ir.adicom.caryar;
+
 import java.util.LinkedList;
 import java.util.List;
  
@@ -12,7 +13,7 @@ import android.util.Log;
 public class DatabaseHandler extends SQLiteOpenHelper {
  
     // Database Version
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 3;
     // Database Name
     private static final String DATABASE_NAME = "CarDB";
  
@@ -22,13 +23,15 @@ public class DatabaseHandler extends SQLiteOpenHelper {
  
     @Override
     public void onCreate(SQLiteDatabase db) {
+        Log.e("TAG", "onCreate");
         // SQL statement to create book table
         String CREATE_BOOK_TABLE = "CREATE TABLE info ( " +
                 "id INTEGER PRIMARY KEY AUTOINCREMENT, " + 
                 "type TEXT, "+
                 "price INTEGER, "+
                 "km INTEGER," +
-                "date INTEGER )";
+                "date INTEGER," +
+                "date2 TEXT)";
  
         // create books table
         db.execSQL(CREATE_BOOK_TABLE);
@@ -36,14 +39,16 @@ public class DatabaseHandler extends SQLiteOpenHelper {
  
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        // Drop older books table if existed
-        db.execSQL("DROP TABLE IF EXISTS info");
- 
-        // create fresh books table
-        this.onCreate(db);
+        Log.e("TAG", "onUpgrade");
+        String upgradeQuery = "ALTER TABLE info ADD COLUMN date2 TEXT";
+        if (newVersion == 3) {
+            db.execSQL(upgradeQuery);
+        } else {
+            db.execSQL("DROP TABLE IF EXISTS info");
+            this.onCreate(db);
+        }
     }
-    //---------------------------------------------------------------------
- 
+
     /**
      * CRUD operations (create "add", read "get", update, delete)
      */
@@ -57,8 +62,9 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     private static final String KEY_PRICE = "price";
     private static final String KEY_KM = "km";
     private static final String KEY_DATE = "date";
- 
-    private static final String[] COLUMNS = {KEY_ID,KEY_TYPE,KEY_PRICE,KEY_KM};
+    private static final String KEY_DATE2 = "date2";
+
+    private static final String[] COLUMNS = {KEY_ID,KEY_TYPE,KEY_PRICE,KEY_KM,KEY_DATE2};
  
     public void addInfo(CarInfo info){
         // 1. get reference to writable DB
@@ -70,6 +76,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values.put(KEY_PRICE, info.getPrice());
         values.put(KEY_KM, info.getKilometer());
         values.put(KEY_DATE, info.getDate());
+        values.put(KEY_DATE2, info.getDate2());
  
         // 3. insert
         db.insert(TABLE_CAR, // table
@@ -81,7 +88,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     }
  
     public CarInfo getInfo(int n){
-
         SQLiteDatabase db = this.getReadableDatabase();
     	Cursor c = db.rawQuery("SELECT * FROM info ", null);
     	c.moveToLast();
@@ -100,9 +106,14 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         int column3 = c.getInt(2);
         int column4 = c.getInt(3);
         int c5 = c.getInt(4);
+        String date = null;
+        try {
+            date = c.getString(5);
+        } catch (Exception e) {
+            Log.e("TAG", e.getMessage());
+        }
         c.close();
-        
-        CarInfo i = new CarInfo(column2, column3, column4, c5);
+        CarInfo i = new CarInfo(column2, column3, column4, c5, date);
         i.setId(column1);
         
         return i;
@@ -111,14 +122,11 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     // Get All CarInfo
     public List<CarInfo> getAllInfo() {
         List<CarInfo> info = new LinkedList<CarInfo>();
- 
         // 1. build the query
         String query = "SELECT  * FROM " + TABLE_CAR + " ORDER By date ASC";
- 
         // 2. get reference to writable DB
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(query, null);
- 
         CarInfo ci = null;
         if (cursor.moveToFirst()) {
             do {
@@ -126,12 +134,18 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 int column3 = cursor.getInt(2);
                 int column4 = cursor.getInt(3);
                 int c5 = cursor.getInt(4);
-                ci = new CarInfo(column2, column3, column4, c5);
+                String date = null;
+                try {
+                    date = cursor.getString(5);
+                } catch (Exception e) {
+                    Log.e("TAG", e.getMessage());
+                }
+                Log.e("TAG", "Add: Date=" + date);
+                ci = new CarInfo(column2, column3, column4, c5, date);
                 ci.setId(Integer.parseInt(cursor.getString(0)));
                 info.add(ci);
             } while (cursor.moveToNext());
         }
- 
         // return 
         return info;
     }
@@ -148,6 +162,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values.put(KEY_TYPE, linfo.getType());
         values.put(KEY_KM, linfo.getKilometer());
         values.put(KEY_DATE, linfo.getDate());
+        values.put(KEY_DATE2, linfo.getDate2());
  
         // 3. updating row
         int i = db.update(TABLE_CAR, //table

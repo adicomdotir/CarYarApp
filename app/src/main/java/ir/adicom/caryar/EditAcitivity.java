@@ -98,6 +98,7 @@ public class EditAcitivity extends Activity {
                         irDate.getGregorianMonth()-1,
                         irDate.getGregorianDay(), 0, 0, 0);
                 long startTime = calendar.getTimeInMillis();
+                String strTime = String.format("%d/%02d/%02d", mYear, mMonth, mDay);
                 if(edtKM.getText().toString().trim().length() == 0
                         || edtCost.getText().toString().trim().length() == 0 ) {
                     Toast.makeText(getApplicationContext(), "هر دو فیلد را پر کنید", Toast.LENGTH_SHORT).show();
@@ -108,7 +109,7 @@ public class EditAcitivity extends Activity {
                                     rbtn.getText().toString(),
                                     Integer.valueOf(edtCost.getText().toString()),
                                     Integer.valueOf(edtKM.getText().toString()),
-                                    startTime/1000L)
+                                    startTime/1000L, strTime)
                     );
                     Log.e(TAG, "onClick: " + log);
                     edtKM.setText("");
@@ -127,7 +128,7 @@ public class EditAcitivity extends Activity {
                         .setCancelable(false)
                         .setPositiveButton("بله", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
-                                db.deleteInfo(new CarInfo(list.get(index).getId(), null, 0, 0, 0));
+                                db.deleteInfo(new CarInfo(list.get(index).getId(), null, 0, 0, 0, null));
                                 EditAcitivity.this.finish();
                             }
                         })

@@ -70,6 +70,7 @@ public class MainActivity extends Activity {
 
 		
 		final DatabaseHandler db = new DatabaseHandler(this);
+
 		
 		final RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radioGroup1);
 		final EditText edtKilo = (EditText) findViewById(R.id.editText1);
@@ -92,6 +93,7 @@ public class MainActivity extends Activity {
 						irDate.getGregorianMonth()-1,
 						irDate.getGregorianDay(), 0, 0, 0);
 				long startTime = calendar.getTimeInMillis();
+				String strTime = mYear + "/" + String.format("%02d", mMonth) + "/" + String.format("%02d", mDay);
 				Log.e("MYTAG", "" + startTime);
 				if(edtKilo.getText().toString().trim().length() == 0
 					|| edtprice.getText().toString().trim().length() == 0 ) {
@@ -101,7 +103,7 @@ public class MainActivity extends Activity {
 							new CarInfo(rbtn.getText().toString(), 
 									Integer.valueOf(edtprice.getText().toString()),
 									Integer.valueOf(edtKilo.getText().toString()),
-									startTime/1000L)
+									startTime/1000L, strTime)
 							);
 					edtKilo.setText("");
 					edtprice.setText("");
