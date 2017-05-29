@@ -122,6 +122,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     // Get All CarInfo
     public List<CarInfo> getAllInfo() {
         List<CarInfo> info = new LinkedList<CarInfo>();
+
         // 1. build the query
         String query = "SELECT  * FROM " + TABLE_CAR + " ORDER By date ASC";
         // 2. get reference to writable DB
@@ -146,8 +147,19 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 info.add(ci);
             } while (cursor.moveToNext());
         }
+        db.close();
         // return 
         return info;
+    }
+
+    public Cursor getAll(String type) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        String q = "SELECT substr(date2,1,7) AS mydate, sum(price) FROM info WHERE type LIKE '%" +
+                type +"%' GROUP BY mydate";
+        Cursor cursor = db.rawQuery(q, null);
+        cursor.moveToFirst();
+        db.close();
+        return cursor;
     }
  
      // Updating single

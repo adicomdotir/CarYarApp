@@ -50,6 +50,18 @@ public class ReportActivity extends Activity {
 
 	private void init() {
 		list = db.getAllInfo();
+//		for (CarInfo carInfo : list) {
+//			Calendar mydate = Calendar.getInstance();
+//			mydate.setTimeInMillis(carInfo.getDate() * 1000);
+//			if(carInfo.getDate2() == null) {
+//				String strTime = String.format("%d/%02d/%02d",
+//						mydate.get(Calendar.YEAR),
+//						mydate.get(Calendar.MONTH) + 1,
+//						mydate.get(Calendar.DAY_OF_MONTH));
+//				carInfo.setDate2(strTime);
+//				db.updateInfo(carInfo);
+//			}
+//		}
 		arr = new String[list.size()];
 		if(list != null) {
 			for (int i = 0; i < arr.length; i++) {

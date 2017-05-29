@@ -4,27 +4,34 @@
     density="hdpi"
     format="8"
     plugin-version="2.2.0"
-    timestamp="17386421298522"
+    timestamp="11617426253693"
     token="-3055290093380250998"
-    verifier="FULL_BUILD_REQUESTED" >
+    verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="877" />
+        duration="61" />
     <task
         name="instant-run-dex"
-        duration="0" />
+        duration="511" />
     <task
         name="instant-run-transform"
-        duration="26" />
+        duration="7" />
     <task
         name="verifier"
-        duration="38" />
+        duration="1" />
 
     <artifact
-        location="/home/adicom/AndroidStudioProjects/CarYar/app/build/outputs/apk/app-debug.apk"
-        type="MAIN" />
+        location="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/reload-dex/debug/classes.dex"
+        type="RELOAD_DEX" />
 
+    <build
+        timestamp="10885523958028"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="/home/adicom/AndroidStudioProjects/CarYar/app/build/outputs/apk/app-debug.apk"
+            type="MAIN" />
+    </build>
     <build
         timestamp="24330520197112"
         verifier="FULL_BUILD_REQUESTED" >

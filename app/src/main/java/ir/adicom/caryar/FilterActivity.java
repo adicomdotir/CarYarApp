@@ -1,6 +1,7 @@
 package ir.adicom.caryar;
 
 import android.app.Activity;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -122,22 +123,47 @@ public class FilterActivity extends Activity {
                     } else {
                         RadioButton rb = (RadioButton) findViewById(rgOne.getCheckedRadioButtonId());
                         // for (Map.Entry<String, Long> entry : monthPriceMap.entrySet()) {
-                        for (String keyFromList : sortedList) {
-                            String[] key = keyFromList.split(",");
-                            int j = Integer.parseInt(key[1]);
-                            Long value = monthPriceMap.get(keyFromList);
-                            long gus = 0;
-                            try {
-                                gus = monthPriceGusMap.get(keyFromList);
-                            } catch (Exception e) {
-                            }
-                            if(rb.getText().equals("همه")) {
-                                stringArrayList.add("کل هزینه " + monthName[j] + " " + key[0] + " : " + value + " تومان");
-                            } else if(rb.getText().equals("گاز")) {
-                                stringArrayList.add("هزینه گاز " + monthName[j] + " " + key[0] + " : " + gus + " تومان");
-                            } else {
-                                stringArrayList.add("هزینه بنزین " + monthName[j] + " " + key[0] + " : " + (value - gus) + " تومان");
-                            }
+//                        for (String keyFromList : sortedList) {
+//                            String[] key = keyFromList.split(",");
+//                            int j = Integer.parseInt(key[1]);
+//                            Long value = monthPriceMap.get(keyFromList);
+//                            long gus = 0;
+//                            try {
+//                                gus = monthPriceGusMap.get(keyFromList);
+//                            } catch (Exception e) {
+//                            }
+//                            if(rb.getText().equals("همه")) {
+//                                stringArrayList.add("کل هزینه " + monthName[j] + " " + key[0] + " : " + value + " تومان");
+//                            } else if(rb.getText().equals("گاز")) {
+//                                stringArrayList.add("هزینه گاز " + monthName[j] + " " + key[0] + " : " + gus + " تومان");
+//                            } else {
+//                                stringArrayList.add("هزینه بنزین " + monthName[j] + " " + key[0] + " : " + (value - gus) + " تومان");
+//                            }
+//                        }
+                        if(rb.getText().equals("همه")) {
+                            Cursor cursor = db.getAll("");
+                            do {
+                                String[] array = cursor.getString(0).split("/");
+                                int month = Integer.parseInt(array[1]);
+                                String temp = "کل هزینه " + monthName[month-1] + " " + array[0] + " = " + cursor.getInt(1) + " تومان";
+                                stringArrayList.add(temp);
+                            } while (cursor.moveToNext());
+                        } else if(rb.getText().equals("گاز")) {
+                            Cursor cursor = db.getAll("گاز");
+                            do {
+                                String[] array = cursor.getString(0).split("/");
+                                int month = Integer.parseInt(array[1]);
+                                String temp = "هزینه گاز " + monthName[month-1] + " " + array[0] + " = " + cursor.getInt(1) + " تومان";
+                                stringArrayList.add(temp);
+                            } while (cursor.moveToNext());
+                        } else {
+                            Cursor cursor = db.getAll("بنزین");
+                            do {
+                                String[] array = cursor.getString(0).split("/");
+                                int month = Integer.parseInt(array[1]);
+                                String temp = "هزینه بنزین " + monthName[month-1] + " " + array[0] + " = " + cursor.getInt(1) + " تومان";
+                                stringArrayList.add(temp);
+                            } while (cursor.moveToNext());
                         }
                     }
 
