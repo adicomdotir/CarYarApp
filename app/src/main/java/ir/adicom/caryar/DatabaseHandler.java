@@ -152,11 +152,16 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return info;
     }
 
-    public Cursor getAll(String type) {
+    public Cursor getAll(String type, boolean monthly) {
+        String query;
+        if (monthly) {
+            query = "SELECT substr(date2,1,7) AS mydate, sum(price) FROM info WHERE type LIKE '%" +
+                    type + "%' GROUP BY mydate";
+        } else {
+            query = "SELECT sum(price) FROM info WHERE type LIKE '%" + type + "%'";
+        }
         SQLiteDatabase db = this.getWritableDatabase();
-        String q = "SELECT substr(date2,1,7) AS mydate, sum(price) FROM info WHERE type LIKE '%" +
-                type +"%' GROUP BY mydate";
-        Cursor cursor = db.rawQuery(q, null);
+        Cursor cursor = db.rawQuery(query, null);
         cursor.moveToFirst();
         db.close();
         return cursor;
@@ -202,5 +207,12 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         // 3. close
         db.close();
   
+    }
+
+    public int getCount() {
+        String query = "SELECT  * FROM " + TABLE_CAR;
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(query, null);
+        return cursor.getCount();
     }
 }
