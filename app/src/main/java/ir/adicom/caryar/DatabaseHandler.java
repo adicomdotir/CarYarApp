@@ -13,7 +13,7 @@ import android.util.Log;
 public class DatabaseHandler extends SQLiteOpenHelper {
  
     // Database Version
-    private static final int DATABASE_VERSION = 3;
+    private static final int DATABASE_VERSION = 4;
     // Database Name
     private static final String DATABASE_NAME = "CarDB";
  
@@ -44,8 +44,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         if (newVersion == 3) {
             db.execSQL(upgradeQuery);
         } else {
-            db.execSQL("DROP TABLE IF EXISTS info");
-            this.onCreate(db);
+//            db.execSQL("DROP TABLE IF EXISTS info");
+//            this.onCreate(db);
         }
     }
 
@@ -156,7 +156,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         String query;
         if (monthly) {
             query = "SELECT substr(date2,1,7) AS mydate, sum(price) FROM info WHERE type LIKE '%" +
-                    type + "%' GROUP BY mydate";
+                    type + "%' GROUP BY mydate ORDER BY mydate DESC";
         } else {
             query = "SELECT sum(price) FROM info WHERE type LIKE '%" + type + "%'";
         }
