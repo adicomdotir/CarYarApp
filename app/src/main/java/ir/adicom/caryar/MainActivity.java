@@ -2,6 +2,7 @@ package ir.adicom.caryar;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Typeface;
 import android.media.audiofx.BassBoost;
 import android.os.Bundle;
@@ -14,10 +15,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Calendar;
 import java.util.Locale;
+import java.util.StringTokenizer;
 
 public class MainActivity extends Activity {
 
@@ -134,6 +137,18 @@ public class MainActivity extends Activity {
                 startActivity(new Intent(MainActivity.this, FilterActivity.class));
             }
         });
+
+		TextView tvTotal = (TextView) findViewById(R.id.tv_total);
+		Cursor cursor = db.get("SELECT sum(price) FROM info GROUP BY type");
+		int benzinCost = cursor.getInt(0);
+		cursor.moveToNext();
+		int gusCost = cursor.getInt(0);
+		String temp = String.format("کل هزینه %d تومان\nکل هزینه گاز %d تومان\nکل هزینه بنزین %d تومان",
+				benzinCost + gusCost, gusCost, benzinCost);
+		tvTotal.setText(temp);
+		TextView tvTotalKm = (TextView) findViewById(R.id.tv_total_km);
+		cursor = db.get("SELECT min(km),max(km) FROM info");
+		tvTotalKm.setText(String.format("کل مسافت طی شده %d کیلومتر",cursor.getInt(1)-cursor.getInt(0)));
 
 	}
 }

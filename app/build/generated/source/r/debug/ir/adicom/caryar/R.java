@@ -37,28 +37,28 @@ public final class R {
     }
     public static final class id {
         public static final int LinearLayout1=0x7f090015;
-        public static final int action_settings=0x7f090028;
+        public static final int action_settings=0x7f09002a;
         public static final int activity_edit=0x7f090000;
         public static final int activity_filter=0x7f09000b;
         public static final int btnDelete=0x7f09000a;
         public static final int btnEdit=0x7f090009;
         public static final int btnInsert=0x7f09001c;
         public static final int btnReport=0x7f09001d;
-        public static final int btn_custom_down=0x7f090025;
-        public static final int btn_custom_up=0x7f090023;
+        public static final int btn_custom_down=0x7f090027;
+        public static final int btn_custom_up=0x7f090025;
         public static final int btn_search_filter=0x7f090010;
         public static final int button2=0x7f09001b;
-        public static final int calender_view=0x7f09001e;
-        public static final int custom_btn_1=0x7f09001f;
-        public static final int custom_btn_2=0x7f090020;
-        public static final int custom_btn_3=0x7f090021;
-        public static final int custom_layout=0x7f090022;
+        public static final int calender_view=0x7f090020;
+        public static final int custom_btn_1=0x7f090021;
+        public static final int custom_btn_2=0x7f090022;
+        public static final int custom_btn_3=0x7f090023;
+        public static final int custom_layout=0x7f090024;
         public static final int editText1=0x7f09001a;
         public static final int editText2=0x7f090019;
         public static final int edtCost=0x7f090005;
         public static final int edtKm=0x7f090007;
-        public static final int label=0x7f090026;
-        public static final int listView1=0x7f090027;
+        public static final int label=0x7f090028;
+        public static final int listView1=0x7f090029;
         public static final int new_listview=0x7f090014;
         public static final int radio0=0x7f090017;
         public static final int radio1=0x7f090018;
@@ -76,7 +76,9 @@ public final class R {
         public static final int textView1=0x7f090004;
         public static final int textView2=0x7f090006;
         public static final int textView3=0x7f090008;
-        public static final int tv_custom=0x7f090024;
+        public static final int tv_custom=0x7f090026;
+        public static final int tv_total=0x7f09001e;
+        public static final int tv_total_km=0x7f09001f;
     }
     public static final class layout {
         public static final int activity_edit=0x7f030000;

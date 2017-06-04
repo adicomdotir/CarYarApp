@@ -46,17 +46,26 @@ public class FilterActivity extends Activity {
                     // Sorting by year and month
                     // sortedList = sortByYearAndMonth(monthPriceMap);
                     RadioButton rbAlltime = (RadioButton) findViewById(rgTwo.getCheckedRadioButtonId());
-                    if(rbAlltime.getText().equals("کل")) {
+                    if(rbAlltime.getText().equals("سالانه")) {
                         RadioButton rb = (RadioButton) findViewById(rgOne.getCheckedRadioButtonId());
                         if(rb.getText().equals("همه")) {
                             Cursor cursor = db.getAll("", false);
-                            stringArrayList.add("کل هزینه: " + cursor.getInt(0) + " تومان");
+                            do {
+                                String temp = "کل هزینه سال " + cursor.getString(0) + " : " + cursor.getInt(1) + " تومان";
+                                stringArrayList.add(temp);
+                            } while (cursor.moveToNext());
                         } else if(rb.getText().equals("گاز")) {
                             Cursor cursor = db.getAll("گاز", false);
-                            stringArrayList.add("هزینه گاز: " + cursor.getInt(0) + " تومان");
+                            do {
+                                String temp = "هزینه گاز سال " + cursor.getString(0) + " : " + cursor.getInt(1) + " تومان";
+                                stringArrayList.add(temp);
+                            } while (cursor.moveToNext());
                         } else {
                             Cursor cursor = db.getAll("بنزین", false);
-                            stringArrayList.add("هزینه بنزین: " + cursor.getInt(0) + " تومان");
+                            do {
+                                String temp = "هزینه بنزین سال " + cursor.getString(0) + " : " + cursor.getInt(1) + " تومان";
+                                stringArrayList.add(temp);
+                            } while (cursor.moveToNext());
                         }
                     } else {
                         RadioButton rb = (RadioButton) findViewById(rgOne.getCheckedRadioButtonId());

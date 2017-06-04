@@ -158,8 +158,17 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             query = "SELECT substr(date2,1,7) AS mydate, sum(price) FROM info WHERE type LIKE '%" +
                     type + "%' GROUP BY mydate ORDER BY mydate DESC";
         } else {
-            query = "SELECT sum(price) FROM info WHERE type LIKE '%" + type + "%'";
+            query = "SELECT substr(date2,1,4) AS mydate, sum(price) FROM info WHERE type LIKE '%" +
+                    type + "%' GROUP BY mydate ORDER BY mydate DESC";
         }
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(query, null);
+        cursor.moveToFirst();
+        db.close();
+        return cursor;
+    }
+
+    public Cursor get(String query) {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(query, null);
         cursor.moveToFirst();

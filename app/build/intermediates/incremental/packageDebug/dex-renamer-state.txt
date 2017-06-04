@@ -1,4 +1,0 @@
-#Fri Jun 02 12:27:43 IRDT 2017
-base.0=/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
-renamed.0=classes.dex
-file.0=/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex

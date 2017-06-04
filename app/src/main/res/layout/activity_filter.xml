@@ -86,7 +86,7 @@
                 android:gravity="center"
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
-                android:text="کل"
+                android:text="سالانه"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/rb_alltime"
