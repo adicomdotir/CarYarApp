@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
 
 public class EditAcitivity extends Activity {
 
@@ -23,7 +24,6 @@ public class EditAcitivity extends Activity {
     private EditText edtCost, edtKM;
     private CustomControl customBtn1, customBtn2, customBtn3;
     private RadioGroup radioGroup;
-    private RadioButton rBtn01, rBtn02;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,16 +41,16 @@ public class EditAcitivity extends Activity {
         customBtn3 = (CustomControl) findViewById(R.id.custom_btn_3);
 
         radioGroup = (RadioGroup) findViewById(R.id.rgEdit);
-        rBtn01 = (RadioButton) findViewById(R.id.radiobutton01);
-        rBtn02 = (RadioButton) findViewById(R.id.radiobutton02);
+        RadioButton rBtn01 = (RadioButton) findViewById(R.id.radiobutton01);
+        RadioButton rBtn02 = (RadioButton) findViewById(R.id.radiobutton02);
 
         final int index = getIntent().getExtras().getInt("INDEX");
 
         final DatabaseHandler db = new DatabaseHandler(this);
         final List<CarInfo> list = db.getAllInfo();
         if(list != null) {
-            edtCost.setText("" + list.get(index).getPrice());
-            edtKM.setText("" + list.get(index).getKilometer());
+            edtCost.setText(String.format(Locale.US,"%d", list.get(index).getPrice()));
+            edtKM.setText(String.format(Locale.US, "%d", list.get(index).getKilometer()));
             Log.e("TAG", "onCreate: " + list.get(0).getDate());
             Calendar mydate = Calendar.getInstance();
             mydate.setTimeInMillis(list.get(index).getDate() * 1000);
@@ -98,14 +98,14 @@ public class EditAcitivity extends Activity {
                         irDate.getGregorianMonth()-1,
                         irDate.getGregorianDay(), 0, 0, 0);
                 long startTime = calendar.getTimeInMillis();
-                String strTime = String.format("%d/%02d/%02d", mYear, mMonth, mDay);
+                String strTime = String.format(Locale.US, "%d/%02d/%02d", mYear, mMonth, mDay);
                 if(edtKM.getText().toString().trim().length() == 0
                         || edtCost.getText().toString().trim().length() == 0 ) {
                     Toast.makeText(getApplicationContext(), "هر دو فیلد را پر کنید", Toast.LENGTH_SHORT).show();
                 } else {
                     int log = db.updateInfo(
                             new CarInfo(
-                                    list.get(index).getId(),
+                                    list != null ? list.get(index).getId() : 0,
                                     rbtn.getText().toString(),
                                     Integer.valueOf(edtCost.getText().toString()),
                                     Integer.valueOf(edtKM.getText().toString()),
@@ -128,7 +128,7 @@ public class EditAcitivity extends Activity {
                         .setCancelable(false)
                         .setPositiveButton("بله", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
-                                db.deleteInfo(new CarInfo(list.get(index).getId(), null, 0, 0, 0, null));
+                                db.deleteInfo(new CarInfo(list != null ? list.get(index).getId() : 0, null, 0, 0, 0, null));
                                 EditAcitivity.this.finish();
                             }
                         })

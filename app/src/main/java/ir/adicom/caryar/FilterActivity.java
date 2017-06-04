@@ -10,8 +10,6 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
 
 public class FilterActivity extends Activity {
 
@@ -105,36 +103,36 @@ public class FilterActivity extends Activity {
         });
     }
 
-    private List<String> sortByYearAndMonth(Map<String, Long> map) {
-        List<String> stringList = new ArrayList<String>();
-        for (String key : map.keySet()) {
-            String[] arr = key.split(",");
-            if(stringList.isEmpty()) {
-                stringList.add(key);
-            } else {
-                int i = 0;
-                for (String str : stringList) {
-                    String[] arrTemp = str.split(",");
-                    int y1 = Integer.valueOf(arr[0]);
-                    int yTemp = Integer.valueOf(arrTemp[0]);
-                    if(y1 < yTemp) {
-                        stringList.add(i, key);
-                        break;
-                    } else if(y1 == yTemp) {
-                        int m1 = Integer.valueOf(arr[1]);
-                        int mTemp = Integer.valueOf(arrTemp[1]);
-                        if(m1 < mTemp) {
-                            stringList.add(i, key);
-                            break;
-                        }
-                    }
-                    i++;
-                    if(stringList.size() == i) {
-                        stringList.add(key);
-                    }
-                }
-            }
-        }
-        return stringList;
-    }
+//    private List<String> sortByYearAndMonth(Map<String, Long> map) {
+//        List<String> stringList = new ArrayList<String>();
+//        for (String key : map.keySet()) {
+//            String[] arr = key.split(",");
+//            if(stringList.isEmpty()) {
+//                stringList.add(key);
+//            } else {
+//                int i = 0;
+//                for (String str : stringList) {
+//                    String[] arrTemp = str.split(",");
+//                    int y1 = Integer.valueOf(arr[0]);
+//                    int yTemp = Integer.valueOf(arrTemp[0]);
+//                    if(y1 < yTemp) {
+//                        stringList.add(i, key);
+//                        break;
+//                    } else if(y1 == yTemp) {
+//                        int m1 = Integer.valueOf(arr[1]);
+//                        int mTemp = Integer.valueOf(arrTemp[1]);
+//                        if(m1 < mTemp) {
+//                            stringList.add(i, key);
+//                            break;
+//                        }
+//                    }
+//                    i++;
+//                    if(stringList.size() == i) {
+//                        stringList.add(key);
+//                    }
+//                }
+//            }
+//        }
+//        return stringList;
+//    }
 }

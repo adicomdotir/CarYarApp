@@ -10,14 +10,14 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
  
-public class DatabaseHandler extends SQLiteOpenHelper {
+class DatabaseHandler extends SQLiteOpenHelper {
  
     // Database Version
     private static final int DATABASE_VERSION = 4;
     // Database Name
     private static final String DATABASE_NAME = "CarDB";
  
-    public DatabaseHandler(Context context) {
+    DatabaseHandler(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);  
     }
  
@@ -43,10 +43,11 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         String upgradeQuery = "ALTER TABLE info ADD COLUMN date2 TEXT";
         if (newVersion == 3) {
             db.execSQL(upgradeQuery);
-        } else {
+        }
+//        else {
 //            db.execSQL("DROP TABLE IF EXISTS info");
 //            this.onCreate(db);
-        }
+//        }
     }
 
     /**
@@ -64,9 +65,9 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     private static final String KEY_DATE = "date";
     private static final String KEY_DATE2 = "date2";
 
-    private static final String[] COLUMNS = {KEY_ID,KEY_TYPE,KEY_PRICE,KEY_KM,KEY_DATE2};
- 
-    public void addInfo(CarInfo info){
+    // private static final String[] COLUMNS = {KEY_ID,KEY_TYPE,KEY_PRICE,KEY_KM,KEY_DATE2};
+
+    void addInfo(CarInfo info){
         // 1. get reference to writable DB
         SQLiteDatabase db = this.getWritableDatabase();
  
@@ -87,40 +88,40 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         db.close(); 
     }
  
-    public CarInfo getInfo(int n){
-        SQLiteDatabase db = this.getReadableDatabase();
-    	Cursor c = db.rawQuery("SELECT * FROM info ", null);
-    	c.moveToLast();
-    	if(n==1) {
-    		if(!c.moveToPrevious())
-    			return null;
-    	}
-    	if(n==2) {
-    		if(!c.moveToPrevious())
-    			return null;
-    		if(!c.moveToPrevious())
-    			return null;
-    	}
-    	int column1 = c.getInt(0);
-        String column2 = c.getString(1);
-        int column3 = c.getInt(2);
-        int column4 = c.getInt(3);
-        int c5 = c.getInt(4);
-        String date = null;
-        try {
-            date = c.getString(5);
-        } catch (Exception e) {
-            Log.e("TAG", e.getMessage());
-        }
-        c.close();
-        CarInfo i = new CarInfo(column2, column3, column4, c5, date);
-        i.setId(column1);
-        
-        return i;
-    }
+//    public CarInfo getInfo(int n){
+//        SQLiteDatabase db = this.getReadableDatabase();
+//    	Cursor c = db.rawQuery("SELECT * FROM info ", null);
+//    	c.moveToLast();
+//    	if(n==1) {
+//    		if(!c.moveToPrevious())
+//    			return null;
+//    	}
+//    	if(n==2) {
+//    		if(!c.moveToPrevious())
+//    			return null;
+//    		if(!c.moveToPrevious())
+//    			return null;
+//    	}
+//    	int column1 = c.getInt(0);
+//        String column2 = c.getString(1);
+//        int column3 = c.getInt(2);
+//        int column4 = c.getInt(3);
+//        int c5 = c.getInt(4);
+//        String date = null;
+//        try {
+//            date = c.getString(5);
+//        } catch (Exception e) {
+//            Log.e("TAG", e.getMessage());
+//        }
+//        c.close();
+//        CarInfo i = new CarInfo(column2, column3, column4, c5, date);
+//        i.setId(column1);
+//
+//        return i;
+//    }
  
     // Get All CarInfo
-    public List<CarInfo> getAllInfo() {
+    List<CarInfo> getAllInfo() {
         List<CarInfo> info = new LinkedList<CarInfo>();
 
         // 1. build the query
@@ -128,7 +129,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         // 2. get reference to writable DB
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(query, null);
-        CarInfo ci = null;
+        CarInfo ci;
         if (cursor.moveToFirst()) {
             do {
                 String column2 = cursor.getString(1);
@@ -147,12 +148,13 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 info.add(ci);
             } while (cursor.moveToNext());
         }
+        cursor.close();
         db.close();
         // return 
         return info;
     }
 
-    public Cursor getAll(String type, boolean monthly) {
+    Cursor getAll(String type, boolean monthly) {
         String query;
         if (monthly) {
             query = "SELECT substr(date2,1,7) AS mydate, sum(price) FROM info WHERE type LIKE '%" +
@@ -168,7 +170,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return cursor;
     }
 
-    public Cursor get(String query) {
+    Cursor get(String query) {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(query, null);
         cursor.moveToFirst();
@@ -177,7 +179,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     }
  
      // Updating single
-    public int updateInfo(CarInfo linfo) {
+    int updateInfo(CarInfo linfo) {
  
         // 1. get reference to writable DB
         SQLiteDatabase db = this.getWritableDatabase();
@@ -203,7 +205,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     }
  
     // Deleting single
-    public void deleteInfo(CarInfo linfo) {
+    void deleteInfo(CarInfo linfo) {
  
         // 1. get reference to writable DB
         SQLiteDatabase db = this.getWritableDatabase();
@@ -218,10 +220,12 @@ public class DatabaseHandler extends SQLiteOpenHelper {
   
     }
 
-    public int getCount() {
+    int getCount() {
         String query = "SELECT  * FROM " + TABLE_CAR;
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(query, null);
-        return cursor.getCount();
+        int count = cursor.getCount();
+        cursor.close();
+        return count;
     }
 }

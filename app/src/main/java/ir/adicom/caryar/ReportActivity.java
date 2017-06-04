@@ -2,13 +2,9 @@ package ir.adicom.caryar;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.Calendar;
@@ -18,9 +14,7 @@ public class ReportActivity extends Activity {
 
 	private DatabaseHandler db;
 	private List<CarInfo> list;
-	private MyAdapter myAdapter;
 	private ListView listView;
-	private String[] arr;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +61,7 @@ public class ReportActivity extends Activity {
 //			carInfo.setDate2(strTime);
 //			db.updateInfo(carInfo);
 //		}
-		arr = new String[list.size()];
+		String[] arr = new String[list.size()];
 		if(list != null) {
 			for (int i = 0; i < arr.length; i++) {
 				Calendar mydate = Calendar.getInstance();
@@ -86,13 +80,13 @@ public class ReportActivity extends Activity {
 		}
 
 		// For reverse array
-		for(int start=0, end=arr.length-1; start<=end; start++, end--){
+		for(int start = 0, end = arr.length-1; start<=end; start++, end--){
 			String aux = arr[start];
-			arr[start]=arr[end];
+			arr[start]= arr[end];
 			arr[end]=aux;
 		}
 
-		myAdapter = new MyAdapter(this, arr);
+		MyAdapter myAdapter = new MyAdapter(this, arr);
 		listView.setAdapter(myAdapter);
 	}
 }

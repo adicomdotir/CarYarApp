@@ -4,9 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Typeface;
-import android.media.audiofx.BassBoost;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -20,14 +18,12 @@ import android.widget.Toast;
 
 import java.util.Calendar;
 import java.util.Locale;
-import java.util.StringTokenizer;
 
 public class MainActivity extends Activity {
 
 	private static final String TAG = "TAG";
 	public CarInfo c;
 	public static Typeface custom_font;
-	Button btnChert;
 
 	private int mYear;
 	private int mMonth;
@@ -96,7 +92,7 @@ public class MainActivity extends Activity {
 						irDate.getGregorianMonth()-1,
 						irDate.getGregorianDay(), 0, 0, 0);
 				long startTime = calendar.getTimeInMillis();
-				String strTime = mYear + "/" + String.format("%02d", mMonth) + "/" + String.format("%02d", mDay);
+				String strTime = mYear + "/" + String.format(Locale.US, "%02d", mMonth) + "/" + String.format(Locale.US, "%02d", mDay);
 				Log.e("MYTAG", "" + startTime);
 				if(edtKilo.getText().toString().trim().length() == 0
 					|| edtprice.getText().toString().trim().length() == 0 ) {
@@ -143,12 +139,11 @@ public class MainActivity extends Activity {
 		int benzinCost = cursor.getInt(0);
 		cursor.moveToNext();
 		int gusCost = cursor.getInt(0);
-		String temp = String.format("کل هزینه %d تومان\nکل هزینه گاز %d تومان\nکل هزینه بنزین %d تومان",
+		String temp = String.format(Locale.US, "کل هزینه %d تومان\nکل هزینه گاز %d تومان\nکل هزینه بنزین %d تومان",
 				benzinCost + gusCost, gusCost, benzinCost);
 		tvTotal.setText(temp);
 		TextView tvTotalKm = (TextView) findViewById(R.id.tv_total_km);
 		cursor = db.get("SELECT min(km),max(km) FROM info");
-		tvTotalKm.setText(String.format("کل مسافت طی شده %d کیلومتر",cursor.getInt(1)-cursor.getInt(0)));
-
+		tvTotalKm.setText(String.format(Locale.US, "کل مسافت طی شده %d کیلومتر",cursor.getInt(1)-cursor.getInt(0)));
 	}
 }
