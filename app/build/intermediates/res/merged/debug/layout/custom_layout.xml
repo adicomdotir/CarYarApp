@@ -15,7 +15,7 @@
 
     <TextView
         android:text="0"
-        android:textColor="#000"
+        android:textColor="#1C2236"
         android:textStyle="bold"
         android:textSize="17sp"
         android:gravity="center"

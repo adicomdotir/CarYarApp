@@ -24,6 +24,7 @@
            android:orientation="horizontal" >
 
            <RadioButton
+               android:textColor="@color/main_color_stroke"
                android:id="@+id/radio0"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
@@ -32,6 +33,7 @@
                android:textSize="18sp" />
 
            <RadioButton
+               android:textColor="@color/main_color_stroke"
                android:id="@+id/radio1"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
@@ -47,7 +49,7 @@
            android:layout_gravity="right"
            android:gravity="center"
            android:text="نوع سوخت"
-           android:textColor="#000"
+           android:textColor="#1C2236"
            android:textSize="18sp" />
 
    </LinearLayout>
@@ -76,7 +78,7 @@
             android:layout_weight="0.3"
             android:gravity="center"
             android:text="هزینه"
-            android:textColor="#000"
+            android:textColor="#1C2236"
             android:textSize="20sp" />
 
     </LinearLayout>
@@ -105,7 +107,7 @@
             android:layout_weight="0.3"
             android:gravity="center"
             android:text="کیلومتر"
-            android:textColor="#000"
+            android:textColor="#1C2236"
             android:textSize="20sp" />
 
     </LinearLayout>
@@ -126,6 +128,7 @@
         android:paddingBottom="3dp" >
 
         <Button
+            android:textColor="@color/main_color_stroke"
             android:id="@+id/button2"
             android:layout_width="96dp"
             android:layout_height="48dp"
@@ -136,6 +139,7 @@
             android:textSize="20sp" />
 
         <Button
+            android:textColor="@color/main_color_stroke"
             android:id="@+id/btnInsert"
             android:layout_width="96dp"
             android:layout_height="48dp"
@@ -153,6 +157,7 @@
         android:paddingBottom="3dp" >
 
         <Button
+            android:textColor="@color/main_color_stroke"
             android:id="@+id/btnReport"
             android:layout_width="96dp"
             android:layout_height="48dp"
@@ -165,6 +170,7 @@
     </LinearLayout>
 
     <TextView
+        android:textColor="@color/main_color_stroke"
         android:text="TextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -173,6 +179,7 @@
         android:textStyle="normal|bold" />
 
     <TextView
+        android:textColor="@color/main_color_stroke"
         android:text="TextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

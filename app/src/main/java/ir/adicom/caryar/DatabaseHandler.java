@@ -24,7 +24,6 @@ class DatabaseHandler extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         Log.e("TAG", "onCreate");
-        // SQL statement to create book table
         String CREATE_BOOK_TABLE = "CREATE TABLE info ( " +
                 "id INTEGER PRIMARY KEY AUTOINCREMENT, " + 
                 "type TEXT, "+
@@ -32,8 +31,6 @@ class DatabaseHandler extends SQLiteOpenHelper {
                 "km INTEGER," +
                 "date INTEGER," +
                 "date2 TEXT)";
- 
-        // create books table
         db.execSQL(CREATE_BOOK_TABLE);
     }
  
@@ -43,6 +40,15 @@ class DatabaseHandler extends SQLiteOpenHelper {
         String upgradeQuery = "ALTER TABLE info ADD COLUMN date2 TEXT";
         if (newVersion == 3) {
             db.execSQL(upgradeQuery);
+        } else if(newVersion == 4) {
+            String createEngineOilTable = "CREATE TABLE IF NOT EXISTS engineoils ( " +
+                    "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                    "name TEXT, "+
+                    "nowkm INTEGER, "+
+                    "maxkm INTEGER," +
+                    "price INTEGER," +
+                    "date TEXT)";
+            db.execSQL(createEngineOilTable);
         }
 //        else {
 //            db.execSQL("DROP TABLE IF EXISTS info");
@@ -212,7 +218,7 @@ class DatabaseHandler extends SQLiteOpenHelper {
  
         // 2. delete
         db.delete(TABLE_CAR,
-                KEY_ID+" = ?",
+                KEY_ID + " = ?",
                 new String[] { String.valueOf(linfo.getId()) });
  
         // 3. close
