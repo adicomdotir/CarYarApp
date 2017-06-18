@@ -16,6 +16,8 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.cengalabs.flatui.FlatUI;
+
 import java.util.Calendar;
 import java.util.Locale;
 
@@ -33,6 +35,8 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        FlatUI.initDefaultValues(this);
+        FlatUI.setDefaultTheme(FlatUI.DEEP);
         setContentView(R.layout.activity_main);
 
         Calendar calendar = Calendar.getInstance();

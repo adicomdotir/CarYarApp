@@ -8,11 +8,280 @@
 package ir.adicom.caryar;
 
 public final class R {
+    public static final class array {
+        public static final int blood=0x7f060000;
+        public static final int blossom=0x7f060001;
+        public static final int candy=0x7f060002;
+        public static final int dark=0x7f060003;
+        public static final int deep=0x7f060004;
+        public static final int grape=0x7f060005;
+        public static final int grass=0x7f060006;
+        public static final int orange=0x7f060007;
+        public static final int sand=0x7f060008;
+        public static final int sea=0x7f060009;
+        public static final int sky=0x7f06000a;
+        public static final int snow=0x7f06000b;
+    }
     public static final class attr {
+        /** <p>May be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+<p>May be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>flat</code></td><td>0</td><td></td></tr>
+<tr><td><code>box</code></td><td>1</td><td></td></tr>
+<tr><td><code>transparent</code></td><td>2</td><td></td></tr>
+</table>
+         */
+        public static final int fl_autoFieldStyle=0x7f01000a;
+        /** <p>May be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+<p>May be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>fl_darker</code></td><td>0</td><td></td></tr>
+<tr><td><code>fl_dark</code></td><td>1</td><td></td></tr>
+<tr><td><code>fl_main</code></td><td>2</td><td></td></tr>
+<tr><td><code>fl_light</code></td><td>3</td><td></td></tr>
+</table>
+         */
+        public static final int fl_backgroundColor=0x7f01000e;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int fl_blockButtonEffectHeight=0x7f01000b;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int fl_borderWidth=0x7f010000;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int fl_cornerRadius=0x7f010001;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int fl_customBackgroundColor=0x7f01000f;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int fl_dotMargin=0x7f010002;
+        /** <p>May be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+<p>May be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>fl_flat</code></td><td>0</td><td></td></tr>
+<tr><td><code>fl_box</code></td><td>1</td><td></td></tr>
+<tr><td><code>fl_transparent</code></td><td>2</td><td></td></tr>
+</table>
+         */
+        public static final int fl_fieldStyle=0x7f01000c;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int fl_fontExtension=0x7f010003;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int fl_fontFamily=0x7f010004;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int fl_fontWeight=0x7f010005;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int fl_size=0x7f010006;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int fl_space=0x7f010010;
+        /** <p>May be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+<p>May be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>fl_none</code></td><td>0</td><td></td></tr>
+<tr><td><code>fl_dark</code></td><td>1</td><td></td></tr>
+<tr><td><code>fl_light</code></td><td>2</td><td></td></tr>
+</table>
+         */
+        public static final int fl_textAppearance=0x7f010007;
+        /** <p>May be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+<p>May be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>fl_darker</code></td><td>0</td><td></td></tr>
+<tr><td><code>fl_dark</code></td><td>1</td><td></td></tr>
+<tr><td><code>fl_main</code></td><td>2</td><td></td></tr>
+<tr><td><code>fl_light</code></td><td>3</td><td></td></tr>
+</table>
+         */
+        public static final int fl_textColor=0x7f01000d;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int fl_theme=0x7f010008;
+        /** <p>May be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+<p>May be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>fl_none</code></td><td>0</td><td></td></tr>
+<tr><td><code>fl_ease</code></td><td>1</td><td></td></tr>
+<tr><td><code>fl_ripple</code></td><td>2</td><td></td></tr>
+</table>
+         */
+        public static final int fl_touchEffect=0x7f010009;
     }
     public static final class color {
-        public static final int main_color=0x7f060000;
-        public static final int main_color_stroke=0x7f060001;
+        public static final int blood_dark=0x7f070000;
+        public static final int blood_darker=0x7f070001;
+        public static final int blood_light=0x7f070002;
+        public static final int blood_primary=0x7f070003;
+        public static final int blossom_dark=0x7f070004;
+        public static final int blossom_darker=0x7f070005;
+        public static final int blossom_light=0x7f070006;
+        public static final int blossom_primary=0x7f070007;
+        public static final int candy_dark=0x7f070008;
+        public static final int candy_darker=0x7f070009;
+        public static final int candy_light=0x7f07000a;
+        public static final int candy_primary=0x7f07000b;
+        public static final int dark_dark=0x7f07000c;
+        public static final int dark_darker=0x7f07000d;
+        public static final int dark_light=0x7f07000e;
+        public static final int dark_primary=0x7f07000f;
+        public static final int deep_dark=0x7f070010;
+        public static final int deep_darker=0x7f070011;
+        public static final int deep_light=0x7f070012;
+        public static final int deep_primary=0x7f070013;
+        public static final int grape_dark=0x7f070014;
+        public static final int grape_darker=0x7f070015;
+        public static final int grape_light=0x7f070016;
+        public static final int grape_primary=0x7f070017;
+        public static final int grass_dark=0x7f070018;
+        public static final int grass_darker=0x7f070019;
+        public static final int grass_light=0x7f07001a;
+        public static final int grass_primary=0x7f07001b;
+        public static final int main_color=0x7f07001c;
+        public static final int main_color_stroke=0x7f07001d;
+        public static final int orange_dark=0x7f07001e;
+        public static final int orange_darker=0x7f07001f;
+        public static final int orange_light=0x7f070020;
+        public static final int orange_primary=0x7f070021;
+        public static final int sand_dark=0x7f070022;
+        public static final int sand_darker=0x7f070023;
+        public static final int sand_light=0x7f070024;
+        public static final int sand_primary=0x7f070025;
+        public static final int sea_dark=0x7f070026;
+        public static final int sea_darker=0x7f070027;
+        public static final int sea_light=0x7f070028;
+        public static final int sea_primary=0x7f070029;
+        public static final int sky_dark=0x7f07002a;
+        public static final int sky_darker=0x7f07002b;
+        public static final int sky_light=0x7f07002c;
+        public static final int sky_primary=0x7f07002d;
+        public static final int snow_dark=0x7f07002e;
+        public static final int snow_darker=0x7f07002f;
+        public static final int snow_light=0x7f070030;
+        public static final int snow_primary=0x7f070031;
     }
     public static final class dimen {
         public static final int activity_horizontal_margin=0x7f050000;
@@ -36,49 +305,62 @@ public final class R {
         public static final int list_selector=0x7f02000e;
     }
     public static final class id {
-        public static final int LinearLayout1=0x7f090015;
-        public static final int action_settings=0x7f09002a;
-        public static final int activity_edit=0x7f090000;
-        public static final int activity_filter=0x7f09000b;
-        public static final int btnDelete=0x7f09000a;
-        public static final int btnEdit=0x7f090009;
-        public static final int btnInsert=0x7f09001c;
-        public static final int btnReport=0x7f09001d;
-        public static final int btn_custom_down=0x7f090027;
-        public static final int btn_custom_up=0x7f090025;
-        public static final int btn_search_filter=0x7f090010;
-        public static final int button2=0x7f09001b;
-        public static final int calender_view=0x7f090020;
-        public static final int custom_btn_1=0x7f090021;
-        public static final int custom_btn_2=0x7f090022;
-        public static final int custom_btn_3=0x7f090023;
-        public static final int custom_layout=0x7f090024;
-        public static final int editText1=0x7f09001a;
-        public static final int editText2=0x7f090019;
-        public static final int edtCost=0x7f090005;
-        public static final int edtKm=0x7f090007;
-        public static final int label=0x7f090028;
-        public static final int listView1=0x7f090029;
-        public static final int new_listview=0x7f090014;
-        public static final int radio0=0x7f090017;
-        public static final int radio1=0x7f090018;
-        public static final int radioGroup1=0x7f090016;
-        public static final int radiobutton01=0x7f090002;
-        public static final int radiobutton02=0x7f090003;
-        public static final int rbAll=0x7f09000d;
-        public static final int rbGas1=0x7f09000e;
-        public static final int rbGas2=0x7f09000f;
-        public static final int rb_alltime=0x7f090013;
-        public static final int rb_month=0x7f090012;
-        public static final int rgEdit=0x7f090001;
-        public static final int rg_filter1=0x7f09000c;
-        public static final int rg_filter2=0x7f090011;
-        public static final int textView1=0x7f090004;
-        public static final int textView2=0x7f090006;
-        public static final int textView3=0x7f090008;
-        public static final int tv_custom=0x7f090026;
-        public static final int tv_total=0x7f09001e;
-        public static final int tv_total_km=0x7f09001f;
+        public static final int LinearLayout1=0x7f0a0022;
+        public static final int action_settings=0x7f0a0037;
+        public static final int activity_edit=0x7f0a000d;
+        public static final int activity_filter=0x7f0a0018;
+        public static final int box=0x7f0a0005;
+        public static final int btnDelete=0x7f0a0017;
+        public static final int btnEdit=0x7f0a0016;
+        public static final int btnInsert=0x7f0a0029;
+        public static final int btnReport=0x7f0a002a;
+        public static final int btn_custom_down=0x7f0a0034;
+        public static final int btn_custom_up=0x7f0a0032;
+        public static final int btn_search_filter=0x7f0a001d;
+        public static final int button2=0x7f0a0028;
+        public static final int calender_view=0x7f0a002d;
+        public static final int custom_btn_1=0x7f0a002e;
+        public static final int custom_btn_2=0x7f0a002f;
+        public static final int custom_btn_3=0x7f0a0030;
+        public static final int custom_layout=0x7f0a0031;
+        public static final int editText1=0x7f0a0027;
+        public static final int editText2=0x7f0a0026;
+        public static final int edtCost=0x7f0a0012;
+        public static final int edtKm=0x7f0a0014;
+        public static final int fl_box=0x7f0a0008;
+        public static final int fl_dark=0x7f0a0000;
+        public static final int fl_darker=0x7f0a000b;
+        public static final int fl_ease=0x7f0a0003;
+        public static final int fl_flat=0x7f0a0009;
+        public static final int fl_light=0x7f0a0001;
+        public static final int fl_main=0x7f0a000c;
+        public static final int fl_none=0x7f0a0002;
+        public static final int fl_ripple=0x7f0a0004;
+        public static final int fl_transparent=0x7f0a000a;
+        public static final int flat=0x7f0a0006;
+        public static final int label=0x7f0a0035;
+        public static final int listView1=0x7f0a0036;
+        public static final int new_listview=0x7f0a0021;
+        public static final int radio0=0x7f0a0024;
+        public static final int radio1=0x7f0a0025;
+        public static final int radioGroup1=0x7f0a0023;
+        public static final int radiobutton01=0x7f0a000f;
+        public static final int radiobutton02=0x7f0a0010;
+        public static final int rbAll=0x7f0a001a;
+        public static final int rbGas1=0x7f0a001b;
+        public static final int rbGas2=0x7f0a001c;
+        public static final int rb_alltime=0x7f0a0020;
+        public static final int rb_month=0x7f0a001f;
+        public static final int rgEdit=0x7f0a000e;
+        public static final int rg_filter1=0x7f0a0019;
+        public static final int rg_filter2=0x7f0a001e;
+        public static final int textView1=0x7f0a0011;
+        public static final int textView2=0x7f0a0013;
+        public static final int textView3=0x7f0a0015;
+        public static final int transparent=0x7f0a0007;
+        public static final int tv_custom=0x7f0a0033;
+        public static final int tv_total=0x7f0a002b;
+        public static final int tv_total_km=0x7f0a002c;
     }
     public static final class layout {
         public static final int activity_edit=0x7f030000;
@@ -90,18 +372,1034 @@ public final class R {
         public static final int report_activity=0x7f030006;
     }
     public static final class menu {
-        public static final int main=0x7f080000;
+        public static final int main=0x7f090000;
     }
     public static final class string {
-        public static final int action_settings=0x7f070000;
-        public static final int app_name=0x7f070001;
-        public static final int hello_world=0x7f070002;
+        public static final int action_settings=0x7f080000;
+        public static final int app_name=0x7f080001;
+        public static final int hello_world=0x7f080002;
     }
     public static final class style {
         /**  API 11 theme customizations can go here. 
  API 14 theme customizations can go here. 
          */
         public static final int AppBaseTheme=0x7f040000;
+        /**  All customizations that are NOT specific to a particular API-level can go here. 
+         */
         public static final int AppTheme=0x7f040001;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a fl_FlatAutoCompleteTextView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #fl_FlatAutoCompleteTextView_fl_autoFieldStyle ir.adicom.caryar:fl_autoFieldStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatAutoCompleteTextView_fl_borderWidth ir.adicom.caryar:fl_borderWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatAutoCompleteTextView_fl_cornerRadius ir.adicom.caryar:fl_cornerRadius}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatAutoCompleteTextView_fl_fontExtension ir.adicom.caryar:fl_fontExtension}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatAutoCompleteTextView_fl_fontFamily ir.adicom.caryar:fl_fontFamily}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatAutoCompleteTextView_fl_fontWeight ir.adicom.caryar:fl_fontWeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatAutoCompleteTextView_fl_textAppearance ir.adicom.caryar:fl_textAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatAutoCompleteTextView_fl_theme ir.adicom.caryar:fl_theme}</code></td><td></td></tr>
+           </table>
+           @see #fl_FlatAutoCompleteTextView_fl_autoFieldStyle
+           @see #fl_FlatAutoCompleteTextView_fl_borderWidth
+           @see #fl_FlatAutoCompleteTextView_fl_cornerRadius
+           @see #fl_FlatAutoCompleteTextView_fl_fontExtension
+           @see #fl_FlatAutoCompleteTextView_fl_fontFamily
+           @see #fl_FlatAutoCompleteTextView_fl_fontWeight
+           @see #fl_FlatAutoCompleteTextView_fl_textAppearance
+           @see #fl_FlatAutoCompleteTextView_fl_theme
+         */
+        public static final int[] fl_FlatAutoCompleteTextView = {
+            0x7f010000, 0x7f010001, 0x7f010003, 0x7f010004,
+            0x7f010005, 0x7f010007, 0x7f010008, 0x7f01000a
+        };
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_autoFieldStyle}
+          attribute's value can be found in the {@link #fl_FlatAutoCompleteTextView} array.
+
+
+          <p>May be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+<p>May be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>flat</code></td><td>0</td><td></td></tr>
+<tr><td><code>box</code></td><td>1</td><td></td></tr>
+<tr><td><code>transparent</code></td><td>2</td><td></td></tr>
+</table>
+          @attr name ir.adicom.caryar:fl_autoFieldStyle
+        */
+        public static final int fl_FlatAutoCompleteTextView_fl_autoFieldStyle = 7;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_borderWidth}
+          attribute's value can be found in the {@link #fl_FlatAutoCompleteTextView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ir.adicom.caryar:fl_borderWidth
+        */
+        public static final int fl_FlatAutoCompleteTextView_fl_borderWidth = 0;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_cornerRadius}
+          attribute's value can be found in the {@link #fl_FlatAutoCompleteTextView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ir.adicom.caryar:fl_cornerRadius
+        */
+        public static final int fl_FlatAutoCompleteTextView_fl_cornerRadius = 1;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_fontExtension}
+          attribute's value can be found in the {@link #fl_FlatAutoCompleteTextView} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ir.adicom.caryar:fl_fontExtension
+        */
+        public static final int fl_FlatAutoCompleteTextView_fl_fontExtension = 2;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_fontFamily}
+          attribute's value can be found in the {@link #fl_FlatAutoCompleteTextView} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ir.adicom.caryar:fl_fontFamily
+        */
+        public static final int fl_FlatAutoCompleteTextView_fl_fontFamily = 3;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_fontWeight}
+          attribute's value can be found in the {@link #fl_FlatAutoCompleteTextView} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ir.adicom.caryar:fl_fontWeight
+        */
+        public static final int fl_FlatAutoCompleteTextView_fl_fontWeight = 4;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_textAppearance}
+          attribute's value can be found in the {@link #fl_FlatAutoCompleteTextView} array.
+
+
+          <p>May be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+<p>May be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>fl_none</code></td><td>0</td><td></td></tr>
+<tr><td><code>fl_dark</code></td><td>1</td><td></td></tr>
+<tr><td><code>fl_light</code></td><td>2</td><td></td></tr>
+</table>
+          @attr name ir.adicom.caryar:fl_textAppearance
+        */
+        public static final int fl_FlatAutoCompleteTextView_fl_textAppearance = 5;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_theme}
+          attribute's value can be found in the {@link #fl_FlatAutoCompleteTextView} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name ir.adicom.caryar:fl_theme
+        */
+        public static final int fl_FlatAutoCompleteTextView_fl_theme = 6;
+        /** Attributes that can be used with a fl_FlatButton.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #fl_FlatButton_fl_blockButtonEffectHeight ir.adicom.caryar:fl_blockButtonEffectHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatButton_fl_cornerRadius ir.adicom.caryar:fl_cornerRadius}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatButton_fl_fontExtension ir.adicom.caryar:fl_fontExtension}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatButton_fl_fontFamily ir.adicom.caryar:fl_fontFamily}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatButton_fl_fontWeight ir.adicom.caryar:fl_fontWeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatButton_fl_textAppearance ir.adicom.caryar:fl_textAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatButton_fl_theme ir.adicom.caryar:fl_theme}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatButton_fl_touchEffect ir.adicom.caryar:fl_touchEffect}</code></td><td></td></tr>
+           </table>
+           @see #fl_FlatButton_fl_blockButtonEffectHeight
+           @see #fl_FlatButton_fl_cornerRadius
+           @see #fl_FlatButton_fl_fontExtension
+           @see #fl_FlatButton_fl_fontFamily
+           @see #fl_FlatButton_fl_fontWeight
+           @see #fl_FlatButton_fl_textAppearance
+           @see #fl_FlatButton_fl_theme
+           @see #fl_FlatButton_fl_touchEffect
+         */
+        public static final int[] fl_FlatButton = {
+            0x7f010001, 0x7f010003, 0x7f010004, 0x7f010005,
+            0x7f010007, 0x7f010008, 0x7f010009, 0x7f01000b
+        };
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_blockButtonEffectHeight}
+          attribute's value can be found in the {@link #fl_FlatButton} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ir.adicom.caryar:fl_blockButtonEffectHeight
+        */
+        public static final int fl_FlatButton_fl_blockButtonEffectHeight = 7;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_cornerRadius}
+          attribute's value can be found in the {@link #fl_FlatButton} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ir.adicom.caryar:fl_cornerRadius
+        */
+        public static final int fl_FlatButton_fl_cornerRadius = 0;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_fontExtension}
+          attribute's value can be found in the {@link #fl_FlatButton} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ir.adicom.caryar:fl_fontExtension
+        */
+        public static final int fl_FlatButton_fl_fontExtension = 1;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_fontFamily}
+          attribute's value can be found in the {@link #fl_FlatButton} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ir.adicom.caryar:fl_fontFamily
+        */
+        public static final int fl_FlatButton_fl_fontFamily = 2;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_fontWeight}
+          attribute's value can be found in the {@link #fl_FlatButton} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ir.adicom.caryar:fl_fontWeight
+        */
+        public static final int fl_FlatButton_fl_fontWeight = 3;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_textAppearance}
+          attribute's value can be found in the {@link #fl_FlatButton} array.
+
+
+          <p>May be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+<p>May be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>fl_none</code></td><td>0</td><td></td></tr>
+<tr><td><code>fl_dark</code></td><td>1</td><td></td></tr>
+<tr><td><code>fl_light</code></td><td>2</td><td></td></tr>
+</table>
+          @attr name ir.adicom.caryar:fl_textAppearance
+        */
+        public static final int fl_FlatButton_fl_textAppearance = 4;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_theme}
+          attribute's value can be found in the {@link #fl_FlatButton} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name ir.adicom.caryar:fl_theme
+        */
+        public static final int fl_FlatButton_fl_theme = 5;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_touchEffect}
+          attribute's value can be found in the {@link #fl_FlatButton} array.
+
+
+          <p>May be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+<p>May be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>fl_none</code></td><td>0</td><td></td></tr>
+<tr><td><code>fl_ease</code></td><td>1</td><td></td></tr>
+<tr><td><code>fl_ripple</code></td><td>2</td><td></td></tr>
+</table>
+          @attr name ir.adicom.caryar:fl_touchEffect
+        */
+        public static final int fl_FlatButton_fl_touchEffect = 6;
+        /** Attributes that can be used with a fl_FlatCheckBox.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #fl_FlatCheckBox_fl_cornerRadius ir.adicom.caryar:fl_cornerRadius}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatCheckBox_fl_dotMargin ir.adicom.caryar:fl_dotMargin}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatCheckBox_fl_fontExtension ir.adicom.caryar:fl_fontExtension}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatCheckBox_fl_fontFamily ir.adicom.caryar:fl_fontFamily}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatCheckBox_fl_fontWeight ir.adicom.caryar:fl_fontWeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatCheckBox_fl_size ir.adicom.caryar:fl_size}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatCheckBox_fl_theme ir.adicom.caryar:fl_theme}</code></td><td></td></tr>
+           </table>
+           @see #fl_FlatCheckBox_fl_cornerRadius
+           @see #fl_FlatCheckBox_fl_dotMargin
+           @see #fl_FlatCheckBox_fl_fontExtension
+           @see #fl_FlatCheckBox_fl_fontFamily
+           @see #fl_FlatCheckBox_fl_fontWeight
+           @see #fl_FlatCheckBox_fl_size
+           @see #fl_FlatCheckBox_fl_theme
+         */
+        public static final int[] fl_FlatCheckBox = {
+            0x7f010001, 0x7f010002, 0x7f010003, 0x7f010004,
+            0x7f010005, 0x7f010006, 0x7f010008
+        };
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_cornerRadius}
+          attribute's value can be found in the {@link #fl_FlatCheckBox} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ir.adicom.caryar:fl_cornerRadius
+        */
+        public static final int fl_FlatCheckBox_fl_cornerRadius = 0;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_dotMargin}
+          attribute's value can be found in the {@link #fl_FlatCheckBox} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ir.adicom.caryar:fl_dotMargin
+        */
+        public static final int fl_FlatCheckBox_fl_dotMargin = 1;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_fontExtension}
+          attribute's value can be found in the {@link #fl_FlatCheckBox} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ir.adicom.caryar:fl_fontExtension
+        */
+        public static final int fl_FlatCheckBox_fl_fontExtension = 2;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_fontFamily}
+          attribute's value can be found in the {@link #fl_FlatCheckBox} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ir.adicom.caryar:fl_fontFamily
+        */
+        public static final int fl_FlatCheckBox_fl_fontFamily = 3;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_fontWeight}
+          attribute's value can be found in the {@link #fl_FlatCheckBox} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ir.adicom.caryar:fl_fontWeight
+        */
+        public static final int fl_FlatCheckBox_fl_fontWeight = 4;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_size}
+          attribute's value can be found in the {@link #fl_FlatCheckBox} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ir.adicom.caryar:fl_size
+        */
+        public static final int fl_FlatCheckBox_fl_size = 5;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_theme}
+          attribute's value can be found in the {@link #fl_FlatCheckBox} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name ir.adicom.caryar:fl_theme
+        */
+        public static final int fl_FlatCheckBox_fl_theme = 6;
+        /** Attributes that can be used with a fl_FlatEditText.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #fl_FlatEditText_fl_borderWidth ir.adicom.caryar:fl_borderWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatEditText_fl_cornerRadius ir.adicom.caryar:fl_cornerRadius}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatEditText_fl_fieldStyle ir.adicom.caryar:fl_fieldStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatEditText_fl_fontExtension ir.adicom.caryar:fl_fontExtension}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatEditText_fl_fontFamily ir.adicom.caryar:fl_fontFamily}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatEditText_fl_fontWeight ir.adicom.caryar:fl_fontWeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatEditText_fl_textAppearance ir.adicom.caryar:fl_textAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatEditText_fl_theme ir.adicom.caryar:fl_theme}</code></td><td></td></tr>
+           </table>
+           @see #fl_FlatEditText_fl_borderWidth
+           @see #fl_FlatEditText_fl_cornerRadius
+           @see #fl_FlatEditText_fl_fieldStyle
+           @see #fl_FlatEditText_fl_fontExtension
+           @see #fl_FlatEditText_fl_fontFamily
+           @see #fl_FlatEditText_fl_fontWeight
+           @see #fl_FlatEditText_fl_textAppearance
+           @see #fl_FlatEditText_fl_theme
+         */
+        public static final int[] fl_FlatEditText = {
+            0x7f010000, 0x7f010001, 0x7f010003, 0x7f010004,
+            0x7f010005, 0x7f010007, 0x7f010008, 0x7f01000c
+        };
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_borderWidth}
+          attribute's value can be found in the {@link #fl_FlatEditText} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ir.adicom.caryar:fl_borderWidth
+        */
+        public static final int fl_FlatEditText_fl_borderWidth = 0;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_cornerRadius}
+          attribute's value can be found in the {@link #fl_FlatEditText} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ir.adicom.caryar:fl_cornerRadius
+        */
+        public static final int fl_FlatEditText_fl_cornerRadius = 1;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_fieldStyle}
+          attribute's value can be found in the {@link #fl_FlatEditText} array.
+
+
+          <p>May be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+<p>May be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>fl_flat</code></td><td>0</td><td></td></tr>
+<tr><td><code>fl_box</code></td><td>1</td><td></td></tr>
+<tr><td><code>fl_transparent</code></td><td>2</td><td></td></tr>
+</table>
+          @attr name ir.adicom.caryar:fl_fieldStyle
+        */
+        public static final int fl_FlatEditText_fl_fieldStyle = 7;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_fontExtension}
+          attribute's value can be found in the {@link #fl_FlatEditText} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ir.adicom.caryar:fl_fontExtension
+        */
+        public static final int fl_FlatEditText_fl_fontExtension = 2;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_fontFamily}
+          attribute's value can be found in the {@link #fl_FlatEditText} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ir.adicom.caryar:fl_fontFamily
+        */
+        public static final int fl_FlatEditText_fl_fontFamily = 3;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_fontWeight}
+          attribute's value can be found in the {@link #fl_FlatEditText} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ir.adicom.caryar:fl_fontWeight
+        */
+        public static final int fl_FlatEditText_fl_fontWeight = 4;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_textAppearance}
+          attribute's value can be found in the {@link #fl_FlatEditText} array.
+
+
+          <p>May be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+<p>May be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>fl_none</code></td><td>0</td><td></td></tr>
+<tr><td><code>fl_dark</code></td><td>1</td><td></td></tr>
+<tr><td><code>fl_light</code></td><td>2</td><td></td></tr>
+</table>
+          @attr name ir.adicom.caryar:fl_textAppearance
+        */
+        public static final int fl_FlatEditText_fl_textAppearance = 5;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_theme}
+          attribute's value can be found in the {@link #fl_FlatEditText} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name ir.adicom.caryar:fl_theme
+        */
+        public static final int fl_FlatEditText_fl_theme = 6;
+        /** Attributes that can be used with a fl_FlatRadioButton.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #fl_FlatRadioButton_fl_borderWidth ir.adicom.caryar:fl_borderWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatRadioButton_fl_dotMargin ir.adicom.caryar:fl_dotMargin}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatRadioButton_fl_fontExtension ir.adicom.caryar:fl_fontExtension}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatRadioButton_fl_fontFamily ir.adicom.caryar:fl_fontFamily}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatRadioButton_fl_fontWeight ir.adicom.caryar:fl_fontWeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatRadioButton_fl_size ir.adicom.caryar:fl_size}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatRadioButton_fl_theme ir.adicom.caryar:fl_theme}</code></td><td></td></tr>
+           </table>
+           @see #fl_FlatRadioButton_fl_borderWidth
+           @see #fl_FlatRadioButton_fl_dotMargin
+           @see #fl_FlatRadioButton_fl_fontExtension
+           @see #fl_FlatRadioButton_fl_fontFamily
+           @see #fl_FlatRadioButton_fl_fontWeight
+           @see #fl_FlatRadioButton_fl_size
+           @see #fl_FlatRadioButton_fl_theme
+         */
+        public static final int[] fl_FlatRadioButton = {
+            0x7f010000, 0x7f010002, 0x7f010003, 0x7f010004,
+            0x7f010005, 0x7f010006, 0x7f010008
+        };
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_borderWidth}
+          attribute's value can be found in the {@link #fl_FlatRadioButton} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ir.adicom.caryar:fl_borderWidth
+        */
+        public static final int fl_FlatRadioButton_fl_borderWidth = 0;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_dotMargin}
+          attribute's value can be found in the {@link #fl_FlatRadioButton} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ir.adicom.caryar:fl_dotMargin
+        */
+        public static final int fl_FlatRadioButton_fl_dotMargin = 1;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_fontExtension}
+          attribute's value can be found in the {@link #fl_FlatRadioButton} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ir.adicom.caryar:fl_fontExtension
+        */
+        public static final int fl_FlatRadioButton_fl_fontExtension = 2;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_fontFamily}
+          attribute's value can be found in the {@link #fl_FlatRadioButton} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ir.adicom.caryar:fl_fontFamily
+        */
+        public static final int fl_FlatRadioButton_fl_fontFamily = 3;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_fontWeight}
+          attribute's value can be found in the {@link #fl_FlatRadioButton} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ir.adicom.caryar:fl_fontWeight
+        */
+        public static final int fl_FlatRadioButton_fl_fontWeight = 4;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_size}
+          attribute's value can be found in the {@link #fl_FlatRadioButton} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ir.adicom.caryar:fl_size
+        */
+        public static final int fl_FlatRadioButton_fl_size = 5;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_theme}
+          attribute's value can be found in the {@link #fl_FlatRadioButton} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name ir.adicom.caryar:fl_theme
+        */
+        public static final int fl_FlatRadioButton_fl_theme = 6;
+        /** Attributes that can be used with a fl_FlatSeekBar.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #fl_FlatSeekBar_fl_size ir.adicom.caryar:fl_size}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatSeekBar_fl_theme ir.adicom.caryar:fl_theme}</code></td><td></td></tr>
+           </table>
+           @see #fl_FlatSeekBar_fl_size
+           @see #fl_FlatSeekBar_fl_theme
+         */
+        public static final int[] fl_FlatSeekBar = {
+            0x7f010006, 0x7f010008
+        };
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_size}
+          attribute's value can be found in the {@link #fl_FlatSeekBar} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ir.adicom.caryar:fl_size
+        */
+        public static final int fl_FlatSeekBar_fl_size = 0;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_theme}
+          attribute's value can be found in the {@link #fl_FlatSeekBar} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name ir.adicom.caryar:fl_theme
+        */
+        public static final int fl_FlatSeekBar_fl_theme = 1;
+        /** Attributes that can be used with a fl_FlatTextView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #fl_FlatTextView_fl_backgroundColor ir.adicom.caryar:fl_backgroundColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatTextView_fl_borderWidth ir.adicom.caryar:fl_borderWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatTextView_fl_cornerRadius ir.adicom.caryar:fl_cornerRadius}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatTextView_fl_customBackgroundColor ir.adicom.caryar:fl_customBackgroundColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatTextView_fl_fontExtension ir.adicom.caryar:fl_fontExtension}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatTextView_fl_fontFamily ir.adicom.caryar:fl_fontFamily}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatTextView_fl_fontWeight ir.adicom.caryar:fl_fontWeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatTextView_fl_textColor ir.adicom.caryar:fl_textColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatTextView_fl_theme ir.adicom.caryar:fl_theme}</code></td><td></td></tr>
+           </table>
+           @see #fl_FlatTextView_fl_backgroundColor
+           @see #fl_FlatTextView_fl_borderWidth
+           @see #fl_FlatTextView_fl_cornerRadius
+           @see #fl_FlatTextView_fl_customBackgroundColor
+           @see #fl_FlatTextView_fl_fontExtension
+           @see #fl_FlatTextView_fl_fontFamily
+           @see #fl_FlatTextView_fl_fontWeight
+           @see #fl_FlatTextView_fl_textColor
+           @see #fl_FlatTextView_fl_theme
+         */
+        public static final int[] fl_FlatTextView = {
+            0x7f010000, 0x7f010001, 0x7f010003, 0x7f010004,
+            0x7f010005, 0x7f010008, 0x7f01000d, 0x7f01000e,
+            0x7f01000f
+        };
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_backgroundColor}
+          attribute's value can be found in the {@link #fl_FlatTextView} array.
+
+
+          <p>May be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+<p>May be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>fl_darker</code></td><td>0</td><td></td></tr>
+<tr><td><code>fl_dark</code></td><td>1</td><td></td></tr>
+<tr><td><code>fl_main</code></td><td>2</td><td></td></tr>
+<tr><td><code>fl_light</code></td><td>3</td><td></td></tr>
+</table>
+          @attr name ir.adicom.caryar:fl_backgroundColor
+        */
+        public static final int fl_FlatTextView_fl_backgroundColor = 7;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_borderWidth}
+          attribute's value can be found in the {@link #fl_FlatTextView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ir.adicom.caryar:fl_borderWidth
+        */
+        public static final int fl_FlatTextView_fl_borderWidth = 0;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_cornerRadius}
+          attribute's value can be found in the {@link #fl_FlatTextView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ir.adicom.caryar:fl_cornerRadius
+        */
+        public static final int fl_FlatTextView_fl_cornerRadius = 1;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_customBackgroundColor}
+          attribute's value can be found in the {@link #fl_FlatTextView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ir.adicom.caryar:fl_customBackgroundColor
+        */
+        public static final int fl_FlatTextView_fl_customBackgroundColor = 8;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_fontExtension}
+          attribute's value can be found in the {@link #fl_FlatTextView} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ir.adicom.caryar:fl_fontExtension
+        */
+        public static final int fl_FlatTextView_fl_fontExtension = 2;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_fontFamily}
+          attribute's value can be found in the {@link #fl_FlatTextView} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ir.adicom.caryar:fl_fontFamily
+        */
+        public static final int fl_FlatTextView_fl_fontFamily = 3;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_fontWeight}
+          attribute's value can be found in the {@link #fl_FlatTextView} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ir.adicom.caryar:fl_fontWeight
+        */
+        public static final int fl_FlatTextView_fl_fontWeight = 4;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_textColor}
+          attribute's value can be found in the {@link #fl_FlatTextView} array.
+
+
+          <p>May be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+<p>May be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>fl_darker</code></td><td>0</td><td></td></tr>
+<tr><td><code>fl_dark</code></td><td>1</td><td></td></tr>
+<tr><td><code>fl_main</code></td><td>2</td><td></td></tr>
+<tr><td><code>fl_light</code></td><td>3</td><td></td></tr>
+</table>
+          @attr name ir.adicom.caryar:fl_textColor
+        */
+        public static final int fl_FlatTextView_fl_textColor = 6;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_theme}
+          attribute's value can be found in the {@link #fl_FlatTextView} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name ir.adicom.caryar:fl_theme
+        */
+        public static final int fl_FlatTextView_fl_theme = 5;
+        /** Attributes that can be used with a fl_FlatToggleButton.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #fl_FlatToggleButton_fl_cornerRadius ir.adicom.caryar:fl_cornerRadius}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatToggleButton_fl_space ir.adicom.caryar:fl_space}</code></td><td></td></tr>
+           <tr><td><code>{@link #fl_FlatToggleButton_fl_theme ir.adicom.caryar:fl_theme}</code></td><td></td></tr>
+           </table>
+           @see #fl_FlatToggleButton_fl_cornerRadius
+           @see #fl_FlatToggleButton_fl_space
+           @see #fl_FlatToggleButton_fl_theme
+         */
+        public static final int[] fl_FlatToggleButton = {
+            0x7f010001, 0x7f010008, 0x7f010010
+        };
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_cornerRadius}
+          attribute's value can be found in the {@link #fl_FlatToggleButton} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ir.adicom.caryar:fl_cornerRadius
+        */
+        public static final int fl_FlatToggleButton_fl_cornerRadius = 0;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_space}
+          attribute's value can be found in the {@link #fl_FlatToggleButton} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ir.adicom.caryar:fl_space
+        */
+        public static final int fl_FlatToggleButton_fl_space = 2;
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_theme}
+          attribute's value can be found in the {@link #fl_FlatToggleButton} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name ir.adicom.caryar:fl_theme
+        */
+        public static final int fl_FlatToggleButton_fl_theme = 1;
+    };
 }

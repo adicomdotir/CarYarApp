@@ -3,6 +3,15 @@
 
     <item
         is-multidex="false"
+        jar="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.github.eluleci/flatui/3.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="d1089efa4a24767294278997764bea2fda31ccca">
+        <dex dex="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/pre-dexed/debug/com.github.eluleci-flatui-3.0.0_c3d570a93e51a630d3a68a32a65e9e5f263c8240.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/adicom/AndroidStudioProjects/CarYar/app/ormlite-android-5.0.jar"
         jumboMode="false"
         optimize="true"
@@ -18,6 +27,15 @@
         revision="23.0.2"
         sha1="01f065373aeef355dd9e2fd9854efd5ed4d54f6d">
         <dex dex="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/pre-dexed/debug/ormlite-android-5.0_83f8cc73d818acbbcde3545b29c6b3ea1eccb10c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.github.eluleci/flatui/3.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="d1089efa4a24767294278997764bea2fda31ccca">
+        <dex dex="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/pre-dexed/debug/com.github.eluleci-flatui-3.0.0_c3d570a93e51a630d3a68a32a65e9e5f263c8240.jar" />
     </item>
 
 </items>

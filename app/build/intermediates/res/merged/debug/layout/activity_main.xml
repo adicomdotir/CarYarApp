@@ -9,36 +9,41 @@
 
    <LinearLayout
        android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:background="@color/main_color"
+       android:layout_height="48dp"
        android:gravity="left"
        android:paddingLeft="5dp"
        android:paddingRight="5dp" >
 
        <RadioGroup
            android:id="@+id/radioGroup1"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
+           android:layout_width="0dp"
+           android:layout_height="match_parent"
            android:layout_gravity="left"
            android:layout_weight="0.46"
-           android:orientation="horizontal" >
+           android:orientation="horizontal"
+           android:gravity="center_vertical">
 
-           <RadioButton
-               android:textColor="@color/main_color_stroke"
+           <com.cengalabs.flatui.views.FlatRadioButton
+               android:layout_marginLeft="10dp"
                android:id="@+id/radio0"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:checked="true"
                android:text="گاز"
-               android:textSize="18sp" />
+               android:textSize="16sp"
+               app:fl_size="24dp"
+               app:fl_dotMargin="3dp" />
 
-           <RadioButton
-               android:textColor="@color/main_color_stroke"
+           <com.cengalabs.flatui.views.FlatRadioButton
+               android:layout_marginLeft="10dp"
                android:id="@+id/radio1"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
+               android:checked="true"
                android:text="بنزین"
-               android:textSize="18sp" />
+               android:textSize="16sp"
+               app:fl_size="24dp"
+               app:fl_dotMargin="3dp" />
 
        </RadioGroup>
 
@@ -49,8 +54,7 @@
            android:layout_gravity="right"
            android:gravity="center"
            android:text="نوع سوخت"
-           android:textColor="#1C2236"
-           android:textSize="18sp" />
+           android:textSize="16sp" />
 
    </LinearLayout>
 
@@ -62,14 +66,14 @@
         android:paddingRight="5dp"
         android:paddingTop="5dp" >
 
-        <EditText
+        <com.cengalabs.flatui.views.FlatEditText
             android:id="@+id/editText2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.7"
-            android:background="@drawable/bg_edittext"
-            android:ems="10"
-            android:inputType="number" />
+            android:inputType="number"
+            app:fl_fieldStyle="fl_box"
+            android:gravity="center" />
 
         <TextView
             android:id="@+id/textView2"
@@ -91,14 +95,15 @@
         android:paddingRight="7dp"
         android:paddingTop="0dp" >
 
-        <EditText
+        <com.cengalabs.flatui.views.FlatEditText
             android:id="@+id/editText1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_weight="0.7"
-            android:background="@drawable/bg_edittext"
-            android:ems="10"
-            android:inputType="number" />
+            android:inputType="number"
+            android:ems="0"
+            app:fl_fieldStyle="fl_box"
+            android:gravity="center" />
 
         <TextView
             android:id="@+id/textView3"
@@ -127,26 +132,29 @@
         android:gravity="center"
         android:paddingBottom="3dp" >
 
-        <Button
-            android:textColor="@color/main_color_stroke"
+        <com.cengalabs.flatui.views.FlatButton
+            android:text="مدیریت"
+            android:textSize="18sp"
             android:id="@+id/button2"
             android:layout_width="96dp"
-            android:layout_height="48dp"
-            android:layout_gravity="center"
-            android:layout_margin="7dp"
-            android:background="@drawable/button_shape"
-            android:text="مدیریت"
-            android:textSize="20sp" />
+            android:layout_height="44dp"
+            fl_touchEffect="fl_ripple"
+            fl_blockButtonEffectHeight="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_margin="5dp" />
 
-        <Button
-            android:textColor="@color/main_color_stroke"
+        <com.cengalabs.flatui.views.FlatButton
+            android:text="ثبت"
+            android:textSize="18sp"
             android:id="@+id/btnInsert"
             android:layout_width="96dp"
-            android:layout_height="48dp"
-            android:layout_margin="7dp"
-            android:background="@drawable/button_shape"
-            android:text="ثبت"
-            android:textSize="20sp" />
+            android:layout_height="44dp"
+            fl_touchEffect="fl_ripple"
+            fl_blockButtonEffectHeight="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_margin="5dp" />
 
     </LinearLayout>
 
@@ -156,16 +164,15 @@
         android:gravity="center"
         android:paddingBottom="3dp" >
 
-        <Button
-            android:textColor="@color/main_color_stroke"
+        <com.cengalabs.flatui.views.FlatButton
+            android:text="گزارش"
+            android:textSize="18sp"
             android:id="@+id/btnReport"
             android:layout_width="96dp"
-            android:layout_height="48dp"
-            android:layout_gravity="center"
-            android:layout_margin="7dp"
-            android:background="@drawable/button_shape"
-            android:text="گزارش"
-            android:textSize="20sp" />
+            android:layout_height="44dp"
+            fl_touchEffect="fl_ripple"
+            fl_blockButtonEffectHeight="3dp"
+            android:layout_margin="5dp" />
 
     </LinearLayout>
 
@@ -186,5 +193,7 @@
         android:gravity="center"
         android:textStyle="normal|bold"
         android:id="@+id/tv_total_km" />
+
+
 
 </LinearLayout>

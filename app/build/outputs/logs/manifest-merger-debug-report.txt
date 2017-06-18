@@ -17,6 +17,7 @@ ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifes
 		ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:2:11-69
 uses-sdk
 ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.eluleci:flatui:3.0.0] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.github.eluleci/flatui/3.0.0/AndroidManifest.xml:5:5-7:41
 	android:targetSdkVersion
 		ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:9:9-38
 		INJECTED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml
@@ -39,6 +40,7 @@ ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifes
 		ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:13:22-77
 application
 ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:15:5-34:19
+MERGED from [com.github.eluleci:flatui:3.0.0] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.github.eluleci/flatui/3.0.0/AndroidManifest.xml:9:5-20
 	android:label
 		ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:18:9-41
 	android:allowBackup
