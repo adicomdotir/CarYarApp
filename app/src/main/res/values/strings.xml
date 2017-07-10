@@ -4,5 +4,7 @@
     <string name="app_name">CarYar</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="gus">گاز</string>
+    <string name="benzin">بنزین</string>
 
 </resources>

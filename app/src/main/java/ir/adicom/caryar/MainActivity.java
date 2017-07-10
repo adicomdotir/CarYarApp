@@ -44,7 +44,7 @@ public class MainActivity extends Activity {
         mMonth = calendar.get(Calendar.MONTH);
         mDay = calendar.get(Calendar.DAY_OF_MONTH);
 
-        custom_font = Typeface.createFromAsset(getAssets(), "BTraffic.ttf");
+        custom_font = Typeface.createFromAsset(getAssets(), "BYekan.ttf");
 
         HelperUI.setFont((ViewGroup) getWindow().getDecorView());
 
