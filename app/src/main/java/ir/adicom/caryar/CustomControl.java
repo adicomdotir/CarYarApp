@@ -1,6 +1,7 @@
 package ir.adicom.caryar;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -65,7 +66,8 @@ public class CustomControl extends LinearLayout {
         tvText = (TextView) view.findViewById(R.id.tv_custom);
         btnDown = (ImageView) view.findViewById(R.id.btn_custom_down);
         btnUp = (ImageView) view.findViewById(R.id.btn_custom_up);
-
+        btnUp.setColorFilter(getResources().getColor(R.color.deep_dark));
+        btnDown.setColorFilter(getResources().getColor(R.color.deep_darker));
 //        addView(view);
     }
 

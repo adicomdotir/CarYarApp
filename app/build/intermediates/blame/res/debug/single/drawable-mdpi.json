@@ -2,13 +2,5 @@
     {
         "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_launcher.png",
         "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/drawable-mdpi/ic_launcher.png"
-    },
-    {
-        "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_down.png",
-        "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/drawable-mdpi/ic_down.png"
-    },
-    {
-        "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/drawable-mdpi/ic_up.png",
-        "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/drawable-mdpi/ic_up.png"
     }
 ]

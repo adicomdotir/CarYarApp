@@ -8,10 +8,10 @@
 
 
     <ImageView
-        android:layout_width="36dp"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_up"
-        android:id="@+id/btn_custom_up" />
+        android:id="@+id/btn_custom_up"
+        android:layout_width="48dp" />
 
     <TextView
         android:text="0"
@@ -19,14 +19,14 @@
         android:textStyle="bold"
         android:textSize="17sp"
         android:gravity="center"
-        android:layout_width="36dp"
         android:layout_height="wrap_content"
-        android:id="@+id/tv_custom" />
+        android:id="@+id/tv_custom"
+        android:layout_width="48dp" />
 
     <ImageView
         android:src="@drawable/ic_down"
-        android:layout_width="36dp"
         android:id="@+id/btn_custom_down"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_width="48dp" />
 
 </LinearLayout>

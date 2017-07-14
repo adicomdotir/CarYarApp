@@ -20,6 +20,10 @@
         "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/layout/activity_edit.xml"
     },
     {
+        "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/layout/modal_layout.xml",
+        "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/layout/modal_layout.xml"
+    },
+    {
         "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
         "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/layout/activity_main.xml"
     },

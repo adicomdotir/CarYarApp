@@ -306,23 +306,26 @@ containing a value of this type.
     }
     public static final class id {
         public static final int LinearLayout1=0x7f0a0022;
-        public static final int action_settings=0x7f0a0037;
+        public static final int action_settings=0x7f0a003a;
         public static final int activity_edit=0x7f0a000d;
         public static final int activity_filter=0x7f0a0018;
         public static final int box=0x7f0a0005;
+        public static final int btnDate=0x7f0a0028;
         public static final int btnDelete=0x7f0a0017;
         public static final int btnEdit=0x7f0a0016;
-        public static final int btnInsert=0x7f0a0029;
-        public static final int btnReport=0x7f0a002a;
-        public static final int btn_custom_down=0x7f0a0034;
-        public static final int btn_custom_up=0x7f0a0032;
+        public static final int btnInsert=0x7f0a002a;
+        public static final int btnReport=0x7f0a002b;
+        public static final int btn_custom_down=0x7f0a0035;
+        public static final int btn_custom_up=0x7f0a0033;
         public static final int btn_search_filter=0x7f0a001d;
-        public static final int button2=0x7f0a0028;
-        public static final int calender_view=0x7f0a002d;
-        public static final int custom_btn_1=0x7f0a002e;
-        public static final int custom_btn_2=0x7f0a002f;
-        public static final int custom_btn_3=0x7f0a0030;
-        public static final int custom_layout=0x7f0a0031;
+        public static final int button=0x7f0a0038;
+        public static final int button2=0x7f0a0029;
+        public static final int calender_view=0x7f0a002e;
+        public static final int custom_btn_1=0x7f0a002f;
+        public static final int custom_btn_2=0x7f0a0030;
+        public static final int custom_btn_3=0x7f0a0031;
+        public static final int custom_dialog_layout_design_user_input=0x7f0a0037;
+        public static final int custom_layout=0x7f0a0032;
         public static final int editText1=0x7f0a0027;
         public static final int editText2=0x7f0a0026;
         public static final int edtCost=0x7f0a0012;
@@ -338,8 +341,8 @@ containing a value of this type.
         public static final int fl_ripple=0x7f0a0004;
         public static final int fl_transparent=0x7f0a000a;
         public static final int flat=0x7f0a0006;
-        public static final int label=0x7f0a0035;
-        public static final int listView1=0x7f0a0036;
+        public static final int label=0x7f0a0036;
+        public static final int listView1=0x7f0a0039;
         public static final int new_listview=0x7f0a0021;
         public static final int radio0=0x7f0a0024;
         public static final int radio1=0x7f0a0025;
@@ -358,9 +361,9 @@ containing a value of this type.
         public static final int textView2=0x7f0a0013;
         public static final int textView3=0x7f0a0015;
         public static final int transparent=0x7f0a0007;
-        public static final int tv_custom=0x7f0a0033;
-        public static final int tv_total=0x7f0a002b;
-        public static final int tv_total_km=0x7f0a002c;
+        public static final int tv_custom=0x7f0a0034;
+        public static final int tv_total=0x7f0a002c;
+        public static final int tv_total_km=0x7f0a002d;
     }
     public static final class layout {
         public static final int activity_edit=0x7f030000;
@@ -369,7 +372,8 @@ containing a value of this type.
         public static final int calander_layout=0x7f030003;
         public static final int custom_layout=0x7f030004;
         public static final int listview=0x7f030005;
-        public static final int report_activity=0x7f030006;
+        public static final int modal_layout=0x7f030006;
+        public static final int report_activity=0x7f030007;
     }
     public static final class menu {
         public static final int main=0x7f090000;
@@ -386,6 +390,8 @@ containing a value of this type.
  API 14 theme customizations can go here. 
          */
         public static final int AppBaseTheme=0x7f040000;
+        /**  All customizations that are NOT specific to a particular API-level can go here. 
+         */
         public static final int AppTheme=0x7f040001;
     }
     public static final class styleable {
