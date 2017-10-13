@@ -30,7 +30,8 @@
             android:name=".ReportActivity"
             android:label="@string/app_name" />
         <activity android:name=".EditAcitivity" />
-        <activity android:name=".FilterActivity"></activity>
+        <activity android:name=".FilterActivity" />
+        <activity android:name=".BaseActivity"></activity>
     </application>
 
 </manifest>
