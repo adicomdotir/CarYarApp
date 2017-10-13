@@ -24,11 +24,38 @@ public class EditAcitivity extends Activity {
     private EditText edtCost, edtKM;
     private CustomControl customBtn1, customBtn2, customBtn3;
     private RadioGroup radioGroup;
+    private int mYear;
+    private int mMonth;
+    private int mDay;
+    CalendarTool irDate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit);
+
+        Calendar calendar = Calendar.getInstance();
+        mYear = calendar.get(Calendar.YEAR);
+        mMonth = calendar.get(Calendar.MONTH);
+        mDay = calendar.get(Calendar.DAY_OF_MONTH);
+        irDate = new CalendarTool(mYear, mMonth + 1, mDay);
+
+        final Button btnDate = (Button) findViewById(R.id.btnDate);
+        btnDate.setText(irDate.getIranianDate());
+        final AppDialog appDialog = new AppDialog(this, irDate);
+        btnDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                appDialog.show();
+            }
+        });
+        appDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
+            @Override
+            public void onDismiss(DialogInterface dialogInterface) {
+                AppDialog appDialog1 = (AppDialog) dialogInterface;
+                btnDate.setText(appDialog1.date);
+            }
+        });
 
         MainActivity.custom_font = Typeface.createFromAsset(getAssets(), "BTraffic.ttf");
         HelperUI.setFont((ViewGroup) getWindow().getDecorView());

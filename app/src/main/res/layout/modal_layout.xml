@@ -12,10 +12,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <Button
-        android:text="Button"
+
+    <com.cengalabs.flatui.views.FlatButton
+        android:text="انتخاب"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        fl_touchEffect="fl_ripple"
+        fl_blockButtonEffectHeight="3dp"
         android:id="@+id/button" />
 
 
