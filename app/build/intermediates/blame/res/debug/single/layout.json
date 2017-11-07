@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/layout/activity_base2.xml",
+        "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/layout/activity_base2.xml"
+    },
+    {
         "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/layout/calander_layout.xml",
         "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/layout/calander_layout.xml"
     },

@@ -42,7 +42,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         FlatUI.initDefaultValues(this);
-        FlatUI.setDefaultTheme(FlatUI.DEEP);
+        FlatUI.setDefaultTheme(FlatUI.SEA);
         setContentView(R.layout.activity_main);
 
         Calendar calendar = Calendar.getInstance();
