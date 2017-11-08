@@ -57,8 +57,8 @@ public class EditAcitivity extends Activity {
             }
         });
 
-        MainActivity.custom_font = Typeface.createFromAsset(getAssets(), "BTraffic.ttf");
-        HelperUI.setFont((ViewGroup) getWindow().getDecorView());
+        Typeface custom_font = Typeface.createFromAsset(getAssets(), "Yekan.ttf");
+        HelperUI.setFont((ViewGroup) getWindow().getDecorView(), custom_font);
 
         edtCost = (EditText) findViewById(R.id.edtCost);
         edtKM = (EditText) findViewById(R.id.edtKm);

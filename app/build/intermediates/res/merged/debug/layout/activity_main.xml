@@ -11,10 +11,11 @@
 
     <LinearLayout
        android:layout_width="match_parent"
-       android:layout_height="48dp"
+       android:layout_height="0dp"
        android:gravity="left"
        android:paddingLeft="5dp"
-       android:paddingRight="5dp" >
+       android:paddingRight="5dp"
+        android:layout_weight="1">
 
        <RadioGroup
            android:id="@+id/radioGroup1"
@@ -65,45 +66,41 @@
     <LinearLayout
         android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <TableRow>
-                <com.cengalabs.flatui.views.FlatButton
-                    android:layout_span="2"
-                    android:textSize="18sp"
-                    android:id="@+id/btnDate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="44dp"
-                    app:fl_touchEffect="fl_ripple"
-                    app:fl_blockButtonEffectHeight="1dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_margin="5dp" />
+        <com.cengalabs.flatui.views.FlatButton
+            android:textSize="18sp"
+            android:id="@+id/btnDate"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            app:fl_touchEffect="fl_ripple"
+            app:fl_blockButtonEffectHeight="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_margin="5dp"
+            android:layout_weight="0.7" />
 
-                <com.cengalabs.flatui.views.FlatTextView
-                    android:textSize="18sp"
-                    android:text="تاریخ"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:textStyle="normal|bold"/>
-            </TableRow>
-        </TableLayout>
-
+        <com.cengalabs.flatui.views.FlatTextView
+            android:textSize="18sp"
+            android:text="تاریخ"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="normal|bold"
+            android:layout_weight="0.3" />
 
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:padding="7dp"
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
-        android:paddingTop="5dp" >
+        android:paddingTop="5dp"
+        android:layout_weight="1">
 
         <com.cengalabs.flatui.views.FlatEditText
             android:id="@+id/editText2"
@@ -112,7 +109,8 @@
             android:layout_weight="0.7"
             android:inputType="number"
             app:fl_fieldStyle="fl_box"
-            android:gravity="center" />
+            android:gravity="center"
+            android:hint="هزینه" />
 
         <com.cengalabs.flatui.views.FlatTextView
             android:id="@+id/textView2"
@@ -127,11 +125,12 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:paddingBottom="7dp"
         android:paddingLeft="7dp"
         android:paddingRight="7dp"
-        android:paddingTop="0dp" >
+        android:paddingTop="0dp"
+        android:layout_weight="1">
 
         <com.cengalabs.flatui.views.FlatEditText
             android:id="@+id/editText1"
@@ -141,7 +140,8 @@
             android:inputType="number"
             android:ems="0"
             app:fl_fieldStyle="fl_box"
-            android:gravity="center" />
+            android:gravity="center"
+            android:hint="کیلومتر" />
 
         <com.cengalabs.flatui.views.FlatTextView
             android:id="@+id/textView3"
@@ -156,9 +156,13 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:gravity="center"
-        android:paddingBottom="3dp" >
+        android:paddingBottom="7dp"
+        android:layout_weight="1"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:paddingTop="0dp">
 
         <com.cengalabs.flatui.views.FlatButton
             android:text="مدیریت"
@@ -168,9 +172,8 @@
             android:layout_height="44dp"
             app:fl_touchEffect="fl_ripple"
             app:fl_blockButtonEffectHeight="1dp"
-            android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_margin="5dp" />
+            android:layout_weight="0.5"/>
 
         <com.cengalabs.flatui.views.FlatButton
             android:text="ثبت"
@@ -180,17 +183,16 @@
             android:layout_height="44dp"
             fl_touchEffect="fl_ripple"
             fl_blockButtonEffectHeight="3dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_margin="5dp" />
+            android:layout_weight="0.5"/>
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:gravity="center"
-        android:paddingBottom="3dp" >
+        android:paddingBottom="3dp"
+        android:layout_weight="1">
 
         <com.cengalabs.flatui.views.FlatButton
             android:text="گزارش"
@@ -204,20 +206,109 @@
 
     </LinearLayout>
 
-    <com.cengalabs.flatui.views.FlatTextView
-        android:text="TextView"
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:id="@+id/tv_total"
-        android:textStyle="normal|bold" />
+        android:layout_height="0dp"
+        android:layout_weight="2">
 
-    <com.cengalabs.flatui.views.FlatTextView
-        android:text="TextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textStyle="normal|bold"
-        android:id="@+id/tv_total_km" />
+        <TableLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <com.cengalabs.flatui.views.FlatTextView
+                    android:text="TextView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:id="@+id/tv_total"
+                    android:textStyle="normal|bold"
+                    android:layout_weight="1"/>
+
+                <com.cengalabs.flatui.views.FlatTextView
+                    android:gravity="center"
+                    android:text="کل هزینه"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <com.cengalabs.flatui.views.FlatTextView
+                    android:id="@+id/tv_total_benz"
+                    android:text="TextView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textStyle="normal|bold"
+                    android:layout_weight="1" />
+
+                <com.cengalabs.flatui.views.FlatTextView
+                    android:gravity="center"
+                    android:text="هزینه بنزین"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <com.cengalabs.flatui.views.FlatTextView
+                    android:text="TextView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textStyle="normal|bold"
+                    android:id="@+id/tv_total_gus"
+                    android:layout_weight="1" />
+
+                <com.cengalabs.flatui.views.FlatTextView
+                    android:gravity="center"
+                    android:text="هزینه گاز"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <com.cengalabs.flatui.views.FlatTextView
+                    android:text="TextView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textStyle="normal|bold"
+                    android:id="@+id/tv_total_km"
+                    android:layout_weight="1" />
+
+                <com.cengalabs.flatui.views.FlatTextView
+                    android:gravity="center"
+                    android:text="مسافت طی شده"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+
+
 
 </LinearLayout>

@@ -29,7 +29,7 @@ import java.util.Locale;
 public class MainActivity extends Activity {
 
     private static final String TAG = "TAG";
-    public static Typeface custom_font;
+    public Typeface custom_font;
     public CarInfo c;
     RadioButton rbtn;
     CustomControl customBtn1, customBtn2, customBtn3;
@@ -67,9 +67,9 @@ public class MainActivity extends Activity {
                 btnDate.setText(appDialog1.date);
             }
         });
-        custom_font = Typeface.createFromAsset(getAssets(), "BYekan.ttf");
+        custom_font = Typeface.createFromAsset(getAssets(), "Yekan.ttf");
 
-        HelperUI.setFont((ViewGroup) getWindow().getDecorView());
+        HelperUI.setFont((ViewGroup) getWindow().getDecorView(), custom_font);
 
         final DatabaseHandler db = new DatabaseHandler(this);
         final RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radioGroup1);
@@ -112,7 +112,7 @@ public class MainActivity extends Activity {
                     );
                     edtKilo.setText("");
                     edtprice.setText("");
-                    Toast.makeText(getApplicationContext(), "Record Added", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "ثبت گردید.", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -140,12 +140,17 @@ public class MainActivity extends Activity {
         int benzinCost = cursor.getInt(0);
         cursor.moveToNext();
         int gusCost = cursor.getInt(0);
-        String temp = String.format(Locale.US, "کل هزینه %d تومان\nکل هزینه گاز %d تومان\nکل هزینه بنزین %d تومان",
-                benzinCost + gusCost, gusCost, benzinCost);
+        String temp = String.format(Locale.US, "%d تومان", benzinCost + gusCost);
         tvTotal.setText(temp);
+        TextView tvTotalBenz = (TextView) findViewById(R.id.tv_total_benz);
+        temp = String.format(Locale.US, "%d تومان", benzinCost);
+        tvTotalBenz.setText(temp);
+        TextView tvTotalGus = (TextView) findViewById(R.id.tv_total_gus);
+        temp = String.format(Locale.US, "%d تومان", gusCost);
+        tvTotalGus.setText(temp);
         TextView tvTotalKm = (TextView) findViewById(R.id.tv_total_km);
         cursor = db.get("SELECT min(km),max(km) FROM info");
-        tvTotalKm.setText(String.format(Locale.US, "کل مسافت طی شده %d کیلومتر", cursor.getInt(1) - cursor.getInt(0)));
+        tvTotalKm.setText(String.format(Locale.US, "%d کیلومتر", cursor.getInt(1) - cursor.getInt(0)));
     }
 }
 

@@ -307,27 +307,27 @@ containing a value of this type.
     }
     public static final class id {
         public static final int LinearLayout1=0x7f0a0026;
-        public static final int action_settings=0x7f0a003d;
-        public static final int activity_base2=0x7f0a000d;
+        public static final int action_settings=0x7f0a003f;
         public static final int activity_edit=0x7f0a0010;
         public static final int activity_filter=0x7f0a001c;
+        public static final int base_layout=0x7f0a000d;
         public static final int box=0x7f0a0005;
         public static final int btnDate=0x7f0a0019;
         public static final int btnDelete=0x7f0a001b;
         public static final int btnEdit=0x7f0a001a;
         public static final int btnInsert=0x7f0a002d;
         public static final int btnReport=0x7f0a002e;
-        public static final int btn_custom_down=0x7f0a0038;
-        public static final int btn_custom_up=0x7f0a0036;
+        public static final int btn_custom_down=0x7f0a003a;
+        public static final int btn_custom_up=0x7f0a0038;
         public static final int btn_search_filter=0x7f0a0021;
-        public static final int button=0x7f0a003b;
+        public static final int button=0x7f0a003d;
         public static final int button2=0x7f0a002c;
-        public static final int calender_view=0x7f0a0031;
-        public static final int custom_btn_1=0x7f0a0032;
-        public static final int custom_btn_2=0x7f0a0033;
-        public static final int custom_btn_3=0x7f0a0034;
-        public static final int custom_dialog_layout_design_user_input=0x7f0a003a;
-        public static final int custom_layout=0x7f0a0035;
+        public static final int calender_view=0x7f0a0033;
+        public static final int custom_btn_1=0x7f0a0034;
+        public static final int custom_btn_2=0x7f0a0035;
+        public static final int custom_btn_3=0x7f0a0036;
+        public static final int custom_dialog_layout_design_user_input=0x7f0a003c;
+        public static final int custom_layout=0x7f0a0037;
         public static final int editText1=0x7f0a002b;
         public static final int editText2=0x7f0a002a;
         public static final int edtCost=0x7f0a0015;
@@ -345,8 +345,8 @@ containing a value of this type.
         public static final int flat=0x7f0a0006;
         public static final int fuel_layer=0x7f0a000e;
         public static final int imageView2=0x7f0a000f;
-        public static final int label=0x7f0a0039;
-        public static final int listView1=0x7f0a003c;
+        public static final int label=0x7f0a003b;
+        public static final int listView1=0x7f0a003e;
         public static final int new_listview=0x7f0a0025;
         public static final int radio0=0x7f0a0028;
         public static final int radio1=0x7f0a0029;
@@ -365,9 +365,11 @@ containing a value of this type.
         public static final int textView2=0x7f0a0016;
         public static final int textView3=0x7f0a0018;
         public static final int transparent=0x7f0a0007;
-        public static final int tv_custom=0x7f0a0037;
+        public static final int tv_custom=0x7f0a0039;
         public static final int tv_total=0x7f0a002f;
-        public static final int tv_total_km=0x7f0a0030;
+        public static final int tv_total_benz=0x7f0a0030;
+        public static final int tv_total_gus=0x7f0a0031;
+        public static final int tv_total_km=0x7f0a0032;
     }
     public static final class layout {
         public static final int activity_base2=0x7f030000;

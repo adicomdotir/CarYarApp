@@ -2,8 +2,10 @@ package ir.adicom.caryar;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 public class BaseActivity extends Activity {
@@ -12,6 +14,9 @@ public class BaseActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_base2);
+
+        HelperUI.setFont((ViewGroup) findViewById(R.id.base_layout),
+                Typeface.createFromAsset(getAssets(), "Yekan.ttf"));
 
         LinearLayout linearLayout = (LinearLayout) findViewById(R.id.fuel_layer);
         linearLayout.setOnClickListener(new View.OnClickListener() {
