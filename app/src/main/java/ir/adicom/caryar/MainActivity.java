@@ -72,6 +72,7 @@ public class MainActivity extends Activity {
         HelperUI.setFont((ViewGroup) getWindow().getDecorView(), custom_font);
 
         final DatabaseHandler db = new DatabaseHandler(this);
+
         final RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radioGroup1);
         final EditText edtKilo = (EditText) findViewById(R.id.editText1);
         final EditText edtprice = (EditText) findViewById(R.id.editText2);
@@ -99,7 +100,7 @@ public class MainActivity extends Activity {
                         irDate.getGregorianDay(), 0, 0, 0);
                 long startTime = calendar.getTimeInMillis();
                 String strTime = mYear + "/" + String.format(Locale.US, "%02d", mMonth) + "/" + String.format(Locale.US, "%02d", mDay);
-                Log.e("MYTAG", "" + startTime);
+                // Log.e("MYTAG", "" + startTime);
                 if (edtKilo.getText().toString().trim().length() == 0
                         || edtprice.getText().toString().trim().length() == 0) {
                     Toast.makeText(getApplicationContext(), "هر دو فیلد را پر کنید", Toast.LENGTH_SHORT).show();
@@ -151,6 +152,13 @@ public class MainActivity extends Activity {
         TextView tvTotalKm = (TextView) findViewById(R.id.tv_total_km);
         cursor = db.get("SELECT min(km),max(km) FROM info");
         tvTotalKm.setText(String.format(Locale.US, "%d کیلومتر", cursor.getInt(1) - cursor.getInt(0)));
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        final DatabaseHandler db = new DatabaseHandler(this);
+        db.getAllInfo();
     }
 }
 
