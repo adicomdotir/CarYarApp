@@ -32,7 +32,7 @@ public class EngineOilAdapter extends ArrayAdapter<EngineOil> {
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View rowView;
-        rowView = inflater.inflate(R.layout.listview, parent, false);
+        rowView = inflater.inflate(R.layout.listview_oil, parent, false);
         TextView textView = (TextView) rowView.findViewById(R.id.label);
         // textView.setText(values[position]);
 

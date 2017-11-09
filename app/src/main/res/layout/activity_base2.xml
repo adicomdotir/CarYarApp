@@ -121,7 +121,44 @@
             android:layout_width="0px"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_marginLeft="10dp"></LinearLayout>
+            android:layout_marginLeft="10dp"
+            android:id="@+id/service_layer"
+            android:paddingBottom="40dp"
+            android:paddingTop="40dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:src="@drawable/car_repair"
+                    android:id="@+id/imageView2"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:scaleType="centerInside" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp"
+                    android:text="تعمیرات"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textStyle="bold"
+                    android:gravity="center" />
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout

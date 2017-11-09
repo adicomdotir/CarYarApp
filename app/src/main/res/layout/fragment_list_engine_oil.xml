@@ -5,6 +5,8 @@
     tools:context="ir.adicom.caryar.engineoil.ListEngineOilFragment">
 
     <ListView
+        android:divider="@color/candy_primary"
+        android:dividerHeight="1px"
         android:id="@+id/listview_oil"
         android:layout_width="match_parent"
         android:layout_height="match_parent"></ListView>
