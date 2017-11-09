@@ -16,8 +16,8 @@ import ir.adicom.caryar.R;
 public class AppDialog extends Dialog {
     private static final String TAG = "TAG";
     private View mainView;
-    String date;
-    AppDialog(final Context context, CalendarTool calendarTool) {
+    public String date;
+    public AppDialog(final Context context, CalendarTool calendarTool) {
         super(context);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         mainView = LayoutInflater.from(context).inflate(R.layout.modal_layout,null);

@@ -4,8 +4,20 @@
         "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/layout/activity_base2.xml"
     },
     {
+        "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/layout/fragment_list_engine_oil.xml",
+        "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/layout/fragment_list_engine_oil.xml"
+    },
+    {
+        "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/layout/fragment_edit_engine_oil.xml",
+        "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/layout/fragment_edit_engine_oil.xml"
+    },
+    {
         "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/layout/calander_layout.xml",
         "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/layout/calander_layout.xml"
+    },
+    {
+        "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/layout/fragment_add_engine_oil.xml",
+        "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/layout/fragment_add_engine_oil.xml"
     },
     {
         "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/layout/report_activity.xml",
