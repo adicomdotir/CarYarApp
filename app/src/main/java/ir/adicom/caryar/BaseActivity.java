@@ -25,5 +25,13 @@ public class BaseActivity extends Activity {
                 startActivity(new Intent(BaseActivity.this, MainActivity.class));
             }
         });
+
+        linearLayout = (LinearLayout) findViewById(R.id.oil_layer);
+        linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(BaseActivity.this, EngineOilActivity.class));
+            }
+        });
     }
 }

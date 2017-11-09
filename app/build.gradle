@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao' // apply plugin
+
 
 android {
     compileSdkVersion 15
@@ -18,7 +20,12 @@ android {
     }
 }
 
+greendao {
+    schemaVersion 2
+}
+
 dependencies {
-    compile files('ormlite-android-5.0.jar')
+    // add library
     compile 'com.github.eluleci:flatui:3.0.0'
+    compile 'org.greenrobot:greendao:3.2.2'
 }

@@ -32,6 +32,10 @@
         "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/layout/activity_main.xml"
     },
     {
+        "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/layout/activity_engine_oil.xml",
+        "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/layout/activity_engine_oil.xml"
+    },
+    {
         "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/layout/activity_filter.xml",
         "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/layout/activity_filter.xml"
     }

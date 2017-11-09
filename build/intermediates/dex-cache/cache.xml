@@ -12,21 +12,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/adicom/AndroidStudioProjects/CarYar/app/ormlite-android-5.0.jar"
+        jar="/home/adicom/.gradle/caches/modules-2/files-2.1/org.greenrobot/greendao/3.2.2/f8c7ebdc29310be23d076e5512bafe6bad3ce2f0/greendao-3.2.2.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.2"
-        sha1="01f065373aeef355dd9e2fd9854efd5ed4d54f6d">
-        <dex dex="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/pre-dexed/debug/ormlite-android-5.0_83f8cc73d818acbbcde3545b29c6b3ea1eccb10c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/adicom/AndroidStudioProjects/CarYar/app/ormlite-android-5.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="01f065373aeef355dd9e2fd9854efd5ed4d54f6d">
-        <dex dex="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/pre-dexed/debug/ormlite-android-5.0_83f8cc73d818acbbcde3545b29c6b3ea1eccb10c.jar" />
+        sha1="f8c7ebdc29310be23d076e5512bafe6bad3ce2f0">
+        <dex dex="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/pre-dexed/debug/greendao-3.2.2_819f163d42615eb33fa820d0fda5cfcf5f8f05c5.jar" />
     </item>
     <item
         is-multidex="false"
@@ -36,6 +27,15 @@
         revision="23.0.2"
         sha1="d1089efa4a24767294278997764bea2fda31ccca">
         <dex dex="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/pre-dexed/debug/com.github.eluleci-flatui-3.0.0_c3d570a93e51a630d3a68a32a65e9e5f263c8240.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/adicom/.gradle/caches/modules-2/files-2.1/org.greenrobot/greendao-api/3.2.2/e9bbf7a184b0b4914a10d8179c993cc9aa9b1b33/greendao-api-3.2.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="e9bbf7a184b0b4914a10d8179c993cc9aa9b1b33">
+        <dex dex="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/pre-dexed/debug/greendao-api-3.2.2_1572bbe582e3e0164035fd74a6daa8518538c1c5.jar" />
     </item>
 
 </items>
