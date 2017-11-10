@@ -6,6 +6,7 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -96,10 +97,6 @@ public class AddEngineOilFragment extends Fragment {
                 engineOil.setNowKilometer(Integer.parseInt(edtKm.getText().toString()));
                 engineOil.setPrice(Integer.parseInt(edtPrice.getText().toString()));
                 engineOilDao.insert(engineOil);
-                List<EngineOil> list = engineOilDao.loadAll();
-                for (EngineOil e : list) {
-                    Log.e("TAG", "" + e.getId());
-                }
             }
         });
 
@@ -109,6 +106,7 @@ public class AddEngineOilFragment extends Fragment {
             public void onClick(View view) {
                 getActivity().getSupportFragmentManager()
                         .beginTransaction()
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
                         .replace(R.id.fragmentParentViewGroup, new ListEngineOilFragment())
                         .commit();
             }

@@ -1,8 +1,12 @@
 package ir.adicom.caryar;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.LinkedList;
 import java.util.List;
@@ -14,7 +18,13 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Environment;
 import android.util.Log;
- 
+
+import ir.adicom.caryar.models.DaoMaster;
+import ir.adicom.caryar.models.DaoSession;
+import ir.adicom.caryar.models.EngineOilDao;
+import ir.adicom.caryar.models.Fuel;
+import ir.adicom.caryar.models.FuelDao;
+
 class DatabaseHandler extends SQLiteOpenHelper {
     private Context mContext;
     // Database Version
@@ -154,7 +164,7 @@ class DatabaseHandler extends SQLiteOpenHelper {
                 } catch (Exception e) {
                     Log.e("TAG", e.getMessage());
                 }
-                Log.e("TAG", "Add: Date=" + date);
+                // Log.e("TAG", "Add: Date=" + date);
                 ci = new CarInfo(column2, column3, column4, c5, date);
                 ci.setId(Integer.parseInt(cursor.getString(0)));
                 info.add(ci);
@@ -164,15 +174,15 @@ class DatabaseHandler extends SQLiteOpenHelper {
         db.close();
         // return
 
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < info.size(); i++) {
-            sb.append("\n");
-            sb.append(info.get(i).getType() + "##");
-            sb.append(info.get(i).getDate2() + "##");
-            sb.append(info.get(i).getKilometer() + "##");
-            sb.append(info.get(i).getPrice());
-        }
-        writeToFile(sb.toString(), mContext);
+//        StringBuilder sb = new StringBuilder();
+//        for (int i = 0; i < info.size(); i++) {
+//            sb.append("\n");
+//            sb.append(info.get(i).getType() + "##");
+//            sb.append(info.get(i).getDate2() + "##");
+//            sb.append(info.get(i).getKilometer() + "##");
+//            sb.append(info.get(i).getPrice());
+//        }
+//        writeToFile(sb.toString(), mContext);
         return info;
     }
 
@@ -272,6 +282,56 @@ class DatabaseHandler extends SQLiteOpenHelper {
             fOut.close();
         } catch (IOException e) {
             Log.e("Exception", "File write failed: " + e.toString());
+        }
+    }
+
+    public void readFromFile(Context context) {
+        // Database initalize
+        DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(context, "carhelper-db", null);
+        SQLiteDatabase dbDao = helper.getWritableDatabase();
+        DaoMaster daoMaster = new DaoMaster(dbDao);
+        DaoSession daoSession = daoMaster.newSession();
+        FuelDao fuelDao = daoSession.getFuelDao();
+
+        final File path = Environment.getExternalStoragePublicDirectory(
+                Environment.DIRECTORY_DCIM + "/YourFolder/"
+        );
+        final File file = new File(path, "config.txt");
+        InputStream instream = null;
+        try {
+            // open the file for reading
+            instream = new FileInputStream(file);
+            // if file the available for reading
+            if (instream != null) {
+                // prepare the file for reading
+                InputStreamReader inputreader = new InputStreamReader(instream);
+                BufferedReader buffreader = new BufferedReader(inputreader);
+                String line;
+                // read every line of the file into the line-variable, on line at the time
+                do {
+                    line = buffreader.readLine();
+                    if (line.length() > 0) {
+                        String[] temp = line.split("##");
+                        Fuel fuel = new Fuel();
+                        fuel.setType(temp[0]);
+                        fuel.setDate(temp[1]);
+                        fuel.setKilometer(Integer.parseInt(temp[2]));
+                        fuel.setPrice(Integer.parseInt(temp[3]));
+                        fuelDao.insert(fuel);
+                        Log.e("TAG", "size: " + fuelDao.count() + "");
+                    }
+                } while (line != null);
+            }
+        } catch (Exception ex) {
+            Log.e("TAG", ex.getMessage());
+            // print stack trace.
+        } finally {
+            // close the file.
+            try {
+                instream.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 }

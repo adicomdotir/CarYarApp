@@ -67,6 +67,7 @@ public class MainActivity extends Activity {
         HelperUI.setFont((ViewGroup) getWindow().getDecorView(), custom_font);
 
         final DatabaseHandler db = new DatabaseHandler(this);
+        // db.readFromFile(getApplicationContext());
 
         final RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radioGroup1);
         final EditText edtKilo = (EditText) findViewById(R.id.editText1);

@@ -5,6 +5,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -63,6 +64,7 @@ public class ListEngineOilFragment extends Fragment {
                 EditEngineOilFragment myObj = new EditEngineOilFragment();
                 myObj.setArguments(bundle);
                 getActivity().getSupportFragmentManager().beginTransaction()
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
                         .replace(R.id.fragmentParentViewGroup, myObj)
                         .commit();
             }

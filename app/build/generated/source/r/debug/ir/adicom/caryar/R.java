@@ -298,15 +298,16 @@ containing a value of this type.
         public static final int button_shape_normal=0x7f020007;
         public static final int button_shape_pressed=0x7f020008;
         public static final int car_repair=0x7f020009;
-        public static final int fuel=0x7f02000a;
-        public static final int gas_station=0x7f02000b;
-        public static final int gradient_bg=0x7f02000c;
-        public static final int gradient_bg_hover=0x7f02000d;
-        public static final int ic_down=0x7f02000e;
-        public static final int ic_launcher=0x7f02000f;
-        public static final int ic_up=0x7f020010;
-        public static final int list_selector=0x7f020011;
-        public static final int oil=0x7f020012;
+        public static final int change_car_oil=0x7f02000a;
+        public static final int fuel=0x7f02000b;
+        public static final int gas_station=0x7f02000c;
+        public static final int gradient_bg=0x7f02000d;
+        public static final int gradient_bg_hover=0x7f02000e;
+        public static final int ic_down=0x7f02000f;
+        public static final int ic_launcher=0x7f020010;
+        public static final int ic_up=0x7f020011;
+        public static final int list_selector=0x7f020012;
+        public static final int oil=0x7f020013;
     }
     public static final class id {
         public static final int LinearLayout1=0x7f0a0028;

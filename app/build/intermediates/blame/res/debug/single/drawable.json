@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/drawable/change_car_oil.png",
+        "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/drawable/change_car_oil.png"
+    },
+    {
         "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/drawable/gradient_bg_hover.xml",
         "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/drawable/gradient_bg_hover.xml"
     },
@@ -14,6 +18,10 @@
     {
         "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/drawable/oil.png",
         "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/drawable/oil.png"
+    },
+    {
+        "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/drawable/car_repair.png",
+        "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/drawable/car_repair.png"
     },
     {
         "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/drawable/bg_edittext_normal.xml",
