@@ -7,6 +7,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
@@ -19,6 +20,7 @@ import android.widget.Toast;
 
 import com.cengalabs.flatui.FlatUI;
 
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Locale;
 
@@ -148,7 +150,9 @@ public class MainActivity extends Activity {
             }
         });
         TextView tvTotal = (TextView) findViewById(R.id.tv_total);
-        Cursor cursor = db.get("SELECT sum(price) FROM info GROUP BY type");
+        Cursor cursor = daoSession.getDatabase().rawQuery("SELECT sum(price) FROM FUEL GROUP BY type", null);
+        //Cursor cursor = db.get("SELECT sum(price) FROM info GROUP BY type");
+        cursor.moveToFirst();
         int benzinCost = cursor.getInt(0);
         cursor.moveToNext();
         int gusCost = cursor.getInt(0);
@@ -161,7 +165,9 @@ public class MainActivity extends Activity {
         temp = String.format(Locale.US, "%d تومان", gusCost);
         tvTotalGus.setText(temp);
         TextView tvTotalKm = (TextView) findViewById(R.id.tv_total_km);
-        cursor = db.get("SELECT min(km),max(km) FROM info");
+        // cursor = db.get("SELECT min(km),max(km) FROM info");
+        cursor = daoSession.getDatabase().rawQuery("SELECT min(KILOMETER),max(KILOMETER) FROM FUEL", null);
+        cursor.moveToFirst();
         tvTotalKm.setText(String.format(Locale.US, "%d کیلومتر", cursor.getInt(1) - cursor.getInt(0)));
     }
 
