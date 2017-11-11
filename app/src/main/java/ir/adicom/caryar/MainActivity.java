@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
@@ -20,6 +21,10 @@ import com.cengalabs.flatui.FlatUI;
 
 import java.util.Calendar;
 import java.util.Locale;
+
+import ir.adicom.caryar.models.DaoMaster;
+import ir.adicom.caryar.models.DaoSession;
+import ir.adicom.caryar.models.Fuel;
 
 public class MainActivity extends Activity {
 
@@ -68,6 +73,10 @@ public class MainActivity extends Activity {
 
         final DatabaseHandler db = new DatabaseHandler(this);
         // db.readFromFile(getApplicationContext());
+        DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(getApplicationContext(), "carhelper-db", null);
+        SQLiteDatabase dbDao = helper.getWritableDatabase();
+        DaoMaster daoMaster = new DaoMaster(dbDao);
+        final DaoSession daoSession = daoMaster.newSession();
 
         final RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radioGroup1);
         final EditText edtKilo = (EditText) findViewById(R.id.editText1);
@@ -101,12 +110,18 @@ public class MainActivity extends Activity {
                         || edtprice.getText().toString().trim().length() == 0) {
                     Toast.makeText(getApplicationContext(), "هر دو فیلد را پر کنید", Toast.LENGTH_SHORT).show();
                 } else {
-                    db.addInfo(
-                            new CarInfo(rbtn.getText().toString(),
-                                    Integer.valueOf(edtprice.getText().toString()),
-                                    Integer.valueOf(edtKilo.getText().toString()),
-                                    startTime / 1000L, strTime)
-                    );
+                    Fuel fuel = new Fuel();
+                    fuel.setDate(btnDate.getText().toString());
+                    fuel.setKilometer(Integer.valueOf(edtKilo.getText().toString()));
+                    fuel.setPrice(Integer.valueOf(edtprice.getText().toString()));
+                    fuel.setType(rbtn.getText().toString());
+                    daoSession.getFuelDao().insert(fuel);
+//                    db.addInfo(
+//                            new CarInfo(rbtn.getText().toString(),
+//                                    Integer.valueOf(edtprice.getText().toString()),
+//                                    Integer.valueOf(edtKilo.getText().toString()),
+//                                    startTime / 1000L, strTime)
+//                    );
                     edtKilo.setText("");
                     edtprice.setText("");
                     Toast.makeText(getApplicationContext(), "ثبت گردید.", Toast.LENGTH_SHORT).show();
