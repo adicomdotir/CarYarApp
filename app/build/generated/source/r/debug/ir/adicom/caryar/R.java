@@ -311,7 +311,7 @@ containing a value of this type.
     }
     public static final class id {
         public static final int LinearLayout1=0x7f0a0028;
-        public static final int action_settings=0x7f0a0047;
+        public static final int action_settings=0x7f0a0049;
         public static final int activity_edit=0x7f0a0012;
         public static final int base_layout=0x7f0a000d;
         public static final int box=0x7f0a0005;
@@ -322,17 +322,17 @@ containing a value of this type.
         public static final int btnReport=0x7f0a0030;
         public static final int btn_custom_down=0x7f0a003c;
         public static final int btn_custom_up=0x7f0a003a;
-        public static final int btn_delete=0x7f0a0040;
-        public static final int btn_edit=0x7f0a0041;
+        public static final int btn_delete=0x7f0a0042;
+        public static final int btn_edit=0x7f0a0043;
         public static final int btn_insert=0x7f0a002f;
         public static final int btn_search_filter=0x7f0a0023;
-        public static final int button=0x7f0a0045;
+        public static final int button=0x7f0a0047;
         public static final int button2=0x7f0a002e;
         public static final int calender_view=0x7f0a0035;
         public static final int custom_btn_1=0x7f0a0036;
         public static final int custom_btn_2=0x7f0a0037;
         public static final int custom_btn_3=0x7f0a0038;
-        public static final int custom_dialog_layout_design_user_input=0x7f0a0044;
+        public static final int custom_dialog_layout_design_user_input=0x7f0a0046;
         public static final int custom_layout=0x7f0a0039;
         public static final int editText1=0x7f0a002d;
         public static final int editText2=0x7f0a002c;
@@ -340,6 +340,8 @@ containing a value of this type.
         public static final int edtKm=0x7f0a0019;
         public static final int edtKmMax=0x7f0a003e;
         public static final int edtTitle=0x7f0a003d;
+        public static final int edt_price_expert=0x7f0a0040;
+        public static final int edt_price_part=0x7f0a0041;
         public static final int fl_box=0x7f0a0008;
         public static final int fl_dark=0x7f0a0000;
         public static final int fl_darker=0x7f0a000b;
@@ -354,9 +356,9 @@ containing a value of this type.
         public static final int fragmentParentViewGroup=0x7f0a001e;
         public static final int fuel_layer=0x7f0a000e;
         public static final int imageView2=0x7f0a000f;
-        public static final int label=0x7f0a0043;
-        public static final int listView1=0x7f0a0046;
-        public static final int listview_oil=0x7f0a0042;
+        public static final int label=0x7f0a0045;
+        public static final int listView1=0x7f0a0048;
+        public static final int listview_oil=0x7f0a0044;
         public static final int new_listview=0x7f0a0027;
         public static final int oil_layer=0x7f0a0010;
         public static final int radio0=0x7f0a002a;
@@ -389,15 +391,17 @@ containing a value of this type.
         public static final int activity_engine_oil=0x7f030002;
         public static final int activity_filter=0x7f030003;
         public static final int activity_main=0x7f030004;
-        public static final int calander_layout=0x7f030005;
-        public static final int custom_layout=0x7f030006;
-        public static final int fragment_add_engine_oil=0x7f030007;
-        public static final int fragment_edit_engine_oil=0x7f030008;
-        public static final int fragment_list_engine_oil=0x7f030009;
-        public static final int listview=0x7f03000a;
-        public static final int listview_oil=0x7f03000b;
-        public static final int modal_layout=0x7f03000c;
-        public static final int report_activity=0x7f03000d;
+        public static final int activity_service=0x7f030005;
+        public static final int calander_layout=0x7f030006;
+        public static final int custom_layout=0x7f030007;
+        public static final int fragment_add_engine_oil=0x7f030008;
+        public static final int fragment_add_service=0x7f030009;
+        public static final int fragment_edit_engine_oil=0x7f03000a;
+        public static final int fragment_list_engine_oil=0x7f03000b;
+        public static final int listview=0x7f03000c;
+        public static final int listview_oil=0x7f03000d;
+        public static final int modal_layout=0x7f03000e;
+        public static final int report_activity=0x7f03000f;
     }
     public static final class menu {
         public static final int main=0x7f090000;

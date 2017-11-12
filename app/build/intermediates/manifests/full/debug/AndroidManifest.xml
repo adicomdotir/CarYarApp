@@ -37,6 +37,7 @@
             </intent-filter>
         </activity>
         <activity android:name="ir.adicom.caryar.EngineOilActivity" />
+        <activity android:name="ir.adicom.caryar.ServiceActivity" />
     </application>
 
 </manifest>
