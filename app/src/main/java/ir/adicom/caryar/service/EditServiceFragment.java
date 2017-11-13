@@ -92,8 +92,8 @@ public class EditServiceFragment extends Fragment {
         edtPricePart = (EditText) view.findViewById(R.id.edt_price_part);
         edtTitle = (EditText) view.findViewById(R.id.edtTitle);
 
-        edtPriceExpert.setText(service.getExpertPrice());
-        edtPricePart.setText(service.getPartPrice());
+        edtPriceExpert.setText("" + service.getExpertPrice());
+        edtPricePart.setText("" + service.getPartPrice());
         edtTitle.setText(service.getTitle());
         btnDate.setText(service.getDate());
 
