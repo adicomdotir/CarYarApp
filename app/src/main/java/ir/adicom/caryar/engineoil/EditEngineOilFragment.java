@@ -12,7 +12,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import java.util.Calendar;
 
@@ -52,7 +51,7 @@ public class EditEngineOilFragment extends Fragment {
 
         // Set font All activity element
         HelperUI.setFont((ViewGroup) view.findViewById(R.id.base_layout),
-                Typeface.createFromAsset(getActivity().getAssets(), "Yekan.ttf"));
+                Typeface.createFromAsset(getActivity().getAssets(), "Vazir_Light.ttf"));
 
         calendar = Calendar.getInstance();
         int mYear = calendar.get(Calendar.YEAR);

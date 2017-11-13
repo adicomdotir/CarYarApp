@@ -16,7 +16,7 @@ public class BaseActivity extends Activity {
         setContentView(R.layout.activity_base2);
 
         HelperUI.setFont((ViewGroup) findViewById(R.id.base_layout),
-                Typeface.createFromAsset(getAssets(), "Yekan.ttf"));
+                Typeface.createFromAsset(getAssets(), "Vazir.ttf"));
 
         LinearLayout linearLayout = (LinearLayout) findViewById(R.id.fuel_layer);
         linearLayout.setOnClickListener(new View.OnClickListener() {

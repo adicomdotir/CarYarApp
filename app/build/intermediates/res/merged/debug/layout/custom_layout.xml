@@ -13,9 +13,8 @@
         android:id="@+id/btn_custom_up"
         android:layout_width="48dp" />
 
-    <TextView
+    <com.cengalabs.flatui.views.FlatTextView
         android:text="0"
-        android:textColor="#1C2236"
         android:textStyle="bold"
         android:textSize="17sp"
         android:gravity="center"

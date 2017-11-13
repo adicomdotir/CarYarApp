@@ -24,8 +24,20 @@
         "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/layout/report_activity.xml"
     },
     {
+        "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/layout/fragment_list_service.xml",
+        "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/layout/fragment_list_service.xml"
+    },
+    {
         "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/layout/listview.xml",
         "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/layout/listview.xml"
+    },
+    {
+        "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/layout/fragment_edit_service.xml",
+        "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/layout/fragment_edit_service.xml"
+    },
+    {
+        "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/layout/listview_service.xml",
+        "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/layout/listview_service.xml"
     },
     {
         "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/layout/custom_layout.xml",

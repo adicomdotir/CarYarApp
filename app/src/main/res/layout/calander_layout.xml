@@ -4,15 +4,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    >
+    android:gravity="center">
 
     <ir.adicom.caryar.CustomControl
         android:id="@+id/custom_btn_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-    <TextView
-        android:textColor="@color/main_color_stroke"
+    <com.cengalabs.flatui.views.FlatTextView
         android:textStyle="bold"
         android:textSize="28sp"
         android:text="/"
@@ -22,8 +20,7 @@
         android:id="@+id/custom_btn_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-    <TextView
-        android:textColor="@color/main_color_stroke"
+    <com.cengalabs.flatui.views.FlatTextView
         android:textStyle="bold"
         android:textSize="28sp"
         android:text="/"

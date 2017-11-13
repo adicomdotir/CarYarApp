@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +14,6 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import java.util.Calendar;
-import java.util.List;
 
 import ir.adicom.caryar.AppDialog;
 import ir.adicom.caryar.CalendarTool;
@@ -50,7 +48,7 @@ public class AddEngineOilFragment extends Fragment {
 
         // Set font All activity element
         HelperUI.setFont((ViewGroup) view.findViewById(R.id.base_layout),
-                Typeface.createFromAsset(getActivity().getAssets(), "Yekan.ttf"));
+                Typeface.createFromAsset(getActivity().getAssets(), "Vazir_Light.ttf"));
 
         // Database initalize
         DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(getContext(), "carhelper-db", null);

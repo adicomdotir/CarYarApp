@@ -31,7 +31,7 @@ class MyAdapter extends ArrayAdapter<String> {
         TextView textView = (TextView) rowView.findViewById(R.id.label);
         textView.setText(values[position]);
 
-        Typeface custom_font = Typeface.createFromAsset(context.getAssets(), "Yekan.ttf");
+        Typeface custom_font = Typeface.createFromAsset(context.getAssets(), "Vazir_Light.ttf");
         textView.setTypeface(custom_font);
 
         return rowView;

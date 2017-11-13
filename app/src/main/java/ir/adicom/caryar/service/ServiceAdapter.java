@@ -1,4 +1,4 @@
-package ir.adicom.caryar.engineoil;
+package ir.adicom.caryar.service;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -12,19 +12,20 @@ import java.util.List;
 
 import ir.adicom.caryar.R;
 import ir.adicom.caryar.models.EngineOil;
+import ir.adicom.caryar.models.Service;
 
 /**
  * Created by adicom on 11/9/17.
  */
 
-public class EngineOilAdapter extends ArrayAdapter<EngineOil> {
+public class ServiceAdapter extends ArrayAdapter<Service> {
     private final Context context;
-    private final List<EngineOil> engineOils;
+    private final List<Service> services;
 
-    public EngineOilAdapter(Context context, List<EngineOil> engineOils) {
-        super(context, -1, engineOils);
+    public ServiceAdapter(Context context, List<Service> services) {
+        super(context, -1, services);
         this.context = context;
-        this.engineOils = engineOils;
+        this.services = services;
     }
 
     @Override
@@ -32,16 +33,15 @@ public class EngineOilAdapter extends ArrayAdapter<EngineOil> {
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View rowView;
-        rowView = inflater.inflate(R.layout.listview_oil, parent, false);
+        rowView = inflater.inflate(R.layout.listview_service, parent, false);
         TextView textView = (TextView) rowView.findViewById(R.id.label);
         // textView.setText(values[position]);
 
         StringBuilder sb = new StringBuilder();
-        sb.append("نام روغن: " + engineOils.get(position).getName() + "\n");
-        sb.append("تاریخ: " + engineOils.get(position).getDate() + "\n");
-        sb.append("حداکثر کارکرد: " + engineOils.get(position).getMaxKilometer() + " کیلومتر\n");
-        sb.append("کیلومتر: " + engineOils.get(position).getNowKilometer() + " کیلومتر\n");
-        sb.append("هزینه: " + engineOils.get(position).getPrice() + " تومان");
+        sb.append("عنوان: " + services.get(position).getTitle() + "\n");
+        sb.append("تاریخ: " + services.get(position).getDate() + "\n");
+        sb.append("هزینه دستمزد: " + services.get(position).getExpertPrice() + " تومان" + "\n");
+        sb.append("هزینه قطعه: " + services.get(position).getPartPrice() + " تومان");
 
         textView.setText(sb);
         Typeface custom_font = Typeface.createFromAsset(context.getAssets(), "Vazir_Light.ttf");

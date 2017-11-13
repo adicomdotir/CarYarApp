@@ -7,7 +7,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
@@ -20,7 +19,6 @@ import android.widget.Toast;
 
 import com.cengalabs.flatui.FlatUI;
 
-import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Locale;
 
@@ -69,7 +67,7 @@ public class MainActivity extends Activity {
                 btnDate.setText(appDialog1.date);
             }
         });
-        custom_font = Typeface.createFromAsset(getAssets(), "Yekan.ttf");
+        custom_font = Typeface.createFromAsset(getAssets(), "Vazir_Light.ttf");
 
         HelperUI.setFont((ViewGroup) getWindow().getDecorView(), custom_font);
 

@@ -16,13 +16,11 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import java.util.Calendar;
-import java.util.List;
 import java.util.Locale;
 
 import ir.adicom.caryar.models.DaoMaster;
 import ir.adicom.caryar.models.DaoSession;
 import ir.adicom.caryar.models.Fuel;
-import ir.adicom.caryar.models.FuelDao;
 
 public class EditAcitivity extends Activity {
 
@@ -62,7 +60,7 @@ public class EditAcitivity extends Activity {
             }
         });
 
-        Typeface custom_font = Typeface.createFromAsset(getAssets(), "Yekan.ttf");
+        Typeface custom_font = Typeface.createFromAsset(getAssets(), "Vazir_Light.ttf");
         HelperUI.setFont((ViewGroup) getWindow().getDecorView(), custom_font);
 
         edtCost = (EditText) findViewById(R.id.edtCost);

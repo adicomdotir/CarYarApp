@@ -2,6 +2,7 @@ package ir.adicom.caryar;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.graphics.Typeface;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,6 +20,7 @@ public class AppDialog extends Dialog {
     public String date;
     public AppDialog(final Context context, CalendarTool calendarTool) {
         super(context);
+
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         mainView = LayoutInflater.from(context).inflate(R.layout.modal_layout,null);
         addContentView(mainView, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
@@ -40,6 +42,7 @@ public class AppDialog extends Dialog {
             customBtn3.setUp();
 
             Button button = (Button) mainView.findViewById(R.id.button);
+            button.setTypeface(Typeface.createFromAsset(context.getAssets(), "Vazir_Light.ttf"));
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

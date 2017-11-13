@@ -7,7 +7,6 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,20 +21,22 @@ import ir.adicom.caryar.HelperUI;
 import ir.adicom.caryar.R;
 import ir.adicom.caryar.models.DaoMaster;
 import ir.adicom.caryar.models.DaoSession;
+import ir.adicom.caryar.models.EngineOil;
+import ir.adicom.caryar.models.EngineOilDao;
 import ir.adicom.caryar.models.Service;
 import ir.adicom.caryar.models.ServiceDao;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class AddServiceFragment extends Fragment {
+public class EditServiceFragment extends Fragment {
 
     private Calendar calendar;
     private CalendarTool irDate;
     private EditText edtTitle, edtPriceExpert, edtPricePart;
     private Button btnDate;
 
-    public AddServiceFragment() {
+    public EditServiceFragment() {
         // Required empty public constructor
     }
 
@@ -44,23 +45,18 @@ public class AddServiceFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_add_service, container, false);
+        return inflater.inflate(R.layout.fragment_edit_service, container, false);
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        final Long id = getArguments().getLong("id", -1);
+
         // Set font All activity element
         HelperUI.setFont((ViewGroup) view.findViewById(R.id.base_layout),
                 Typeface.createFromAsset(getActivity().getAssets(), "Vazir_Light.ttf"));
-
-        // Database initalize
-        DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(getContext(), "carhelper-db", null);
-        SQLiteDatabase dbDao = helper.getWritableDatabase();
-        DaoMaster daoMaster = new DaoMaster(dbDao);
-        DaoSession daoSession = daoMaster.newSession();
-        final ServiceDao serviceDao = daoSession.getServiceDao();
 
         calendar = Calendar.getInstance();
         int mYear = calendar.get(Calendar.YEAR);
@@ -84,32 +80,44 @@ public class AddServiceFragment extends Fragment {
             }
         });
 
+        // Database initalize
+        DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(getContext(), "carhelper-db", null);
+        SQLiteDatabase dbDao = helper.getWritableDatabase();
+        DaoMaster daoMaster = new DaoMaster(dbDao);
+        DaoSession daoSession = daoMaster.newSession();
+        final ServiceDao serviceDao = daoSession.getServiceDao();
+        Service service = serviceDao.load(id);
+
         edtPriceExpert = (EditText) view.findViewById(R.id.edt_price_expert);
         edtPricePart = (EditText) view.findViewById(R.id.edt_price_part);
         edtTitle = (EditText) view.findViewById(R.id.edtTitle);
 
-        Button btnInsert = (Button) view.findViewById(R.id.btn_insert);
-        btnInsert.setOnClickListener(new View.OnClickListener() {
+        edtPriceExpert.setText(service.getExpertPrice());
+        edtPricePart.setText(service.getPartPrice());
+        edtTitle.setText(service.getTitle());
+        btnDate.setText(service.getDate());
+
+        Button btnEdit = (Button) view.findViewById(R.id.btn_edit);
+        btnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Service service = new Service();
+                service.setId(id);
                 service.setDate(btnDate.getText().toString());
                 service.setTitle(edtTitle.getText().toString());
                 service.setExpertPrice(Integer.parseInt(edtPriceExpert.getText().toString()));
                 service.setPartPrice(Integer.parseInt(edtPricePart.getText().toString()));
-                serviceDao.insert(service);
+                serviceDao.update(service);
+                getActivity().onBackPressed();
             }
         });
 
-        Button btnList = (Button) view.findViewById(R.id.btnList);
-        btnList.setOnClickListener(new View.OnClickListener() {
+        Button btnDelete = (Button) view.findViewById(R.id.btn_delete);
+        btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getActivity().getSupportFragmentManager()
-                        .beginTransaction()
-                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
-                        .replace(R.id.fragmentParentViewGroup, new ListServiceFragment())
-                        .commit();
+                serviceDao.deleteByKey(id);
+                getActivity().onBackPressed();
             }
         });
     }

@@ -32,7 +32,7 @@ public class FilterActivity extends Activity {
         setContentView(R.layout.activity_filter);
 
         HelperUI.setFont((ViewGroup) findViewById(R.id.base_layout),
-                Typeface.createFromAsset(getAssets(), "Yekan.ttf"));
+                Typeface.createFromAsset(getAssets(), "Vazir_Light.ttf"));
 
         db = new DatabaseHandler(this);
         listView = (ListView) findViewById(R.id.new_listview);
