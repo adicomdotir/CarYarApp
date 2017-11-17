@@ -8,7 +8,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import java.text.NumberFormat;
 import java.util.List;
+import java.util.Locale;
 
 import ir.adicom.caryar.models.DaoMaster;
 import ir.adicom.caryar.models.DaoSession;
@@ -57,7 +59,7 @@ public class ReportActivity extends Activity {
             for (int i = 0; i < arr.length; i++) {
                 arr[i] = "تاریخ :‌ " + fuels.get(i).getDate() + "   " +
                         "نوع سوخت : " + fuels.get(i).getType() + "\n" +
-                        "هزینه : " + fuels.get(i).getPrice() + " تومان\n" +
+                        "هزینه : " + NumberFormat.getNumberInstance(Locale.US).format(fuels.get(i).getPrice()) + " تومان\n" +
                         "کیلومتر : " + fuels.get(i).getKilometer();
             }
         }

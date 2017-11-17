@@ -33,7 +33,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".EngineOilActivity" />
-        <activity android:name=".ServiceActivity"></activity>
+        <activity android:name=".ServiceActivity" />
+        <activity android:name=".ChartActivity"></activity>
     </application>
 
 </manifest>

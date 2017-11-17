@@ -17,6 +17,7 @@ import java.util.Calendar;
 
 import ir.adicom.caryar.AppDialog;
 import ir.adicom.caryar.CalendarTool;
+import ir.adicom.caryar.CustomTextWacher;
 import ir.adicom.caryar.HelperUI;
 import ir.adicom.caryar.R;
 import ir.adicom.caryar.models.DaoMaster;
@@ -82,6 +83,7 @@ public class AddEngineOilFragment extends Fragment {
         edtKm = (EditText) view.findViewById(R.id.edtKm);
         edtKmMax = (EditText) view.findViewById(R.id.edtKmMax);
         edtPrice = (EditText) view.findViewById(R.id.edtCost);
+        edtPrice.addTextChangedListener(new CustomTextWacher(edtPrice));
         edtTitle = (EditText) view.findViewById(R.id.edtTitle);
 
         Button btnInsert = (Button) view.findViewById(R.id.btn_insert);
@@ -94,6 +96,7 @@ public class AddEngineOilFragment extends Fragment {
                 engineOil.setMaxKilometer(Integer.parseInt(edtKmMax.getText().toString()));
                 engineOil.setNowKilometer(Integer.parseInt(edtKm.getText().toString()));
                 engineOil.setPrice(Integer.parseInt(edtPrice.getText().toString()));
+                engineOil.setCarId(1L);
                 engineOilDao.insert(engineOil);
             }
         });

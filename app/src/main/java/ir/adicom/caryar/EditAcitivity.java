@@ -64,6 +64,7 @@ public class EditAcitivity extends Activity {
         HelperUI.setFont((ViewGroup) getWindow().getDecorView(), custom_font);
 
         edtCost = (EditText) findViewById(R.id.edtCost);
+        edtCost.addTextChangedListener(new CustomTextWacher(edtCost));
         edtKM = (EditText) findViewById(R.id.edtKm);
 
         customBtn1 = (CustomControl) findViewById(R.id.custom_btn_1);
@@ -176,6 +177,7 @@ public class EditAcitivity extends Activity {
                     tempFuel.setDate(btnDate.getText().toString());
                     tempFuel.setPrice(Integer.parseInt(edtCost.getText().toString()));
                     tempFuel.setKilometer(Integer.parseInt(edtKM.getText().toString()));
+                    tempFuel.setCarId(1L);
                     daoSession.getFuelDao().update(tempFuel);
                     edtKM.setText("");
                     edtCost.setText("");

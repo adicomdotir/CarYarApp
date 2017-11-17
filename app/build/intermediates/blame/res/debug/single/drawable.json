@@ -36,6 +36,10 @@
         "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/drawable/fuel.png"
     },
     {
+        "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/drawable/arrow.png",
+        "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/drawable/arrow.png"
+    },
+    {
         "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/drawable/button_shape_normal.xml",
         "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/drawable/button_shape_normal.xml"
     },
@@ -62,6 +66,10 @@
     {
         "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/drawable/button_shape_pressed.xml",
         "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/drawable/button_shape_pressed.xml"
+    },
+    {
+        "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/drawable/report.png",
+        "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/drawable/report.png"
     },
     {
         "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/drawable/bg_edittext.xml",

@@ -7,6 +7,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
@@ -19,6 +21,8 @@ import android.widget.Toast;
 
 import com.cengalabs.flatui.FlatUI;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
@@ -81,6 +85,7 @@ public class MainActivity extends Activity {
         final RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radioGroup1);
         final EditText edtKilo = (EditText) findViewById(R.id.editText1);
         final EditText edtprice = (EditText) findViewById(R.id.editText2);
+        edtprice.addTextChangedListener(new CustomTextWacher(edtprice));
         Button btnInsert = (Button) findViewById(R.id.btn_insert);
         btnInsert.setTypeface(custom_font);
         btnInsert.setOnClickListener(new OnClickListener() {
@@ -115,6 +120,7 @@ public class MainActivity extends Activity {
                     fuel.setKilometer(Integer.valueOf(edtKilo.getText().toString()));
                     fuel.setPrice(Integer.valueOf(edtprice.getText().toString()));
                     fuel.setType(rbtn.getText().toString());
+                    fuel.setCarId(1L);
                     daoSession.getFuelDao().insert(fuel);
 //                    db.addInfo(
 //                            new CarInfo(rbtn.getText().toString(),
@@ -154,13 +160,16 @@ public class MainActivity extends Activity {
         int benzinCost = cursor.getInt(0);
         cursor.moveToNext();
         int gusCost = cursor.getInt(0);
-        String temp = String.format(Locale.US, "%d تومان", benzinCost + gusCost);
+        String str = NumberFormat.getNumberInstance(Locale.US).format(benzinCost + gusCost);
+        String temp = String.format(Locale.US, "%s تومان", str);
         tvTotal.setText(temp);
         TextView tvTotalBenz = (TextView) findViewById(R.id.tv_total_benz);
-        temp = String.format(Locale.US, "%d تومان", benzinCost);
+        str = NumberFormat.getNumberInstance(Locale.US).format(benzinCost);
+        temp = String.format(Locale.US, "%s تومان", str);
         tvTotalBenz.setText(temp);
         TextView tvTotalGus = (TextView) findViewById(R.id.tv_total_gus);
-        temp = String.format(Locale.US, "%d تومان", gusCost);
+        str = NumberFormat.getNumberInstance(Locale.US).format(gusCost);
+        temp = String.format(Locale.US, "%s تومان", str);
         tvTotalGus.setText(temp);
         TextView tvTotalKm = (TextView) findViewById(R.id.tv_total_km);
         // cursor = db.get("SELECT min(km),max(km) FROM info");

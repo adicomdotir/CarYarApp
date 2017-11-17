@@ -14,6 +14,56 @@
         android:layout_weight="1"></LinearLayout>
 
     <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/deep_primary"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:src="@drawable/car"
+                android:id="@+id/imageView2"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:scaleType="centerInside"
+                android:layout_width="48dp"
+                android:layout_height="48dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:text="پراید"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textStyle="bold"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
         android:background="@color/sea_primary"
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -51,7 +101,7 @@
 
                 <TextView
                     android:textColor="#FFFFFF"
-                    android:textSize="24sp"
+                    android:textSize="20sp"
                     android:text="سوخت"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -113,7 +163,7 @@
 
             <TextView
                 android:textColor="#FFFFFF"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:text="روغن موتور"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -174,7 +224,7 @@
 
             <TextView
                 android:textColor="#FFFFFF"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:text="تعمیرات"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -206,7 +256,8 @@
         android:layout_width="match_parent"
         android:layout_height="0px"
         android:layout_weight="1"
-        android:padding="0dp">
+        android:padding="0dp"
+        android:id="@+id/report_layer">
 
         <LinearLayout
             android:orientation="vertical"
@@ -233,7 +284,7 @@
 
             <TextView
                 android:textColor="#FFFFFF"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:text="گزارش"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

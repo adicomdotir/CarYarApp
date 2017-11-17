@@ -17,6 +17,7 @@ import java.util.Calendar;
 
 import ir.adicom.caryar.AppDialog;
 import ir.adicom.caryar.CalendarTool;
+import ir.adicom.caryar.CustomTextWacher;
 import ir.adicom.caryar.HelperUI;
 import ir.adicom.caryar.R;
 import ir.adicom.caryar.models.DaoMaster;
@@ -91,7 +92,9 @@ public class EditServiceFragment extends Fragment {
         edtTitle = (EditText) view.findViewById(R.id.edtTitle);
 
         edtPriceExpert.setText("" + service.getExpertPrice());
+        edtPriceExpert.addTextChangedListener(new CustomTextWacher(edtPriceExpert));
         edtPricePart.setText("" + service.getPartPrice());
+        edtPricePart.addTextChangedListener(new CustomTextWacher(edtPricePart));
         edtTitle.setText(service.getTitle());
         btnDate.setText(service.getDate());
 
@@ -105,6 +108,7 @@ public class EditServiceFragment extends Fragment {
                 service.setTitle(edtTitle.getText().toString());
                 service.setExpertPrice(Integer.parseInt(edtPriceExpert.getText().toString()));
                 service.setPartPrice(Integer.parseInt(edtPricePart.getText().toString()));
+                service.setCarId(1L);
                 serviceDao.update(service);
                 getActivity().onBackPressed();
             }

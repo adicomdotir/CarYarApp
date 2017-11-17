@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/base_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ir.adicom.caryar.ChartActivity"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:textColor="@color/sea_primary"
+        android:text="سوخت"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvFuelCost"
+        android:gravity="center"
+        android:textSize="24sp" />
+
+    <TextView
+        android:textColor="@color/candy_primary"
+        android:text="روغن"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/tvOilCost"
+        android:textSize="24sp" />
+
+    <TextView
+        android:textColor="@color/grape_primary"
+        android:text="سرویس"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/tvServiceCost"
+        android:textSize="24sp" />
+</LinearLayout>

@@ -28,6 +28,10 @@
         "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/layout/fragment_list_service.xml"
     },
     {
+        "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/layout/activity_chart.xml",
+        "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/layout/activity_chart.xml"
+    },
+    {
         "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/layout/listview.xml",
         "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/layout/listview.xml"
     },

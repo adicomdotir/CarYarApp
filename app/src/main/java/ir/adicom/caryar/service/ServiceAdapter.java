@@ -8,7 +8,9 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import java.text.NumberFormat;
 import java.util.List;
+import java.util.Locale;
 
 import ir.adicom.caryar.R;
 import ir.adicom.caryar.models.EngineOil;
@@ -40,8 +42,8 @@ public class ServiceAdapter extends ArrayAdapter<Service> {
         StringBuilder sb = new StringBuilder();
         sb.append("عنوان: " + services.get(position).getTitle() + "\n");
         sb.append("تاریخ: " + services.get(position).getDate() + "\n");
-        sb.append("هزینه دستمزد: " + services.get(position).getExpertPrice() + " تومان" + "\n");
-        sb.append("هزینه قطعه: " + services.get(position).getPartPrice() + " تومان");
+        sb.append("هزینه دستمزد: " + NumberFormat.getNumberInstance(Locale.US).format(services.get(position).getExpertPrice()) + " تومان" + "\n");
+        sb.append("هزینه قطعه: " + NumberFormat.getNumberInstance(Locale.US).format(services.get(position).getPartPrice()) + " تومان");
 
         textView.setText(sb);
         Typeface custom_font = Typeface.createFromAsset(context.getAssets(), "Vazir_Light.ttf");

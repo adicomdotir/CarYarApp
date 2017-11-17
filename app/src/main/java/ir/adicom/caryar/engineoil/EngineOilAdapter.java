@@ -8,7 +8,9 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import java.text.NumberFormat;
 import java.util.List;
+import java.util.Locale;
 
 import ir.adicom.caryar.R;
 import ir.adicom.caryar.models.EngineOil;
@@ -41,7 +43,7 @@ public class EngineOilAdapter extends ArrayAdapter<EngineOil> {
         sb.append("تاریخ: " + engineOils.get(position).getDate() + "\n");
         sb.append("حداکثر کارکرد: " + engineOils.get(position).getMaxKilometer() + " کیلومتر\n");
         sb.append("کیلومتر: " + engineOils.get(position).getNowKilometer() + " کیلومتر\n");
-        sb.append("هزینه: " + engineOils.get(position).getPrice() + " تومان");
+        sb.append("هزینه: " + NumberFormat.getNumberInstance(Locale.US).format(engineOils.get(position).getPrice()) + " تومان");
 
         textView.setText(sb);
         Typeface custom_font = Typeface.createFromAsset(context.getAssets(), "Vazir_Light.ttf");
