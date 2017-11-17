@@ -8,22 +8,23 @@
     tools:context="ir.adicom.caryar.BaseActivity">
 
     <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></LinearLayout>
+
+    <LinearLayout
         android:background="@color/sea_primary"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="0px"
-        android:layout_weight="3"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp">
+        android:layout_weight="1">
 
         <LinearLayout
             android:id="@+id/fuel_layer"
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingLeft="40dp"
-            android:paddingRight="40dp">
+            android:layout_height="match_parent">
 
             <LinearLayout
                 android:orientation="vertical"
@@ -37,9 +38,9 @@
                     android:id="@+id/imageView2"
                     android:layout_centerVertical="true"
                     android:layout_alignParentLeft="true"
-                    android:layout_width="72dp"
-                    android:layout_height="72dp"
-                    android:scaleType="centerInside" />
+                    android:scaleType="centerInside"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -58,116 +59,209 @@
                     android:gravity="center" />
             </LinearLayout>
 
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:src="@drawable/arrow"
+                    android:id="@+id/imageView2"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:scaleType="centerInside"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp" />
+            </LinearLayout>
+
         </LinearLayout>
 
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/oil_layer"
+        android:background="@color/candy_primary"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0px"
-        android:layout_weight="5"
-        android:layout_marginTop="10dp"
-        android:layout_margin="10dp">
+        android:layout_weight="1">
 
         <LinearLayout
-            android:id="@+id/oil_layer"
-            android:background="@color/candy_primary"
             android:orientation="vertical"
-            android:layout_width="0px"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:paddingBottom="40dp"
-            android:paddingTop="40dp">
+            android:gravity="center">
 
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center">
-
-                <ImageView
-                    android:src="@drawable/change_car_oil"
-                    android:id="@+id/imageView2"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_width="72dp"
-                    android:layout_height="72dp"
-                    android:scaleType="centerInside" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:textColor="#FFFFFF"
-                    android:textSize="24sp"
-                    android:text="روغن موتور"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textStyle="bold"
-                    android:gravity="center" />
-            </LinearLayout>s
-
+            <ImageView
+                android:src="@drawable/change_car_oil"
+                android:id="@+id/imageView2"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:scaleType="centerInside"
+                android:layout_width="48dp"
+                android:layout_height="48dp" />
         </LinearLayout>
 
         <LinearLayout
-            android:background="@color/grape_primary"
-            android:orientation="vertical"
-            android:layout_width="0px"
-            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_marginLeft="10dp"
-            android:id="@+id/service_layer"
-            android:paddingBottom="40dp"
-            android:paddingTop="40dp">
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-            <LinearLayout
-                android:orientation="vertical"
+            <TextView
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:text="روغن موتور"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center">
+                android:textStyle="bold"
+                android:gravity="center" />
+        </LinearLayout>
 
-                <ImageView
-                    android:src="@drawable/car_repair"
-                    android:id="@+id/imageView2"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_width="72dp"
-                    android:layout_height="72dp"
-                    android:scaleType="centerInside" />
-            </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
 
-            <LinearLayout
-                android:layout_weight="1"
-                android:orientation="vertical"
+            <ImageView
+                android:src="@drawable/arrow"
+                android:id="@+id/imageView2"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:scaleType="centerInside"
+                android:layout_width="48dp"
+                android:layout_height="48dp" />
+        </LinearLayout>
+        s
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@color/grape_primary"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:id="@+id/service_layer">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:src="@drawable/car_repair"
+                android:id="@+id/imageView2"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:scaleType="centerInside"
+                android:layout_width="48dp"
+                android:layout_height="48dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:text="تعمیرات"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:textStyle="bold"
+                android:gravity="center" />
+        </LinearLayout>
 
-                <TextView
-                    android:textColor="#FFFFFF"
-                    android:textSize="24sp"
-                    android:text="تعمیرات"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textStyle="bold"
-                    android:gravity="center" />
-            </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:src="@drawable/arrow"
+                android:id="@+id/imageView2"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:scaleType="centerInside"
+                android:layout_width="48dp"
+                android:layout_height="48dp" />
         </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
         android:background="@color/sky_primary"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0px"
-        android:layout_weight="2"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"></LinearLayout>
+        android:layout_weight="1"
+        android:padding="0dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:src="@drawable/report"
+                android:id="@+id/imageView2"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:scaleType="centerInside"
+                android:layout_width="48dp"
+                android:layout_height="48dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:text="گزارش"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textStyle="bold"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:src="@drawable/arrow"
+                android:id="@+id/imageView2"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:scaleType="centerInside"
+                android:layout_width="48dp"
+                android:layout_height="48dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></LinearLayout>
 </LinearLayout>
