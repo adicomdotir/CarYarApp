@@ -16,14 +16,16 @@ public class Service {
     private String date;
     private int partPrice;
     private int expertPrice;
-    @Generated(hash = 608087253)
+    private Long carId;
+    @Generated(hash = 1764429945)
     public Service(Long id, String title, String date, int partPrice,
-            int expertPrice) {
+            int expertPrice, Long carId) {
         this.id = id;
         this.title = title;
         this.date = date;
         this.partPrice = partPrice;
         this.expertPrice = expertPrice;
+        this.carId = carId;
     }
     @Generated(hash = 552382128)
     public Service() {
@@ -57,5 +59,11 @@ public class Service {
     }
     public void setExpertPrice(int expertPrice) {
         this.expertPrice = expertPrice;
+    }
+    public Long getCarId() {
+        return this.carId;
+    }
+    public void setCarId(Long carId) {
+        this.carId = carId;
     }
 }

@@ -21,8 +21,6 @@ import ir.adicom.caryar.HelperUI;
 import ir.adicom.caryar.R;
 import ir.adicom.caryar.models.DaoMaster;
 import ir.adicom.caryar.models.DaoSession;
-import ir.adicom.caryar.models.EngineOil;
-import ir.adicom.caryar.models.EngineOilDao;
 import ir.adicom.caryar.models.Service;
 import ir.adicom.caryar.models.ServiceDao;
 

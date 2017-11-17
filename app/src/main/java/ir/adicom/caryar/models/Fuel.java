@@ -16,17 +16,18 @@ public class Fuel {
     private int kilometer;
     private int price;
     private String type;
-    @Generated(hash = 1039958607)
-    public Fuel(Long id, String date, int kilometer, int price, String type) {
+    private Long carId;
+    @Generated(hash = 492037332)
+    public Fuel(Long id, String date, int kilometer, int price, String type, Long carId) {
         this.id = id;
         this.date = date;
         this.kilometer = kilometer;
         this.price = price;
         this.type = type;
+        this.carId = carId;
     }
     @Generated(hash = 1121116807)
-    public Fuel() {
-    }
+    public Fuel() { }
     public Long getId() {
         return this.id;
     }
@@ -56,5 +57,11 @@ public class Fuel {
     }
     public void setType(String type) {
         this.type = type;
+    }
+    public Long getCarId() {
+        return this.carId;
+    }
+    public void setCarId(Long carId) {
+        this.carId = carId;
     }
 }

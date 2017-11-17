@@ -18,15 +18,17 @@ public class EngineOil {
     private int maxKilometer;
     private int price;
     private String date;
-    @Generated(hash = 92180008)
+    private Long carId;
+    @Generated(hash = 229818481)
     public EngineOil(Long id, String name, int nowKilometer, int maxKilometer,
-            int price, String date) {
+            int price, String date, Long carId) {
         this.id = id;
         this.name = name;
         this.nowKilometer = nowKilometer;
         this.maxKilometer = maxKilometer;
         this.price = price;
         this.date = date;
+        this.carId = carId;
     }
     @Generated(hash = 1587947175)
     public EngineOil() {
@@ -66,5 +68,11 @@ public class EngineOil {
     }
     public void setDate(String date) {
         this.date = date;
+    }
+    public Long getCarId() {
+        return this.carId;
+    }
+    public void setCarId(Long carId) {
+        this.carId = carId;
     }
 }
