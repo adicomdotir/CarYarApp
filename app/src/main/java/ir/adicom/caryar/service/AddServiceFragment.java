@@ -14,7 +14,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.text.NumberFormat;
+import java.text.ParseException;
 import java.util.Calendar;
+import java.util.Locale;
 
 import ir.adicom.caryar.AppDialog;
 import ir.adicom.caryar.CalendarTool;
@@ -98,8 +101,21 @@ public class AddServiceFragment extends Fragment {
                 Service service = new Service();
                 service.setDate(btnDate.getText().toString());
                 service.setTitle(edtTitle.getText().toString());
-                service.setExpertPrice(Integer.parseInt(edtPriceExpert.getText().toString()));
-                service.setPartPrice(Integer.parseInt(edtPricePart.getText().toString()));
+                NumberFormat nf = NumberFormat.getInstance(Locale.US);
+                Number myNumber = null;
+                try {
+                    myNumber = nf.parse(edtPriceExpert.getText().toString());
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+                service.setExpertPrice(myNumber.intValue());
+                myNumber = null;
+                try {
+                    myNumber = nf.parse(edtPricePart.getText().toString());
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+                service.setPartPrice(myNumber.intValue());
                 service.setCarId(1L);
                 serviceDao.insert(service);
             }

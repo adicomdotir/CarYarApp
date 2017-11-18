@@ -15,6 +15,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import java.text.NumberFormat;
+import java.text.ParseException;
 import java.util.Calendar;
 import java.util.Locale;
 
@@ -175,7 +177,14 @@ public class EditAcitivity extends Activity {
 //                    );
                     tempFuel.setType(rbtn.getText().toString());
                     tempFuel.setDate(btnDate.getText().toString());
-                    tempFuel.setPrice(Integer.parseInt(edtCost.getText().toString()));
+                    NumberFormat nf = NumberFormat.getInstance(Locale.US);
+                    Number myNumber = null;
+                    try {
+                        myNumber = nf.parse(edtCost.getText().toString());
+                    } catch (ParseException e) {
+                        e.printStackTrace();
+                    }
+                    tempFuel.setPrice(myNumber.intValue());
                     tempFuel.setKilometer(Integer.parseInt(edtKM.getText().toString()));
                     tempFuel.setCarId(1L);
                     daoSession.getFuelDao().update(tempFuel);

@@ -13,7 +13,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.text.NumberFormat;
+import java.text.ParseException;
 import java.util.Calendar;
+import java.util.Locale;
 
 import ir.adicom.caryar.AppDialog;
 import ir.adicom.caryar.CalendarTool;
@@ -101,7 +104,14 @@ public class EditEngineOilFragment extends Fragment {
             public void onClick(View view) {
                 EngineOil temp = new EngineOil();
                 temp.setId(id);
-                temp.setPrice(Integer.parseInt(edtPrice.getText().toString()));
+                NumberFormat nf = NumberFormat.getInstance(Locale.US);
+                Number myNumber = null;
+                try {
+                    myNumber = nf.parse(edtPrice.getText().toString());
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+                temp.setPrice(myNumber.intValue());
                 temp.setNowKilometer(Integer.parseInt(edtKm.getText().toString()));
                 temp.setMaxKilometer(Integer.parseInt(edtKmMax.getText().toString()));
                 temp.setDate(btnDate.getText().toString());

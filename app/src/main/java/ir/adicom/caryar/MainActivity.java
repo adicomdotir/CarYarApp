@@ -23,6 +23,7 @@ import com.cengalabs.flatui.FlatUI;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+import java.text.ParseException;
 import java.util.Calendar;
 import java.util.Locale;
 
@@ -118,7 +119,14 @@ public class MainActivity extends Activity {
                     Fuel fuel = new Fuel();
                     fuel.setDate(btnDate.getText().toString());
                     fuel.setKilometer(Integer.valueOf(edtKilo.getText().toString()));
-                    fuel.setPrice(Integer.valueOf(edtprice.getText().toString()));
+                    NumberFormat nf = NumberFormat.getInstance(Locale.US);
+                    Number myNumber = null;
+                    try {
+                        myNumber = nf.parse(edtprice.getText().toString());
+                    } catch (ParseException e) {
+                        e.printStackTrace();
+                    }
+                    fuel.setPrice(myNumber.intValue());
                     fuel.setType(rbtn.getText().toString());
                     fuel.setCarId(1L);
                     daoSession.getFuelDao().insert(fuel);
