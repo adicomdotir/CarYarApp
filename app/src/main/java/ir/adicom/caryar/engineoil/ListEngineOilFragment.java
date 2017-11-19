@@ -50,7 +50,7 @@ public class ListEngineOilFragment extends Fragment {
         DaoSession daoSession = daoMaster.newSession();
         EngineOilDao engineOilDao = daoSession.getEngineOilDao();
 
-        engineOils = engineOilDao.loadAll();
+        engineOils = engineOilDao.queryBuilder().orderDesc(EngineOilDao.Properties.Id).list();
 
         ListView listView = (ListView) view.findViewById(R.id.listview_oil);
         EngineOilAdapter myAdapter = new EngineOilAdapter(getContext(), engineOils);

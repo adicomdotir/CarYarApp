@@ -10,10 +10,20 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:paddingBottom="3dp"
+        android:layout_weight="1">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:gravity="left"
         android:paddingLeft="5dp"
-        android:paddingRight="5dp" >
+        android:paddingRight="5dp"
+        android:layout_weight="1">
 
         <RadioGroup
             android:id="@+id/rgEdit"
@@ -62,12 +72,43 @@
     </LinearLayout>
 
     <LinearLayout
+        android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.cengalabs.flatui.views.FlatButton
+            android:textSize="18sp"
+            android:id="@+id/btnDate"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            app:fl_touchEffect="fl_ripple"
+            app:fl_blockButtonEffectHeight="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_margin="5dp"
+            android:layout_weight="0.7" />
+
+        <com.cengalabs.flatui.views.FlatTextView
+            android:textSize="18sp"
+            android:text="تاریخ"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="normal|bold"
+            android:layout_weight="0.3" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:padding="7dp"
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
-        android:paddingTop="5dp" >
+        android:paddingTop="5dp"
+        android:layout_weight="1">
 
         <com.cengalabs.flatui.views.FlatEditText
             android:id="@+id/edtCost"
@@ -78,26 +119,26 @@
             app:fl_fieldStyle="fl_box"
             android:gravity="center" />
 
-        <TextView
+        <com.cengalabs.flatui.views.FlatTextView
             android:id="@+id/textView2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.3"
             android:gravity="center"
             android:text="هزینه"
-            android:textColor="#1C2236"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
     </LinearLayout>
 
     <LinearLayout
 
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:paddingBottom="7dp"
         android:paddingLeft="7dp"
         android:paddingRight="7dp"
-        android:paddingTop="0dp" >
+        android:paddingTop="0dp"
+        android:layout_weight="1">
 
         <com.cengalabs.flatui.views.FlatEditText
             android:id="@+id/edtKm"
@@ -109,41 +150,26 @@
             app:fl_fieldStyle="fl_box"
             android:gravity="center" />
 
-        <TextView
+        <com.cengalabs.flatui.views.FlatTextView
             android:id="@+id/textView3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.3"
             android:gravity="center"
             android:text="کیلومتر"
-            android:textColor="#1C2236"
-            android:textSize="20sp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <com.cengalabs.flatui.views.FlatButton
-            android:textSize="18sp"
-            android:id="@+id/btnDate"
-            android:layout_width="wrap_content"
-            android:layout_height="44dp"
-            app:fl_touchEffect="fl_ripple"
-            app:fl_blockButtonEffectHeight="1dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_margin="5dp" />
+            android:textSize="18sp" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:gravity="center"
-        android:paddingBottom="3dp" >
+        android:paddingBottom="7dp"
+        android:layout_weight="1"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:paddingTop="0dp">
 
         <com.cengalabs.flatui.views.FlatButton
             android:id="@+id/btnEdit"
@@ -158,14 +184,6 @@
             android:layout_marginRight="10dp"
             android:layout_margin="5dp" />
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:paddingBottom="3dp" >
-
         <com.cengalabs.flatui.views.FlatButton
             android:textSize="18sp"
             android:layout_width="96dp"
@@ -178,7 +196,17 @@
             android:layout_margin="5dp"
             android:id="@+id/btnDelete"
             android:background="@drawable/button_delete"
-            android:text="حذف"/>
+            android:text="حذف"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:paddingBottom="3dp"
+        android:layout_weight="1">
 
     </LinearLayout>
 
