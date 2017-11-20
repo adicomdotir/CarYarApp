@@ -118,7 +118,7 @@ public class EditEngineOilFragment extends Fragment {
                 temp.setMaxKilometer(Integer.parseInt(edtKmMax.getText().toString()));
                 temp.setDate(btnDate.getText().toString());
                 temp.setName(edtTitle.getText().toString());
-                temp.setCarId(1L);
+                temp.setCarId(HelperUI.CAR_ID);
                 engineOilDao.update(temp);
                 getActivity().onBackPressed();
             }

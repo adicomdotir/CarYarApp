@@ -2,6 +2,7 @@ package ir.adicom.caryar;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -31,7 +32,15 @@ public class BaseActivity extends Activity {
             car.setPlaque("91ه251");
             car.setYear(1384);
             daoSession.getCarDao().insert(car);
+            // TODO: Problem here
+            SharedPreferences prefs = getSharedPreferences(getApplicationContext().getPackageName(),
+                            this.MODE_PRIVATE);
+            prefs.edit().putLong("CARID", 1).apply();
         }
+
+        SharedPreferences prefs = getSharedPreferences(getApplicationContext().getPackageName(),
+                this.MODE_PRIVATE);
+        HelperUI.CAR_ID = prefs.getLong("CARID", 0);
 
         HelperUI.setFont((ViewGroup) findViewById(R.id.base_layout),
                 Typeface.createFromAsset(getAssets(), "Vazir.ttf"));

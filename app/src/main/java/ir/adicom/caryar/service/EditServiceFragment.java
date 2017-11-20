@@ -126,7 +126,7 @@ public class EditServiceFragment extends Fragment {
                     e.printStackTrace();
                 }
                 service.setPartPrice(myNumber.intValue());
-                service.setCarId(1L);
+                service.setCarId(HelperUI.CAR_ID);
                 serviceDao.update(service);
                 getActivity().onBackPressed();
             }

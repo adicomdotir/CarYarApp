@@ -106,7 +106,7 @@ public class AddEngineOilFragment extends Fragment {
                     e.printStackTrace();
                 }
                 engineOil.setPrice(myNumber.intValue());
-                engineOil.setCarId(1L);
+                engineOil.setCarId(HelperUI.CAR_ID);
                 engineOilDao.insert(engineOil);
             }
         });

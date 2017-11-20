@@ -318,7 +318,7 @@ containing a value of this type.
     }
     public static final class id {
         public static final int LinearLayout1=0x7f0b002e;
-        public static final int action_settings=0x7f0b0057;
+        public static final int action_settings=0x7f0b0058;
         public static final int activity_edit=0x7f0b0019;
         public static final int base_layout=0x7f0b000d;
         public static final int box=0x7f0b0005;
@@ -327,22 +327,23 @@ containing a value of this type.
         public static final int btnEdit=0x7f0b0023;
         public static final int btnList=0x7f0b0047;
         public static final int btnReport=0x7f0b0036;
+        public static final int btnSelect=0x7f0b004c;
         public static final int btn_custom_down=0x7f0b0042;
         public static final int btn_custom_up=0x7f0b0040;
-        public static final int btn_delete=0x7f0b004c;
-        public static final int btn_edit=0x7f0b004d;
+        public static final int btn_delete=0x7f0b004d;
+        public static final int btn_edit=0x7f0b004e;
         public static final int btn_insert=0x7f0b0035;
-        public static final int btn_no=0x7f0b0052;
+        public static final int btn_no=0x7f0b0053;
         public static final int btn_search_filter=0x7f0b0029;
-        public static final int btn_yes=0x7f0b0051;
-        public static final int button=0x7f0b0055;
+        public static final int btn_yes=0x7f0b0052;
+        public static final int button=0x7f0b0056;
         public static final int button2=0x7f0b0034;
         public static final int calender_view=0x7f0b003b;
         public static final int car_layer=0x7f0b000e;
         public static final int custom_btn_1=0x7f0b003c;
         public static final int custom_btn_2=0x7f0b003d;
         public static final int custom_btn_3=0x7f0b003e;
-        public static final int custom_dialog_layout_design_user_input=0x7f0b0054;
+        public static final int custom_dialog_layout_design_user_input=0x7f0b0055;
         public static final int custom_layout=0x7f0b003f;
         public static final int editText1=0x7f0b0033;
         public static final int editText2=0x7f0b0032;
@@ -371,11 +372,11 @@ containing a value of this type.
         public static final int fuel_layer=0x7f0b000f;
         public static final int graph=0x7f0b0015;
         public static final int imageView2=0x7f0b0010;
-        public static final int label=0x7f0b0053;
-        public static final int listView1=0x7f0b0056;
-        public static final int listview_car=0x7f0b004e;
-        public static final int listview_oil=0x7f0b004f;
-        public static final int listview_service=0x7f0b0050;
+        public static final int label=0x7f0b0054;
+        public static final int listView1=0x7f0b0057;
+        public static final int listview_car=0x7f0b004f;
+        public static final int listview_oil=0x7f0b0050;
+        public static final int listview_service=0x7f0b0051;
         public static final int new_listview=0x7f0b002d;
         public static final int oil_layer=0x7f0b0011;
         public static final int radio0=0x7f0b0030;

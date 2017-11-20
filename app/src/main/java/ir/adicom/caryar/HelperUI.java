@@ -6,6 +6,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 public class HelperUI {
+
+	public static long CAR_ID = 0;
 	
 	public static void setFont(ViewGroup viewGroup, Typeface font) {
 		int childCount = viewGroup.getChildCount();

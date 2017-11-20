@@ -317,7 +317,7 @@ class DatabaseHandler extends SQLiteOpenHelper {
                         fuel.setDate(temp[1]);
                         fuel.setKilometer(Integer.parseInt(temp[2]));
                         fuel.setPrice(Integer.parseInt(temp[3]));
-                        fuel.setCarId(1L);
+                        fuel.setCarId(HelperUI.CAR_ID);
                         fuelDao.insert(fuel);
                         Log.e("TAG", "size: " + fuelDao.count() + "");
                     }

@@ -186,7 +186,7 @@ public class EditAcitivity extends Activity {
                     }
                     tempFuel.setPrice(myNumber.intValue());
                     tempFuel.setKilometer(Integer.parseInt(edtKM.getText().toString()));
-                    tempFuel.setCarId(1L);
+                    tempFuel.setCarId(HelperUI.CAR_ID);
                     daoSession.getFuelDao().update(tempFuel);
                     edtKM.setText("");
                     edtCost.setText("");

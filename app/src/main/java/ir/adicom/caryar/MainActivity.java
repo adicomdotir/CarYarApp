@@ -128,7 +128,7 @@ public class MainActivity extends Activity {
                     }
                     fuel.setPrice(myNumber.intValue());
                     fuel.setType(rbtn.getText().toString());
-                    fuel.setCarId(1L);
+                    fuel.setCarId(HelperUI.CAR_ID);
                     daoSession.getFuelDao().insert(fuel);
 //                    db.addInfo(
 //                            new CarInfo(rbtn.getText().toString(),

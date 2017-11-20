@@ -3,6 +3,7 @@ package ir.adicom.caryar.car;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -102,6 +103,19 @@ public class EditCarFragment extends Fragment {
                         });
                 AlertDialog alert = builder.create();
                 alert.show();
+            }
+        });
+
+        Button btnSelect = (Button) view.findViewById(R.id.btnSelect);
+        btnSelect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences prefs = getActivity()
+                        .getSharedPreferences(getActivity().getApplicationContext().getPackageName(),
+                                getContext().MODE_PRIVATE);
+                prefs.edit().putLong("CARID", globalId).apply();
+                HelperUI.CAR_ID = globalId;
+                getActivity().onBackPressed();
             }
         });
     }
