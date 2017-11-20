@@ -17,19 +17,19 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@color/deep_primary"
-        android:layout_weight="1">
+        android:background="@color/grass_primary"
+        android:layout_weight="1"
+        android:id="@+id/car_layer">
 
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center">
 
             <ImageView
                 android:src="@drawable/car"
-                android:id="@+id/imageView2"
                 android:layout_centerVertical="true"
                 android:layout_alignParentLeft="true"
                 android:scaleType="centerInside"
@@ -40,7 +40,7 @@
         <LinearLayout
             android:layout_weight="1"
             android:orientation="vertical"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent">
 
             <TextView
@@ -55,11 +55,18 @@
 
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center">
 
+            <ImageView
+                android:src="@drawable/arrow"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:scaleType="centerInside"
+                android:layout_width="48dp"
+                android:layout_height="48dp" />
         </LinearLayout>
     </LinearLayout>
 

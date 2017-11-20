@@ -1,12 +1,14 @@
 package ir.adicom.caryar.service;
 
 
+import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,7 +56,7 @@ public class EditServiceFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        final Long id = getArguments().getLong("id", -1);
+        final Long globalId = getArguments().getLong("id", -1);
 
         // Set font All activity element
         HelperUI.setFont((ViewGroup) view.findViewById(R.id.base_layout),
@@ -88,7 +90,7 @@ public class EditServiceFragment extends Fragment {
         DaoMaster daoMaster = new DaoMaster(dbDao);
         DaoSession daoSession = daoMaster.newSession();
         final ServiceDao serviceDao = daoSession.getServiceDao();
-        Service service = serviceDao.load(id);
+        Service service = serviceDao.load(globalId);
 
         edtPriceExpert = (EditText) view.findViewById(R.id.edt_price_expert);
         edtPricePart = (EditText) view.findViewById(R.id.edt_price_part);
@@ -106,7 +108,7 @@ public class EditServiceFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Service service = new Service();
-                service.setId(id);
+                service.setId(globalId);
                 service.setDate(btnDate.getText().toString());
                 service.setTitle(edtTitle.getText().toString());
                 NumberFormat nf = NumberFormat.getInstance(Locale.US);
@@ -134,8 +136,22 @@ public class EditServiceFragment extends Fragment {
         btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                serviceDao.deleteByKey(id);
-                getActivity().onBackPressed();
+                AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(getContext(), android.R.style.Theme_Dialog));
+                builder.setMessage("آیا مطمئن هستید که می خواهید این رکورد حذف کنید؟")
+                        .setCancelable(false)
+                        .setPositiveButton("بله", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                serviceDao.deleteByKey(globalId);
+                                getActivity().onBackPressed();
+                            }
+                        })
+                        .setNegativeButton("خیر", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        });
+                AlertDialog alert = builder.create();
+                alert.show();
             }
         });
     }

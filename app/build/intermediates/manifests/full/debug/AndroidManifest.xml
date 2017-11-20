@@ -39,6 +39,9 @@
         <activity android:name="ir.adicom.caryar.EngineOilActivity" />
         <activity android:name="ir.adicom.caryar.ServiceActivity" />
         <activity android:name="ir.adicom.caryar.ChartActivity" />
+        <activity
+            android:name="ir.adicom.caryar.CarActivity"
+            android:label="@string/title_activity_car" />
     </application>
 
 </manifest>

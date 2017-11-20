@@ -26,8 +26,8 @@ greendao {
 
 dependencies {
     // add library
+    compile files('GraphView-4.2.1.jar')
     compile 'com.github.eluleci:flatui:3.0.0'
     compile 'org.greenrobot:greendao:3.2.2'
     compile 'com.android.support:support-v4:25.3.1'
-    compile files('GraphView-4.2.1.jar')
 }

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/base_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/grass_light"
+    tools:context="ir.adicom.caryar.EngineOilActivity">
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:layout_weight="1">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <com.cengalabs.flatui.views.FlatEditText
+            android:id="@+id/edtName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:inputType="text"
+            app:fl_fieldStyle="fl_box"
+            android:gravity="center"
+            android:hint="نام وسیله نقلیه" />
+
+        <com.cengalabs.flatui.views.FlatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:gravity="right"
+            android:text="نام"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <com.cengalabs.flatui.views.FlatEditText
+            android:id="@+id/edtPlaque"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:inputType="text"
+            app:fl_fieldStyle="fl_box"
+            android:gravity="center"
+            android:hint="شماره پلاک" />
+
+        <com.cengalabs.flatui.views.FlatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:gravity="right"
+            android:text="پلاک"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <com.cengalabs.flatui.views.FlatEditText
+            android:id="@+id/edtColor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:inputType="text"
+            app:fl_fieldStyle="fl_box"
+            android:gravity="center"
+            android:hint="رنگ وسیله نقلیه" />
+
+        <com.cengalabs.flatui.views.FlatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:gravity="right"
+            android:text="رنگ"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <com.cengalabs.flatui.views.FlatEditText
+            android:id="@+id/edtYear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:inputType="text"
+            app:fl_fieldStyle="fl_box"
+            android:gravity="center"
+            android:hint="سال ساخت" />
+
+        <com.cengalabs.flatui.views.FlatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:gravity="right"
+            android:text="مدل"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+        <com.cengalabs.flatui.views.FlatButton
+            android:text="مدیریت"
+            android:textSize="18sp"
+            android:id="@+id/btnList"
+            android:layout_width="96dp"
+            android:layout_height="44dp"
+            app:fl_touchEffect="fl_ripple"
+            app:fl_blockButtonEffectHeight="0dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="0.5"/>
+
+        <com.cengalabs.flatui.views.FlatButton
+            android:text="ثبت"
+            android:textSize="18sp"
+            android:id="@+id/btn_insert"
+            android:layout_width="96dp"
+            android:layout_height="44dp"
+            app:fl_touchEffect="fl_ripple"
+            android:layout_weight="0.5"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:layout_weight="1">
+
+    </LinearLayout>
+
+</LinearLayout>

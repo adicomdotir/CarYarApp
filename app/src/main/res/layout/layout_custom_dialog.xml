@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.cengalabs.flatui.views.FlatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:gravity="right"
+            android:text="عنوان"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.cengalabs.flatui.views.FlatButton
+            android:text="بله"
+            android:textSize="18sp"
+            android:id="@+id/btn_yes"
+            android:layout_width="96dp"
+            android:layout_height="44dp"
+            app:fl_touchEffect="fl_ripple"
+            app:fl_blockButtonEffectHeight="0dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="0.5"/>
+
+        <com.cengalabs.flatui.views.FlatButton
+            android:text="خیر"
+            android:textSize="18sp"
+            android:id="@+id/btn_no"
+            android:layout_width="96dp"
+            android:layout_height="44dp"
+            app:fl_touchEffect="fl_ripple"
+            android:layout_weight="0.5"/>
+
+    </LinearLayout>
+</LinearLayout>

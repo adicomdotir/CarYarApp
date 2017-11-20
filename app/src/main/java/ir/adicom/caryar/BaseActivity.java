@@ -69,5 +69,13 @@ public class BaseActivity extends Activity {
                 overridePendingTransition(R.anim.enter, R.anim.exit);
             }
         });
+        linearLayout = (LinearLayout) findViewById(R.id.car_layer);
+        linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(BaseActivity.this, CarActivity.class));
+                overridePendingTransition(R.anim.enter, R.anim.exit);
+            }
+        });
     }
 }

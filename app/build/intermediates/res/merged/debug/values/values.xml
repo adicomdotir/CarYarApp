@@ -174,10 +174,11 @@
     <string name="gus">گاز</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_car">CarActivity</string>
     <style name="AppBaseTheme" parent="android:Theme.Light.NoTitleBar">
         
     </style>
     <style name="AppTheme" parent="AppBaseTheme">
-        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        
     </style>
 </resources>

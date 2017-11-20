@@ -1,6 +1,7 @@
 package ir.adicom.caryar.engineoil;
 
 
+import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
@@ -21,6 +22,7 @@ import java.util.Locale;
 import ir.adicom.caryar.AppDialog;
 import ir.adicom.caryar.CalendarTool;
 import ir.adicom.caryar.CustomTextWacher;
+import ir.adicom.caryar.EditAcitivity;
 import ir.adicom.caryar.HelperUI;
 import ir.adicom.caryar.R;
 import ir.adicom.caryar.models.DaoMaster;
@@ -51,7 +53,7 @@ public class EditEngineOilFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        final Long id = getArguments().getLong("id", -1);
+        final Long globalId = getArguments().getLong("id", -1);
 
         // Set font All activity element
         HelperUI.setFont((ViewGroup) view.findViewById(R.id.base_layout),
@@ -85,7 +87,7 @@ public class EditEngineOilFragment extends Fragment {
         DaoMaster daoMaster = new DaoMaster(dbDao);
         DaoSession daoSession = daoMaster.newSession();
         final EngineOilDao engineOilDao = daoSession.getEngineOilDao();
-        EngineOil engineOil = engineOilDao.load(id);
+        EngineOil engineOil = engineOilDao.load(globalId);
 
         edtKm = (EditText) view.findViewById(R.id.edtKm);
         edtKm.setText("" + engineOil.getNowKilometer());
@@ -103,7 +105,7 @@ public class EditEngineOilFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 EngineOil temp = new EngineOil();
-                temp.setId(id);
+                temp.setId(globalId);
                 NumberFormat nf = NumberFormat.getInstance(Locale.US);
                 Number myNumber = null;
                 try {
@@ -126,8 +128,22 @@ public class EditEngineOilFragment extends Fragment {
         btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                engineOilDao.deleteByKey(id);
-                getActivity().onBackPressed();
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                builder.setMessage("آیا مطمئن هستید که می خواهید این رکورد حذف کنید؟")
+                        .setCancelable(false)
+                        .setPositiveButton("بله", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                engineOilDao.deleteByKey(globalId);
+                                getActivity().onBackPressed();
+                            }
+                        })
+                        .setNegativeButton("خیر", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        });
+                AlertDialog alert = builder.create();
+                alert.show();
             }
         });
     }
