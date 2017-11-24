@@ -20,7 +20,7 @@ import java.util.Locale;
 
 import ir.adicom.caryar.AppDialog;
 import ir.adicom.caryar.CalendarTool;
-import ir.adicom.caryar.CustomTextWacher;
+import ir.adicom.caryar.CustomTextWatcher;
 import ir.adicom.caryar.HelperUI;
 import ir.adicom.caryar.R;
 import ir.adicom.caryar.models.DaoMaster;
@@ -86,7 +86,7 @@ public class AddEngineOilFragment extends Fragment {
         edtKm = (EditText) view.findViewById(R.id.edtKm);
         edtKmMax = (EditText) view.findViewById(R.id.edtKmMax);
         edtPrice = (EditText) view.findViewById(R.id.edtCost);
-        edtPrice.addTextChangedListener(new CustomTextWacher(edtPrice));
+        edtPrice.addTextChangedListener(new CustomTextWatcher(edtPrice));
         edtTitle = (EditText) view.findViewById(R.id.edtTitle);
 
         Button btnInsert = (Button) view.findViewById(R.id.btn_insert);

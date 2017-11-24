@@ -22,7 +22,7 @@ import java.util.Locale;
 
 import ir.adicom.caryar.AppDialog;
 import ir.adicom.caryar.CalendarTool;
-import ir.adicom.caryar.CustomTextWacher;
+import ir.adicom.caryar.CustomTextWatcher;
 import ir.adicom.caryar.HelperUI;
 import ir.adicom.caryar.R;
 import ir.adicom.caryar.models.DaoMaster;
@@ -97,9 +97,9 @@ public class EditServiceFragment extends Fragment {
         edtTitle = (EditText) view.findViewById(R.id.edtTitle);
 
         edtPriceExpert.setText("" + service.getExpertPrice());
-        edtPriceExpert.addTextChangedListener(new CustomTextWacher(edtPriceExpert));
+        edtPriceExpert.addTextChangedListener(new CustomTextWatcher(edtPriceExpert));
         edtPricePart.setText("" + service.getPartPrice());
-        edtPricePart.addTextChangedListener(new CustomTextWacher(edtPricePart));
+        edtPricePart.addTextChangedListener(new CustomTextWatcher(edtPricePart));
         edtTitle.setText(service.getTitle());
         btnDate.setText(service.getDate());
 

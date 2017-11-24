@@ -52,7 +52,8 @@ public class ReportActivity extends Activity {
         DaoSession daoSession = daoMaster.newSession();
         FuelDao fuelDao = daoSession.getFuelDao();
         // List<Fuel> fuels = fuelDao.loadAll();
-        fuels = fuelDao.queryBuilder().orderDesc(FuelDao.Properties.Id).list();
+        fuels = fuelDao.queryBuilder().where(FuelDao.Properties.CarId.eq(HelperUI.CAR_ID))
+                .orderDesc(FuelDao.Properties.Id).list();
 
         String[] arr = new String[fuels.size()];
         if (fuels != null) {

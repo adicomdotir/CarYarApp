@@ -14,11 +14,13 @@ import android.widget.ListView;
 
 import java.util.List;
 
+import ir.adicom.caryar.HelperUI;
 import ir.adicom.caryar.R;
 import ir.adicom.caryar.models.DaoMaster;
 import ir.adicom.caryar.models.DaoSession;
 import ir.adicom.caryar.models.EngineOil;
 import ir.adicom.caryar.models.EngineOilDao;
+import ir.adicom.caryar.models.FuelDao;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -50,7 +52,8 @@ public class ListEngineOilFragment extends Fragment {
         DaoSession daoSession = daoMaster.newSession();
         EngineOilDao engineOilDao = daoSession.getEngineOilDao();
 
-        engineOils = engineOilDao.queryBuilder().orderDesc(EngineOilDao.Properties.Id).list();
+        engineOils = engineOilDao.queryBuilder().where(EngineOilDao.Properties.CarId.eq(HelperUI.CAR_ID))
+                .orderDesc(EngineOilDao.Properties.Id).list();
 
         ListView listView = (ListView) view.findViewById(R.id.listview_oil);
         EngineOilAdapter myAdapter = new EngineOilAdapter(getContext(), engineOils);

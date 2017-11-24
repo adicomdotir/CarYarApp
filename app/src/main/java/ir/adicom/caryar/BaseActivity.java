@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import ir.adicom.caryar.models.Car;
 import ir.adicom.caryar.models.DaoMaster;
@@ -16,15 +17,22 @@ import ir.adicom.caryar.models.DaoSession;
 
 public class BaseActivity extends Activity {
 
+    private String carName;
+    private DaoMaster.DevOpenHelper helper;
+    private SQLiteDatabase dbDao;
+    private DaoMaster daoMaster;
+    private DaoSession daoSession;
+    private TextView txtCarName;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_base2);
 
-        DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(getApplicationContext(), "carhelper-db", null);
-        SQLiteDatabase dbDao = helper.getWritableDatabase();
-        DaoMaster daoMaster = new DaoMaster(dbDao);
-        final DaoSession daoSession = daoMaster.newSession();
+        helper = new DaoMaster.DevOpenHelper(getApplicationContext(), "carhelper-db", null);
+        dbDao = helper.getWritableDatabase();
+        daoMaster = new DaoMaster(dbDao);
+        daoSession = daoMaster.newSession();
         if (daoSession.getCarDao().count() == 0) {
             Car car = new Car();
             car.setName("پراید");
@@ -43,7 +51,7 @@ public class BaseActivity extends Activity {
         HelperUI.CAR_ID = prefs.getLong("CARID", 0);
 
         HelperUI.setFont((ViewGroup) findViewById(R.id.base_layout),
-                Typeface.createFromAsset(getAssets(), "Vazir.ttf"));
+                Typeface.createFromAsset(getAssets(), "Vazir_Medium.ttf"));
 
         LinearLayout linearLayout = (LinearLayout) findViewById(R.id.fuel_layer);
         linearLayout.setOnClickListener(new View.OnClickListener() {
@@ -53,7 +61,6 @@ public class BaseActivity extends Activity {
                 overridePendingTransition(R.anim.enter, R.anim.exit);
             }
         });
-
         linearLayout = (LinearLayout) findViewById(R.id.oil_layer);
         linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,5 +93,20 @@ public class BaseActivity extends Activity {
                 overridePendingTransition(R.anim.enter, R.anim.exit);
             }
         });
+
+        txtCarName = (TextView) findViewById(R.id.carName);
+        getName();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        getName();
+    }
+
+    private void getName() {
+        Car tempCar = daoSession.getCarDao().load(HelperUI.CAR_ID);
+        carName = tempCar.getName() + "," + tempCar.getColor();
+        txtCarName.setText(carName);
     }
 }

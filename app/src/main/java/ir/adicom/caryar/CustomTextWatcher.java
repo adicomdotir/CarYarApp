@@ -10,10 +10,10 @@ import java.text.DecimalFormat;
  * Created by adicom on 11/17/17.
  */
 
-public class CustomTextWacher implements TextWatcher {
+public class CustomTextWatcher implements TextWatcher {
     private EditText editText;
 
-    public CustomTextWacher(EditText editText) {
+    public CustomTextWatcher(EditText editText) {
         this.editText = editText;
     }
 

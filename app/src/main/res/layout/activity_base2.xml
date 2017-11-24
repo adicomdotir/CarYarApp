@@ -44,8 +44,9 @@
             android:layout_height="match_parent">
 
             <TextView
+                android:id="@+id/carName"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:text="پراید"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

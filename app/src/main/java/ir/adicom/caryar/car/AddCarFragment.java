@@ -1,7 +1,6 @@
 package ir.adicom.caryar.car;
 
 
-import android.content.DialogInterface;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -14,23 +13,12 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
-import java.text.NumberFormat;
-import java.text.ParseException;
-import java.util.Calendar;
-import java.util.Locale;
-
-import ir.adicom.caryar.AppDialog;
-import ir.adicom.caryar.CalendarTool;
-import ir.adicom.caryar.CustomTextWacher;
 import ir.adicom.caryar.HelperUI;
 import ir.adicom.caryar.R;
-import ir.adicom.caryar.engineoil.ListEngineOilFragment;
 import ir.adicom.caryar.models.Car;
 import ir.adicom.caryar.models.CarDao;
 import ir.adicom.caryar.models.DaoMaster;
 import ir.adicom.caryar.models.DaoSession;
-import ir.adicom.caryar.models.EngineOil;
-import ir.adicom.caryar.models.EngineOilDao;
 
 /**
  * A simple {@link Fragment} subclass.

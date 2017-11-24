@@ -40,19 +40,19 @@ public class ChartActivity extends Activity {
         int[] data = new int[3];
 
         TextView tvFuelCost = (TextView) findViewById(R.id.tvFuelCost);
-        Cursor cursor = daoSession.getDatabase().rawQuery("SELECT sum(PRICE) FROM FUEL", null);
+        Cursor cursor = daoSession.getDatabase().rawQuery("SELECT sum(PRICE) FROM FUEL WHERE=" + HelperUI.CAR_ID, null);
         cursor.moveToFirst();
         String str = NumberFormat.getNumberInstance(Locale.US).format(cursor.getInt(0));
         data[0] = cursor.getInt(0);
         tvFuelCost.setText("هزینه سوخت : " + str + " تومان");
         TextView tvOilCost = (TextView) findViewById(R.id.tvOilCost);
-        cursor = daoSession.getDatabase().rawQuery("SELECT sum(PRICE) FROM ENGINE_OIL", null);
+        cursor = daoSession.getDatabase().rawQuery("SELECT sum(PRICE) FROM ENGINE_OIL WHERE=" + HelperUI.CAR_ID, null);
         cursor.moveToFirst();
         str = NumberFormat.getNumberInstance(Locale.US).format(cursor.getInt(0));
         data[1] = cursor.getInt(0);
         tvOilCost.setText("هزینه روغن : " + str + " تومان");
         TextView tvServiceCost = (TextView) findViewById(R.id.tvServiceCost);
-        cursor = daoSession.getDatabase().rawQuery("SELECT sum(PART_PRICE),sum(EXPERT_PRICE) FROM SERVICE", null);
+        cursor = daoSession.getDatabase().rawQuery("SELECT sum(PART_PRICE),sum(EXPERT_PRICE) FROM SERVICE WHERE=" + HelperUI.CAR_ID, null);
         cursor.moveToFirst();
         str = NumberFormat.getNumberInstance(Locale.US).format(cursor.getInt(0) + cursor.getInt(1));
         data[2] = cursor.getInt(0) + cursor.getInt(1);

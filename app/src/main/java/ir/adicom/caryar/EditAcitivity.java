@@ -66,7 +66,7 @@ public class EditAcitivity extends Activity {
         HelperUI.setFont((ViewGroup) getWindow().getDecorView(), custom_font);
 
         edtCost = (EditText) findViewById(R.id.edtCost);
-        edtCost.addTextChangedListener(new CustomTextWacher(edtCost));
+        edtCost.addTextChangedListener(new CustomTextWatcher(edtCost));
         edtKM = (EditText) findViewById(R.id.edtKm);
 
         customBtn1 = (CustomControl) findViewById(R.id.custom_btn_1);

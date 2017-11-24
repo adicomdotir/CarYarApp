@@ -14,6 +14,7 @@ import android.widget.ListView;
 
 import java.util.List;
 
+import ir.adicom.caryar.HelperUI;
 import ir.adicom.caryar.R;
 import ir.adicom.caryar.models.DaoMaster;
 import ir.adicom.caryar.models.DaoSession;
@@ -50,7 +51,8 @@ public class ListServiceFragment extends Fragment {
         DaoSession daoSession = daoMaster.newSession();
         ServiceDao serviceDao = daoSession.getServiceDao();
 
-        services = serviceDao.queryBuilder().orderDesc(ServiceDao.Properties.Id).list();
+        services = serviceDao.queryBuilder().where(ServiceDao.Properties.CarId.eq(HelperUI.CAR_ID))
+                .orderDesc(ServiceDao.Properties.Id).list();
 
         ListView listView = (ListView) view.findViewById(R.id.listview_service);
         ServiceAdapter myAdapter = new ServiceAdapter(getContext(), services);

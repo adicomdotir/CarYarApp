@@ -7,8 +7,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
@@ -21,7 +19,6 @@ import android.widget.Toast;
 
 import com.cengalabs.flatui.FlatUI;
 
-import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.text.ParseException;
 import java.util.Calendar;
@@ -86,7 +83,7 @@ public class MainActivity extends Activity {
         final RadioGroup radioGroup = (RadioGroup) findViewById(R.id.radioGroup1);
         final EditText edtKilo = (EditText) findViewById(R.id.editText1);
         final EditText edtprice = (EditText) findViewById(R.id.editText2);
-        edtprice.addTextChangedListener(new CustomTextWacher(edtprice));
+        edtprice.addTextChangedListener(new CustomTextWatcher(edtprice));
         Button btnInsert = (Button) findViewById(R.id.btn_insert);
         btnInsert.setTypeface(custom_font);
         btnInsert.setOnClickListener(new OnClickListener() {
@@ -162,8 +159,9 @@ public class MainActivity extends Activity {
             }
         });
         TextView tvTotal = (TextView) findViewById(R.id.tv_total);
-        Cursor cursor = daoSession.getDatabase().rawQuery("SELECT sum(price) FROM FUEL GROUP BY type", null);
+        //Cursor cursor = daoSession.getDatabase().rawQuery("SELECT sum(price) FROM FUEL GROUP BY type", null);
         //Cursor cursor = db.get("SELECT sum(price) FROM info GROUP BY type");
+        Cursor cursor = daoSession.getDatabase().rawQuery("SELECT sum(PRICE) FROM FUEL WHERE CAR_ID=" + HelperUI.CAR_ID + " GROUP BY TYPE", null);
         cursor.moveToFirst();
         int benzinCost = cursor.getInt(0);
         cursor.moveToNext();
@@ -181,7 +179,8 @@ public class MainActivity extends Activity {
         tvTotalGus.setText(temp);
         TextView tvTotalKm = (TextView) findViewById(R.id.tv_total_km);
         // cursor = db.get("SELECT min(km),max(km) FROM info");
-        cursor = daoSession.getDatabase().rawQuery("SELECT min(KILOMETER),max(KILOMETER) FROM FUEL", null);
+        // cursor = daoSession.getDatabase().rawQuery("SELECT min(KILOMETER),max(KILOMETER) FROM FUEL", null);
+        cursor = daoSession.getDatabase().rawQuery("SELECT min(KILOMETER),max(KILOMETER) FROM FUEL WHERE CAR_ID=" + HelperUI.CAR_ID, null);
         cursor.moveToFirst();
         tvTotalKm.setText(String.format(Locale.US, "%d کیلومتر", cursor.getInt(1) - cursor.getInt(0)));
     }
