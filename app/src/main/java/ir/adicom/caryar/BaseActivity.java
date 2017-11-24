@@ -6,10 +6,18 @@ import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.os.Environment;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.nio.channels.FileChannel;
 
 import ir.adicom.caryar.models.Car;
 import ir.adicom.caryar.models.DaoMaster;
@@ -96,6 +104,8 @@ public class BaseActivity extends Activity {
 
         txtCarName = (TextView) findViewById(R.id.carName);
         getName();
+
+        copyFile();
     }
 
     @Override
@@ -108,5 +118,30 @@ public class BaseActivity extends Activity {
         Car tempCar = daoSession.getCarDao().load(HelperUI.CAR_ID);
         carName = tempCar.getName() + "," + tempCar.getColor();
         txtCarName.setText(carName);
+    }
+
+    public void copyFile() {
+        try {
+            File sd = Environment.getExternalStorageDirectory();
+            File data = Environment.getDataDirectory();
+
+            if (sd.canWrite()) {
+                String currentDBPath = "/data/ir.adicom.caryar/databases/carhelper-db";
+                String backupDBPath = "database_name";
+                File currentDB = new File(data, currentDBPath);
+                File backupDB = new File(sd, backupDBPath);
+
+                if (currentDB.exists()) {
+                    FileChannel src = new FileInputStream(currentDB).getChannel();
+                    FileChannel dst = new FileOutputStream(backupDB).getChannel();
+                    dst.transferFrom(src, 0, src.size());
+                    src.close();
+                    dst.close();
+                }
+            }
+        }
+        catch (Exception e) {
+            Log.w("Settings Backup", e);
+        }
     }
 }

@@ -162,10 +162,13 @@ public class MainActivity extends Activity {
         //Cursor cursor = daoSession.getDatabase().rawQuery("SELECT sum(price) FROM FUEL GROUP BY type", null);
         //Cursor cursor = db.get("SELECT sum(price) FROM info GROUP BY type");
         Cursor cursor = daoSession.getDatabase().rawQuery("SELECT sum(PRICE) FROM FUEL WHERE CAR_ID=" + HelperUI.CAR_ID + " GROUP BY TYPE", null);
-        cursor.moveToFirst();
-        int benzinCost = cursor.getInt(0);
-        cursor.moveToNext();
-        int gusCost = cursor.getInt(0);
+        int gusCost = 0, benzinCost = 0;
+        if (cursor.moveToFirst()) {
+            benzinCost = cursor.getInt(0);
+        }
+        if (cursor.moveToNext()) {
+            gusCost = cursor.getInt(0);
+        }
         String str = NumberFormat.getNumberInstance(Locale.US).format(benzinCost + gusCost);
         String temp = String.format(Locale.US, "%s تومان", str);
         tvTotal.setText(temp);

@@ -10,16 +10,20 @@
     android:gravity="center">
 
     <LinearLayout
+        android:padding="10dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:gravity="center">
 
-        <com.jjoe64.graphview.GraphView
+        <ir.adicom.caryar.CustomChart
+            android:id="@+id/customChart"
+            xmlns:customNS="http://schemas.android.com/apk/res/ir.adicom.caryar"
+            customNS:bgColor="@color/sky_light"
             android:layout_width="match_parent"
-            android:layout_height="200dip"
-            android:id="@+id/graph" />
+            android:layout_height="100dp" />
+
     </LinearLayout>
 
     <LinearLayout

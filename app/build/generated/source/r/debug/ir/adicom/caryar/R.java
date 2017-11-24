@@ -27,6 +27,15 @@ public final class R {
         public static final int snow=0x7f07000b;
     }
     public static final class attr {
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int bgColor=0x7f01000a;
         /** <p>May be an integer value, such as "<code>100</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -44,7 +53,7 @@ containing a value of this type.
 <tr><td><code>transparent</code></td><td>2</td><td></td></tr>
 </table>
          */
-        public static final int fl_autoFieldStyle=0x7f01000a;
+        public static final int fl_autoFieldStyle=0x7f01000b;
         /** <p>May be an integer value, such as "<code>100</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -63,7 +72,7 @@ containing a value of this type.
 <tr><td><code>fl_light</code></td><td>3</td><td></td></tr>
 </table>
          */
-        public static final int fl_backgroundColor=0x7f01000e;
+        public static final int fl_backgroundColor=0x7f01000f;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -73,7 +82,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int fl_blockButtonEffectHeight=0x7f01000b;
+        public static final int fl_blockButtonEffectHeight=0x7f01000c;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -102,7 +111,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int fl_customBackgroundColor=0x7f01000f;
+        public static final int fl_customBackgroundColor=0x7f010010;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -130,7 +139,7 @@ containing a value of this type.
 <tr><td><code>fl_transparent</code></td><td>2</td><td></td></tr>
 </table>
          */
-        public static final int fl_fieldStyle=0x7f01000c;
+        public static final int fl_fieldStyle=0x7f01000d;
         /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -174,7 +183,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int fl_space=0x7f010010;
+        public static final int fl_space=0x7f010011;
         /** <p>May be an integer value, such as "<code>100</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -211,7 +220,7 @@ containing a value of this type.
 <tr><td><code>fl_light</code></td><td>3</td><td></td></tr>
 </table>
          */
-        public static final int fl_textColor=0x7f01000d;
+        public static final int fl_textColor=0x7f01000e;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
@@ -341,6 +350,7 @@ containing a value of this type.
         public static final int calender_view=0x7f0b003c;
         public static final int carName=0x7f0b000f;
         public static final int car_layer=0x7f0b000e;
+        public static final int customChart=0x7f0b0016;
         public static final int custom_btn_1=0x7f0b003d;
         public static final int custom_btn_2=0x7f0b003e;
         public static final int custom_btn_3=0x7f0b003f;
@@ -371,7 +381,6 @@ containing a value of this type.
         public static final int flat=0x7f0b0006;
         public static final int fragmentParentViewGroup=0x7f0b0015;
         public static final int fuel_layer=0x7f0b0010;
-        public static final int graph=0x7f0b0016;
         public static final int imageView2=0x7f0b0011;
         public static final int label=0x7f0b0055;
         public static final int listView1=0x7f0b0058;
@@ -456,6 +465,34 @@ containing a value of this type.
         public static final int AppTheme=0x7f050001;
     }
     public static final class styleable {
+        /** Attributes that can be used with a CustomChart.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #CustomChart_bgColor ir.adicom.caryar:bgColor}</code></td><td></td></tr>
+           </table>
+           @see #CustomChart_bgColor
+         */
+        public static final int[] CustomChart = {
+            0x7f01000a
+        };
+        /**
+          <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#bgColor}
+          attribute's value can be found in the {@link #CustomChart} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name ir.adicom.caryar:bgColor
+        */
+        public static final int CustomChart_bgColor = 0;
         /** Attributes that can be used with a fl_FlatAutoCompleteTextView.
            <p>Includes the following attributes:</p>
            <table>
@@ -482,7 +519,7 @@ containing a value of this type.
          */
         public static final int[] fl_FlatAutoCompleteTextView = {
             0x7f010000, 0x7f010001, 0x7f010003, 0x7f010004,
-            0x7f010005, 0x7f010007, 0x7f010008, 0x7f01000a
+            0x7f010005, 0x7f010007, 0x7f010008, 0x7f01000b
         };
         /**
           <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_autoFieldStyle}
@@ -642,7 +679,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
          */
         public static final int[] fl_FlatButton = {
             0x7f010001, 0x7f010003, 0x7f010004, 0x7f010005,
-            0x7f010007, 0x7f010008, 0x7f010009, 0x7f01000b
+            0x7f010007, 0x7f010008, 0x7f010009, 0x7f01000c
         };
         /**
           <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_blockButtonEffectHeight}
@@ -928,7 +965,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
          */
         public static final int[] fl_FlatEditText = {
             0x7f010000, 0x7f010001, 0x7f010003, 0x7f010004,
-            0x7f010005, 0x7f010007, 0x7f010008, 0x7f01000c
+            0x7f010005, 0x7f010007, 0x7f010008, 0x7f01000d
         };
         /**
           <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_borderWidth}
@@ -1257,8 +1294,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
          */
         public static final int[] fl_FlatTextView = {
             0x7f010000, 0x7f010001, 0x7f010003, 0x7f010004,
-            0x7f010005, 0x7f010008, 0x7f01000d, 0x7f01000e,
-            0x7f01000f
+            0x7f010005, 0x7f010008, 0x7f01000e, 0x7f01000f,
+            0x7f010010
         };
         /**
           <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_backgroundColor}
@@ -1424,7 +1461,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            @see #fl_FlatToggleButton_fl_theme
          */
         public static final int[] fl_FlatToggleButton = {
-            0x7f010001, 0x7f010008, 0x7f010010
+            0x7f010001, 0x7f010008, 0x7f010011
         };
         /**
           <p>This symbol is the offset where the {@link ir.adicom.caryar.R.attr#fl_cornerRadius}

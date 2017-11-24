@@ -140,6 +140,7 @@
     <color name="snow_darker">#c8c8c8</color>
     <color name="snow_light">#fafafa</color>
     <color name="snow_primary">#e8e8e8</color>
+    <declare-styleable name="CustomChart"><attr format="color" name="bgColor"/></declare-styleable>
     <declare-styleable name="fl_FlatAutoCompleteTextView"><attr name="fl_theme"/><attr name="fl_fontFamily"/><attr name="fl_fontWeight"/><attr name="fl_fontExtension"/><attr name="fl_textAppearance"/><attr name="fl_cornerRadius"/><attr name="fl_borderWidth"/><attr format="integer" name="fl_autoFieldStyle">
             <enum name="flat" value="0"/>
             <enum name="box" value="1"/>

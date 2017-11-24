@@ -1,20 +1,13 @@
 package ir.adicom.caryar;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import java.text.NumberFormat;
-import java.util.Locale;
 
 /**
  * Created by adicom on 12/5/16.
@@ -57,7 +50,6 @@ public class CustomControl extends LinearLayout {
         super(context, attrs, defStyleAttr);
         init(context);
     }
-
 
     public void init(Context context) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
