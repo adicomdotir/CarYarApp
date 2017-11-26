@@ -22,7 +22,7 @@
             xmlns:customNS="http://schemas.android.com/apk/res/ir.adicom.caryar"
             customNS:bgColor="@color/sky_light"
             android:layout_width="match_parent"
-            android:layout_height="100dp" />
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 

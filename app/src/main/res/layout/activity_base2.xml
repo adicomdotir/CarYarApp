@@ -126,7 +126,6 @@
 
                 <ImageView
                     android:src="@drawable/arrow"
-                    android:id="@+id/imageView2"
                     android:layout_centerVertical="true"
                     android:layout_alignParentLeft="true"
                     android:scaleType="centerInside"
@@ -155,7 +154,6 @@
 
             <ImageView
                 android:src="@drawable/change_car_oil"
-                android:id="@+id/imageView2"
                 android:layout_centerVertical="true"
                 android:layout_alignParentLeft="true"
                 android:scaleType="centerInside"
@@ -188,7 +186,6 @@
 
             <ImageView
                 android:src="@drawable/arrow"
-                android:id="@+id/imageView2"
                 android:layout_centerVertical="true"
                 android:layout_alignParentLeft="true"
                 android:scaleType="centerInside"
@@ -216,7 +213,6 @@
 
             <ImageView
                 android:src="@drawable/car_repair"
-                android:id="@+id/imageView2"
                 android:layout_centerVertical="true"
                 android:layout_alignParentLeft="true"
                 android:scaleType="centerInside"
@@ -249,7 +245,6 @@
 
             <ImageView
                 android:src="@drawable/arrow"
-                android:id="@+id/imageView2"
                 android:layout_centerVertical="true"
                 android:layout_alignParentLeft="true"
                 android:scaleType="centerInside"
@@ -276,7 +271,6 @@
 
             <ImageView
                 android:src="@drawable/report"
-                android:id="@+id/imageView2"
                 android:layout_centerVertical="true"
                 android:layout_alignParentLeft="true"
                 android:scaleType="centerInside"
@@ -309,7 +303,6 @@
 
             <ImageView
                 android:src="@drawable/arrow"
-                android:id="@+id/imageView2"
                 android:layout_centerVertical="true"
                 android:layout_alignParentLeft="true"
                 android:scaleType="centerInside"

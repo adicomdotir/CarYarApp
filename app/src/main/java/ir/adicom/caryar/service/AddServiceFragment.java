@@ -118,6 +118,10 @@ public class AddServiceFragment extends Fragment {
                 service.setPartPrice(myNumber.intValue());
                 service.setCarId(HelperUI.CAR_ID);
                 serviceDao.insert(service);
+                edtPriceExpert.setText("");
+                edtPricePart.setText("");
+                edtPricePart.setText("");
+                edtTitle.setText("");
             }
         });
 

@@ -69,6 +69,10 @@ public class AddCarFragment extends Fragment {
                 car.setPlaque(edtPlaque.getText().toString());
                 car.setYear(Integer.parseInt(edtYear.getText().toString()));
                 carDao.insert(car);
+                edtName.setText("");
+                edtColor.setText("");
+                edtPlaque.setText("");
+                edtYear.setText("");
             }
         });
 

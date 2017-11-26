@@ -105,7 +105,7 @@ public class BaseActivity extends Activity {
         txtCarName = (TextView) findViewById(R.id.carName);
         getName();
 
-        copyFile();
+        // copyFile();
     }
 
     @Override
@@ -116,7 +116,7 @@ public class BaseActivity extends Activity {
 
     private void getName() {
         Car tempCar = daoSession.getCarDao().load(HelperUI.CAR_ID);
-        carName = tempCar.getName() + "," + tempCar.getColor();
+        carName = tempCar.getName();
         txtCarName.setText(carName);
     }
 

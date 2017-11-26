@@ -108,6 +108,10 @@ public class AddEngineOilFragment extends Fragment {
                 engineOil.setPrice(myNumber.intValue());
                 engineOil.setCarId(HelperUI.CAR_ID);
                 engineOilDao.insert(engineOil);
+                edtKm.setText("");
+                edtKmMax.setText("5000");
+                edtPrice.setText("");
+                edtTitle.setText("");
             }
         });
 
