@@ -1,6 +1,6 @@
 package ir.adicom.caryar;
 
-import android.app.Activity;
+import android.Manifest;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
@@ -19,11 +19,13 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.nio.channels.FileChannel;
 
+import ir.adicom.caryar.Utility.ParentActivity;
+import ir.adicom.caryar.Utility.PermissionHandler;
 import ir.adicom.caryar.models.Car;
 import ir.adicom.caryar.models.DaoMaster;
 import ir.adicom.caryar.models.DaoSession;
 
-public class BaseActivity extends Activity {
+public class BaseActivity extends ParentActivity {
 
     private String carName;
     private DaoMaster.DevOpenHelper helper;
@@ -37,6 +39,25 @@ public class BaseActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_base2);
 
+        String temp[] = {
+                android.Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                Manifest.permission.READ_EXTERNAL_STORAGE,
+                Manifest.permission.READ_PHONE_STATE
+        };
+        new PermissionHandler().checkPermission(this, temp, new PermissionHandler.OnPermissionResponse() {
+            @Override
+            public void onPermissionGranted() {
+                init();
+            }
+
+            @Override
+            public void onPermissionDenied() {
+                Toast.makeText(BaseActivity.this, "مجوزها را صادر کنید", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    private void init() {
         helper = new DaoMaster.DevOpenHelper(getApplicationContext(), "carhelper-db", null);
         dbDao = helper.getWritableDatabase();
         daoMaster = new DaoMaster(dbDao);
@@ -50,7 +71,7 @@ public class BaseActivity extends Activity {
             daoSession.getCarDao().insert(car);
             // TODO: Problem here
             SharedPreferences prefs = getSharedPreferences(getApplicationContext().getPackageName(),
-                            this.MODE_PRIVATE);
+                    this.MODE_PRIVATE);
             prefs.edit().putLong("CARID", 1).apply();
         }
 
@@ -104,8 +125,6 @@ public class BaseActivity extends Activity {
 
         txtCarName = (TextView) findViewById(R.id.carName);
         getName();
-
-        // copyFile();
     }
 
     @Override
