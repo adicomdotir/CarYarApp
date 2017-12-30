@@ -18,14 +18,13 @@ ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifes
 uses-sdk
 ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.eluleci:flatui:3.0.0] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.github.eluleci/flatui/3.0.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:support-v4:25.3.1] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.1/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-compat:25.3.1] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-media-compat:25.3.1] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.1/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-utils:25.3.1] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.1/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-core-ui:25.3.1] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.1/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-fragment:25.3.1] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.3.1/AndroidManifest.xml:21:5-23:60
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/io.reactivex.rxjava2/rxandroid/2.0.1/AndroidManifest.xml:19:5-43
+MERGED from [com.android.support:appcompat-v7:23.4.0] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:23.4.0] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:support-vector-drawable:23.4.0] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.4.0] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
 	tools:overrideLibrary
-		ADDED from [com.android.support:support-v4:25.3.1] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.1/AndroidManifest.xml:23:9-51
+		ADDED from [com.android.support:appcompat-v7:23.4.0] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
 		ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:9:9-38
 		INJECTED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml
@@ -49,12 +48,10 @@ ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifes
 application
 ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:15:5-41:19
 MERGED from [com.github.eluleci:flatui:3.0.0] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.github.eluleci/flatui/3.0.0/AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:support-v4:25.3.1] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.1/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-compat:25.3.1] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-media-compat:25.3.1] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.1/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-utils:25.3.1] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.1/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-ui:25.3.1] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.1/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-fragment:25.3.1] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:23.4.0] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.4.0] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.4.0] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.4.0] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
 	android:label
 		ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:18:9-41
 	android:allowBackup
@@ -115,14 +112,3 @@ ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifes
 		ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:40:13-55
 	android:name
 		ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:39:13-40
-meta-data#android.support.VERSION
-ADDED from [com.android.support:support-v4:25.3.1] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.1/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-compat:25.3.1] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-media-compat:25.3.1] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.1/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-utils:25.3.1] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.1/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-ui:25.3.1] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.1/AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-fragment:25.3.1] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.3.1/AndroidManifest.xml:25:5-27:34
-	android:value
-		ADDED from [com.android.support:support-v4:25.3.1] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.1/AndroidManifest.xml:27:9-31
-	android:name
-		ADDED from [com.android.support:support-v4:25.3.1] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.1/AndroidManifest.xml:26:9-47

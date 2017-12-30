@@ -19,6 +19,13 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.nio.channels.FileChannel;
 
+import io.reactivex.Observable;
+import io.reactivex.Observer;
+import io.reactivex.annotations.NonNull;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Action;
+import io.reactivex.functions.Function;
+import io.reactivex.functions.Predicate;
 import ir.adicom.caryar.Utility.ParentActivity;
 import ir.adicom.caryar.Utility.PermissionHandler;
 import ir.adicom.caryar.models.Car;
@@ -53,6 +60,46 @@ public class BaseActivity extends ParentActivity {
             @Override
             public void onPermissionDenied() {
                 Toast.makeText(BaseActivity.this, "مجوزها را صادر کنید", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        myTest();
+    }
+
+    public void myTest() {
+        Integer[] numbers = new Integer[] {1, 2, 3, 4, 5};
+        Observable<Integer> observable = io.reactivex.Observable.fromArray(numbers);
+        observable = observable.map(new Function<Integer, Integer>() {
+            @Override
+            public Integer apply(@NonNull Integer integer) throws Exception {
+                return integer * integer;
+            }
+        });
+        observable = observable.filter(new Predicate<Integer>() {
+            @Override
+            public boolean test(@NonNull Integer integer) throws Exception {
+                return integer > 10;
+            }
+        });
+        observable.subscribe(new Observer<Integer>() {
+            @Override
+            public void onSubscribe(@NonNull Disposable d) {
+
+            }
+
+            @Override
+            public void onNext(@NonNull Integer integer) {
+                Log.e("TAG", "" + integer);
+            }
+
+            @Override
+            public void onError(@NonNull Throwable e) {
+
+            }
+
+            @Override
+            public void onComplete() {
+
             }
         });
     }
