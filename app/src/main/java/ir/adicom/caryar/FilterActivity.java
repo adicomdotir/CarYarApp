@@ -2,6 +2,7 @@ package ir.adicom.caryar;
 
 import android.app.Activity;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +13,9 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import java.util.ArrayList;
+
+import ir.adicom.caryar.models.DaoMaster;
+import ir.adicom.caryar.models.DaoSession;
 
 public class FilterActivity extends Activity {
 
@@ -34,6 +38,11 @@ public class FilterActivity extends Activity {
         HelperUI.setFont((ViewGroup) findViewById(R.id.base_layout),
                 Typeface.createFromAsset(getAssets(), "Vazir_Light.ttf"));
 
+        DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(getApplicationContext(), "carhelper-db", null);
+        SQLiteDatabase dbDao = helper.getWritableDatabase();
+        DaoMaster daoMaster = new DaoMaster(dbDao);
+        final DaoSession daoSession = daoMaster.newSession();
+
         db = new DatabaseHandler(this);
         listView = (ListView) findViewById(R.id.new_listview);
 
@@ -45,26 +54,34 @@ public class FilterActivity extends Activity {
             @Override
             public void onClick(View view) {
                 ArrayList<String> stringArrayList = new ArrayList<String>();
-                if(db.getCount() > 0) {
                     // Sorting by year and month
                     // sortedList = sortByYearAndMonth(monthPriceMap);
                     RadioButton rbAlltime = (RadioButton) findViewById(rgTwo.getCheckedRadioButtonId());
                     if(rbAlltime.getText().equals("سالانه")) {
                         RadioButton rb = (RadioButton) findViewById(rgOne.getCheckedRadioButtonId());
                         if(rb.getText().equals("همه")) {
-                            Cursor cursor = db.getAll("", false);
+                            // Cursor cursor = db.getAll("", false);
+                            Cursor cursor = daoSession.getDatabase().rawQuery("SELECT substr(DATE,1,4) AS mydate, sum(PRICE) FROM FUEL WHERE CAR_ID=" + HelperUI.CAR_ID + " AND TYPE LIKE '%" +
+                                    "" + "%' GROUP BY mydate ORDER BY mydate DESC", null);
+                            cursor.moveToFirst();
                             do {
                                 String temp = "کل هزینه سال " + cursor.getString(0) + " : " + cursor.getInt(1) + " تومان";
                                 stringArrayList.add(temp);
                             } while (cursor.moveToNext());
                         } else if(rb.getText().equals("گاز")) {
-                            Cursor cursor = db.getAll("گاز", false);
+                            // Cursor cursor = db.getAll("گاز", false);
+                            Cursor cursor = daoSession.getDatabase().rawQuery("SELECT substr(DATE,1,4) AS mydate, sum(PRICE) FROM FUEL WHERE CAR_ID=" + HelperUI.CAR_ID + " AND TYPE LIKE '%" +
+                                    "گاز" + "%' GROUP BY mydate ORDER BY mydate DESC", null);
+                            cursor.moveToFirst();
                             do {
                                 String temp = "هزینه گاز سال " + cursor.getString(0) + " : " + cursor.getInt(1) + " تومان";
                                 stringArrayList.add(temp);
                             } while (cursor.moveToNext());
                         } else {
-                            Cursor cursor = db.getAll("بنزین", false);
+                            // Cursor cursor = db.getAll("بنزین", false);
+                            Cursor cursor = daoSession.getDatabase().rawQuery("SELECT substr(DATE,1,4) AS mydate, sum(PRICE) FROM FUEL WHERE CAR_ID=" + HelperUI.CAR_ID + " AND TYPE LIKE '%" +
+                                    "بنزین" + "%' GROUP BY mydate ORDER BY mydate DESC", null);
+                            cursor.moveToFirst();
                             do {
                                 String temp = "هزینه بنزین سال " + cursor.getString(0) + " : " + cursor.getInt(1) + " تومان";
                                 stringArrayList.add(temp);
@@ -73,7 +90,10 @@ public class FilterActivity extends Activity {
                     } else {
                         RadioButton rb = (RadioButton) findViewById(rgOne.getCheckedRadioButtonId());
                         if(rb.getText().equals("همه")) {
-                            Cursor cursor = db.getAll("", true);
+                            // Cursor cursor = db.getAll("", true);
+                            Cursor cursor = daoSession.getDatabase().rawQuery("SELECT substr(DATE,1,7) AS mydate, sum(PRICE) FROM FUEL WHERE CAR_ID=" + HelperUI.CAR_ID + " AND TYPE LIKE '%" +
+                                    "" + "%' GROUP BY mydate ORDER BY mydate DESC", null);
+                            cursor.moveToFirst();
                             do {
                                 String[] array = cursor.getString(0).split("/");
                                 int month = Integer.parseInt(array[1]);
@@ -81,7 +101,10 @@ public class FilterActivity extends Activity {
                                 stringArrayList.add(temp);
                             } while (cursor.moveToNext());
                         } else if(rb.getText().equals("گاز")) {
-                            Cursor cursor = db.getAll("گاز", true);
+                            // Cursor cursor = db.getAll("گاز", true);
+                            Cursor cursor = daoSession.getDatabase().rawQuery("SELECT substr(DATE,1,7) AS mydate, sum(PRICE) FROM FUEL WHERE CAR_ID=" + HelperUI.CAR_ID + " AND TYPE LIKE '%" +
+                                    "گاز" + "%' GROUP BY mydate ORDER BY mydate DESC", null);
+                            cursor.moveToFirst();
                             do {
                                 String[] array = cursor.getString(0).split("/");
                                 int month = Integer.parseInt(array[1]);
@@ -89,7 +112,10 @@ public class FilterActivity extends Activity {
                                 stringArrayList.add(temp);
                             } while (cursor.moveToNext());
                         } else {
-                            Cursor cursor = db.getAll("بنزین", true);
+                            // Cursor cursor = db.getAll("بنزین", true);
+                            Cursor cursor = daoSession.getDatabase().rawQuery("SELECT substr(DATE,1,7) AS mydate, sum(PRICE) FROM FUEL WHERE CAR_ID=" + HelperUI.CAR_ID + " AND TYPE LIKE '%" +
+                                    "بنزین" + "%' GROUP BY mydate ORDER BY mydate DESC", null);
+                            cursor.moveToFirst();
                             do {
                                 String[] array = cursor.getString(0).split("/");
                                 int month = Integer.parseInt(array[1]);
@@ -99,7 +125,6 @@ public class FilterActivity extends Activity {
                         }
                     }
 
-                }
                 String[] arr = new String[stringArrayList.size()];
                 arr = stringArrayList.toArray(arr);
                 myAdapter = new MyAdapter(FilterActivity.this, arr);

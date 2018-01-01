@@ -108,12 +108,12 @@
         "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/drawable/button_delete.xml"
     },
     {
-        "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/drawable/car.png",
-        "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/drawable/car.png"
-    },
-    {
         "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/drawable/oil.png",
         "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/drawable/oil.png"
+    },
+    {
+        "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/drawable/car.png",
+        "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/drawable/car.png"
     },
     {
         "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
@@ -128,12 +128,12 @@
         "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/drawable/car_repair.png"
     },
     {
-        "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/drawable/arrow.png",
-        "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/drawable/arrow.png"
-    },
-    {
         "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/drawable/bg_edittext_normal.xml",
         "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/drawable/bg_edittext_normal.xml"
+    },
+    {
+        "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/drawable/arrow.png",
+        "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/drawable/arrow.png"
     },
     {
         "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_top_material.xml",

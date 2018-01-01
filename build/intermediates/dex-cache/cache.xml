@@ -3,6 +3,78 @@
 
     <item
         is-multidex="false"
+        jar="/home/adicom/.gradle/caches/modules-2/files-2.1/io.reactivex.rxjava2/rxjava/2.1.7/8c6d3f76a0b8ed49e9d49a5af9c80c5fc2091677/rxjava-2.1.7.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="8c6d3f76a0b8ed49e9d49a5af9c80c5fc2091677">
+        <dex dex="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/pre-dexed/debug/rxjava-2.1.7_dc1f2f7f266d8f16e5c30aac0a592fc18f1c6204.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/adicom/.gradle/caches/modules-2/files-2.1/org.greenrobot/greendao/3.2.2/f8c7ebdc29310be23d076e5512bafe6bad3ce2f0/greendao-3.2.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="f8c7ebdc29310be23d076e5512bafe6bad3ce2f0">
+        <dex dex="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/pre-dexed/debug/greendao-3.2.2_819f163d42615eb33fa820d0fda5cfcf5f8f05c5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.4.0_4f308dc03858e11accc617c6942735b1ea3a0e04.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.4.0_4f308dc03858e11accc617c6942735b1ea3a0e04.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/pre-dexed/debug/internal_impl-23.4.0_395702f6024f033f4b23132ada3f3fb5d093b5d8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.github.eluleci/flatui/3.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="d1089efa4a24767294278997764bea2fda31ccca">
+        <dex dex="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/pre-dexed/debug/com.github.eluleci-flatui-3.0.0_c3d570a93e51a630d3a68a32a65e9e5f263c8240.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/adicom/.gradle/caches/modules-2/files-2.1/org.greenrobot/greendao-api/3.2.2/e9bbf7a184b0b4914a10d8179c993cc9aa9b1b33/greendao-api-3.2.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="e9bbf7a184b0b4914a10d8179c993cc9aa9b1b33">
+        <dex dex="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/pre-dexed/debug/greendao-api-3.2.2_1572bbe582e3e0164035fd74a6daa8518538c1c5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/pre-dexed/debug/internal_impl-23.4.0_395702f6024f033f4b23132ada3f3fb5d093b5d8.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.github.eluleci/flatui/3.0.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -18,15 +90,6 @@
         revision="23.0.2"
         sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
         <dex dex="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.4.0_b249bb85062ab4aba188ccd2c24842cff9b8f1a7.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/adicom/.gradle/caches/modules-2/files-2.1/io.reactivex.rxjava2/rxjava/2.1.7/8c6d3f76a0b8ed49e9d49a5af9c80c5fc2091677/rxjava-2.1.7.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="8c6d3f76a0b8ed49e9d49a5af9c80c5fc2091677">
-        <dex dex="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/pre-dexed/debug/rxjava-2.1.7_dc1f2f7f266d8f16e5c30aac0a592fc18f1c6204.jar" />
     </item>
     <item
         is-multidex="false"
@@ -48,6 +111,33 @@
     </item>
     <item
         is-multidex="false"
+        jar="/home/adicom/adt-bundle-linux-x86_64-20140702/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/pre-dexed/debug/support-annotations-23.4.0_d43b6d56d43d5a8cb813287ac2ae7224231f5d98.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/io.reactivex.rxjava2/rxandroid/2.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="4119ea97a7191ff9b8f33b534ea220448f62f491">
+        <dex dex="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/pre-dexed/debug/io.reactivex.rxjava2-rxandroid-2.0.1_5586b7581852c63b928f8abe35ded5812be63f7a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.4.0_fa2791f96b1ce62af4dc4921fa13eb954340bd42.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -57,21 +147,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
-        jumboMode="true"
+        jar="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="23.0.2"
-        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
-        <dex dex="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.4.0_4f308dc03858e11accc617c6942735b1ea3a0e04.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="34c80033c638303d5faa6b14281439016e8d1677">
-        <dex dex="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/pre-dexed/debug/instant-run_5b4c7e0926961bff2786fdc648fe58947ef918bf.jar" />
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.4.0_2e9b7556204a0616872bae623bf2f00a30f8a4c7.jar" />
     </item>
     <item
         is-multidex="false"
@@ -84,24 +165,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="0917e4ab899211fd1fc0f0d8098da52842c22ee5">
-        <dex dex="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_6e0b24d83d8bc756670cd760ff4a79dcc5a73d3b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
-        <dex dex="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/pre-dexed/debug/internal_impl-23.4.0_395702f6024f033f4b23132ada3f3fb5d093b5d8.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/home/adicom/.gradle/caches/modules-2/files-2.1/org.greenrobot/greendao/3.2.2/f8c7ebdc29310be23d076e5512bafe6bad3ce2f0/greendao-3.2.2.jar"
         jumboMode="true"
         optimize="true"
@@ -111,12 +174,39 @@
     </item>
     <item
         is-multidex="false"
+        jar="/home/adicom/.gradle/caches/modules-2/files-2.1/io.reactivex.rxjava2/rxjava/2.1.7/8c6d3f76a0b8ed49e9d49a5af9c80c5fc2091677/rxjava-2.1.7.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="8c6d3f76a0b8ed49e9d49a5af9c80c5fc2091677">
+        <dex dex="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/pre-dexed/debug/rxjava-2.1.7_dc1f2f7f266d8f16e5c30aac0a592fc18f1c6204.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.4.0_b249bb85062ab4aba188ccd2c24842cff9b8f1a7.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/adicom/adt-bundle-linux-x86_64-20140702/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
         sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
         <dex dex="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/pre-dexed/debug/support-annotations-23.4.0_d43b6d56d43d5a8cb813287ac2ae7224231f5d98.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/adicom/.gradle/caches/modules-2/files-2.1/org.reactivestreams/reactive-streams/1.0.1/1b1c911686eb40179219466e6a59b634b9d7a748/reactive-streams-1.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="1b1c911686eb40179219466e6a59b634b9d7a748">
+        <dex dex="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/pre-dexed/debug/reactive-streams-1.0.1_9c3cc93b0f51317d523f9d6d5d8bfb3f465cb5c3.jar" />
     </item>
     <item
         is-multidex="false"

@@ -64,6 +64,7 @@ public class BaseActivity extends ParentActivity {
         });
 
         myTest();
+        copyFile();
     }
 
     public void myTest() {
