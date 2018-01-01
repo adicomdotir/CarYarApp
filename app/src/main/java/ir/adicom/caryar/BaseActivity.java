@@ -64,7 +64,6 @@ public class BaseActivity extends ParentActivity {
         });
 
         myTest();
-        copyFile();
     }
 
     public void myTest() {
@@ -167,6 +166,14 @@ public class BaseActivity extends ParentActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(BaseActivity.this, CarActivity.class));
+                overridePendingTransition(R.anim.enter, R.anim.exit);
+            }
+        });
+        linearLayout = (LinearLayout) findViewById(R.id.other_layer);
+        linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(BaseActivity.this, OtherActivity.class));
                 overridePendingTransition(R.anim.enter, R.anim.exit);
             }
         });

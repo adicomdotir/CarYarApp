@@ -116,6 +116,10 @@
         "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/layout/listview_car.xml"
     },
     {
+        "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/layout/activity_other.xml",
+        "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/layout/activity_other.xml"
+    },
+    {
         "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_button_bar_material.xml",
         "source": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_alert_dialog_button_bar_material.xml"
     },

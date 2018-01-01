@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:2:1-43:12
+ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:2:1-44:12
 	package
 		ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:3:5-31
 		INJECTED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml
@@ -46,7 +46,7 @@ ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifes
 	android:name
 		ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:13:22-77
 application
-ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:15:5-41:19
+ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:15:5-42:19
 MERGED from [com.github.eluleci:flatui:3.0.0] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.github.eluleci/flatui/3.0.0/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:appcompat-v7:23.4.0] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:animated-vector-drawable:23.4.0] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
@@ -107,8 +107,12 @@ ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifes
 	android:name
 		ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:37:19-48
 activity#ir.adicom.caryar.CarActivity
-ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:38:9-40:67
+ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:38:9-40:58
 	android:label
 		ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:40:13-55
 	android:name
 		ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:39:13-40
+activity#ir.adicom.caryar.OtherActivity
+ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:41:9-60
+	android:name
+		ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:41:19-48

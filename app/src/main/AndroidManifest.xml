@@ -37,7 +37,8 @@
         <activity android:name=".ChartActivity" />
         <activity
             android:name=".CarActivity"
-            android:label="@string/title_activity_car"></activity>
+            android:label="@string/title_activity_car" />
+        <activity android:name=".OtherActivity"></activity>
     </application>
 
 </manifest>
