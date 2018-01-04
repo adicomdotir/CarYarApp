@@ -8,6 +8,10 @@
         
     </style>
 
+    <style name="MyTheme" parent="android:Theme.Black">
+
+    </style>
+
     <!-- Application theme. -->
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->

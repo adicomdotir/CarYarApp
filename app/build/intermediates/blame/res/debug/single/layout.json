@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",
-        "source": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_action_bar_title_item.xml"
-    },
-    {
         "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/layout/fragment_list_engine_oil.xml",
         "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/layout/fragment_list_engine_oil.xml"
+    },
+    {
+        "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",
+        "source": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_action_bar_title_item.xml"
     },
     {
         "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/layout/fragment_add_engine_oil.xml",
@@ -126,10 +126,6 @@
     {
         "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/layout/design_navigation_menu_item.xml",
         "source": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/layout/design_navigation_menu_item.xml"
-    },
-    {
-        "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/layout/fragment_other.xml",
-        "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/layout/fragment_other.xml"
     },
     {
         "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",

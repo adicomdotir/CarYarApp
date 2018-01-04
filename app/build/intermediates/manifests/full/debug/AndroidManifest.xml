@@ -38,7 +38,8 @@
         <activity
             android:name="ir.adicom.caryar.CarActivity"
             android:label="@string/title_activity_car" />
-        <activity android:name="ir.adicom.caryar.OtherActivity" />
+        <activity android:name="ir.adicom.caryar.OtherActivity" >
+        </activity>
     </application>
 
 </manifest>

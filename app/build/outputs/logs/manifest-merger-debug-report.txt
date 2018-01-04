@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:2:1-44:12
+ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:2:1-45:12
 	package
 		ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:3:5-31
 		INJECTED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml
@@ -48,7 +48,7 @@ ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifes
 	android:name
 		ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:13:22-77
 application
-ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:15:5-42:19
+ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:15:5-43:19
 MERGED from [com.github.eluleci:flatui:3.0.0] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.github.eluleci/flatui/3.0.0/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:design:23.4.0] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.4.0] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
@@ -116,6 +116,6 @@ ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifes
 	android:name
 		ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:39:13-40
 activity#ir.adicom.caryar.OtherActivity
-ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:41:9-60
+ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:41:9-42:20
 	android:name
 		ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:41:19-48
