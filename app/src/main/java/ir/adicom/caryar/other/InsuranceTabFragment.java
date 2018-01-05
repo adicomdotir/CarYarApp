@@ -42,7 +42,6 @@ public class InsuranceTabFragment extends Fragment {
     private EditText edtTitle, edtPrice;
     private Button btnDate;
 
-
     public InsuranceTabFragment() {
         // Required empty public constructor
     }

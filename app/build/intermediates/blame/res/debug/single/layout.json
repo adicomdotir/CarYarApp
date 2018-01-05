@@ -192,6 +192,10 @@
         "source": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/layout/design_menu_item_action_area.xml"
     },
     {
+        "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/layout/fragment_edit_insurance.xml",
+        "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/layout/fragment_edit_insurance.xml"
+    },
+    {
         "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/layout/activity_chart.xml",
         "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/layout/activity_chart.xml"
     },

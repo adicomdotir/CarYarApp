@@ -5,6 +5,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -60,14 +61,14 @@ public class ListInsuranceFragment extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-//                Bundle bundle = new Bundle();
-//                bundle.putLong("id", insurances.get(i).getId());
-//                EditInsuranceFragment myObj = new EditInsuranceFragment();
-//                myObj.setArguments(bundle);
-//                getActivity().getSupportFragmentManager().beginTransaction()
-//                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
-//                        .replace(R.id.fragmentParentViewGroup, myObj)
-//                        .commit();
+                Bundle bundle = new Bundle();
+                bundle.putLong("id", insurances.get(i).getId());
+                EditInsuranceFragment myObj = new EditInsuranceFragment();
+                myObj.setArguments(bundle);
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+                        .replace(R.id.fragmentParentViewGroup, myObj)
+                        .commit();
             }
         });
     }
