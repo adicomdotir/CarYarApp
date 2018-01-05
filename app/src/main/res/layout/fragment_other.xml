@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/base_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/deep_light">
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:layout_weight="1">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+        <com.cengalabs.flatui.views.FlatButton
+            android:text="بیمه"
+            android:textSize="18sp"
+            android:id="@+id/btn_insurance"
+            android:layout_width="96dp"
+            android:layout_height="44dp"
+            app:fl_touchEffect="fl_ripple"
+            app:fl_blockButtonEffectHeight="0dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="0.5"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+        <com.cengalabs.flatui.views.FlatButton
+            android:text="یاداور"
+            android:textSize="18sp"
+            android:id="@+id/btn_reminder"
+            android:layout_width="96dp"
+            android:layout_height="44dp"
+            app:fl_touchEffect="fl_ripple"
+            app:fl_blockButtonEffectHeight="0dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="0.5"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:layout_weight="1">
+
+    </LinearLayout>
+
+</LinearLayout>

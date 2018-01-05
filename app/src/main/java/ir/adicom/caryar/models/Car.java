@@ -26,6 +26,8 @@ public class Car {
     private List<EngineOil> engineOils;
     @ToMany(referencedJoinProperty = "carId")
     private List<Service> services;
+    @ToMany(referencedJoinProperty = "carId")
+    private List<Insurance> insurances;
     /** Used to resolve relations */
     @Generated(hash = 2040040024)
     private transient DaoSession daoSession;
@@ -184,6 +186,32 @@ public class Car {
     @Generated(hash = 1227775301)
     public synchronized void resetServices() {
         services = null;
+    }
+    /**
+     * To-many relationship, resolved on first access (and after reset).
+     * Changes to to-many relations are not persisted, make changes to the target entity.
+     */
+    @Generated(hash = 649339155)
+    public List<Insurance> getInsurances() {
+        if (insurances == null) {
+            final DaoSession daoSession = this.daoSession;
+            if (daoSession == null) {
+                throw new DaoException("Entity is detached from DAO context");
+            }
+            InsuranceDao targetDao = daoSession.getInsuranceDao();
+            List<Insurance> insurancesNew = targetDao._queryCar_Insurances(id);
+            synchronized (this) {
+                if (insurances == null) {
+                    insurances = insurancesNew;
+                }
+            }
+        }
+        return insurances;
+    }
+    /** Resets a to-many relationship, making the next get call to query for a fresh result. */
+    @Generated(hash = 1885234349)
+    public synchronized void resetInsurances() {
+        insurances = null;
     }
     /** called by internal mechanisms, do not call yourself. */
     @Generated(hash = 679603784)
