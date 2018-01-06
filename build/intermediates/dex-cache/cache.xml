@@ -84,6 +84,24 @@
     </item>
     <item
         is-multidex="false"
+        jar="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.github.markushi/android-ui/1.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="96436aef5f48b09aca1e0183dfcd7782aa580bd6">
+        <dex dex="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/pre-dexed/debug/com.github.markushi-android-ui-1.2_80845167deb20fca9b10e5f7a494055268fe8be8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/it.neokree/MaterialTabs/0.11/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="fef6aa7ea0bb2d6adf10965d0a5bb8e353517bff">
+        <dex dex="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/pre-dexed/debug/it.neokree-MaterialTabs-0.11_75687eb46fc0fba8ed09ffd498361266bc6b92fc.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.github.eluleci/flatui/3.0.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"

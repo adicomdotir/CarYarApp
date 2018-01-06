@@ -25,6 +25,8 @@ MERGED from [com.android.support:support-v4:23.4.0] /home/adicom/AndroidStudioPr
 MERGED from [com.android.support:appcompat-v7:23.4.0] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:animated-vector-drawable:23.4.0] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/AndroidManifest.xml:5:5-44
 MERGED from [com.android.support:support-vector-drawable:23.4.0] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:5:5-43
+MERGED from [it.neokree:MaterialTabs:0.11] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/it.neokree/MaterialTabs/0.11/AndroidManifest.xml:7:5-10:50
+MERGED from [com.github.markushi:android-ui:1.2] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.github.markushi/android-ui/1.2/AndroidManifest.xml:7:5-44
 	tools:overrideLibrary
 		ADDED from [com.android.support:appcompat-v7:23.4.0] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
@@ -55,6 +57,7 @@ MERGED from [com.android.support:support-v4:23.4.0] /home/adicom/AndroidStudioPr
 MERGED from [com.android.support:appcompat-v7:23.4.0] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:animated-vector-drawable:23.4.0] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
 MERGED from [com.android.support:support-vector-drawable:23.4.0] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
+MERGED from [com.github.markushi:android-ui:1.2] /home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.github.markushi/android-ui/1.2/AndroidManifest.xml:9:5-10:19
 	android:label
 		ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:18:9-41
 	android:allowBackup
