@@ -38,10 +38,7 @@ public class FilterActivity extends Activity {
         HelperUI.setFont((ViewGroup) findViewById(R.id.base_layout),
                 Typeface.createFromAsset(getAssets(), "Vazir_Light.ttf"));
 
-        DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(getApplicationContext(), "carhelper-db", null);
-        SQLiteDatabase dbDao = helper.getWritableDatabase();
-        DaoMaster daoMaster = new DaoMaster(dbDao);
-        final DaoSession daoSession = daoMaster.newSession();
+        final DaoSession daoSession = ((App) getApplication()).getDaoSession();
 
         db = new DatabaseHandler(this);
         listView = (ListView) findViewById(R.id.new_listview);

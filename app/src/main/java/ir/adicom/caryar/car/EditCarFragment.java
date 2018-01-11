@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import ir.adicom.caryar.App;
 import ir.adicom.caryar.HelperUI;
 import ir.adicom.caryar.R;
 import ir.adicom.caryar.models.Car;
@@ -52,10 +53,7 @@ public class EditCarFragment extends Fragment {
                 Typeface.createFromAsset(getActivity().getAssets(), "Vazir_Light.ttf"));
 
         // Database initalize
-        DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(getContext(), "carhelper-db", null);
-        SQLiteDatabase dbDao = helper.getWritableDatabase();
-        DaoMaster daoMaster = new DaoMaster(dbDao);
-        DaoSession daoSession = daoMaster.newSession();
+        DaoSession daoSession = ((App) getActivity().getApplication()).getDaoSession();
         final CarDao carDao = daoSession.getCarDao();
         Car car = carDao.load(globalId);
 

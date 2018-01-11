@@ -46,10 +46,7 @@ public class ReportActivity extends Activity {
     }
 
     private void init() {
-        DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(getApplicationContext(), "carhelper-db", null);
-        SQLiteDatabase dbDao = helper.getWritableDatabase();
-        DaoMaster daoMaster = new DaoMaster(dbDao);
-        DaoSession daoSession = daoMaster.newSession();
+        DaoSession daoSession = ((App) getApplication()).getDaoSession();
         FuelDao fuelDao = daoSession.getFuelDao();
         // List<Fuel> fuels = fuelDao.loadAll();
         fuels = fuelDao.queryBuilder().where(FuelDao.Properties.CarId.eq(HelperUI.CAR_ID))

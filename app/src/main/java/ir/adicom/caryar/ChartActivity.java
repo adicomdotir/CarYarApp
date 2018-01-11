@@ -27,8 +27,7 @@ public class ChartActivity extends Activity {
         HelperUI.setFont((ViewGroup) findViewById(R.id.base_layout),
                 Typeface.createFromAsset(getAssets(), "Vazir.ttf"));
 
-        DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(getApplicationContext(), "carhelper-db", null);
-        DaoSession daoSession = new DaoMaster(helper.getWritableDatabase()).newSession();
+        DaoSession daoSession = ((App) getApplication()).getDaoSession();
 
         float[] data = new float[3];
 

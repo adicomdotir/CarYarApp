@@ -79,10 +79,7 @@ public class EditAcitivity extends Activity {
 
         final Long index = getIntent().getExtras().getLong("INDEX");
 
-        DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(getApplicationContext(), "carhelper-db", null);
-        SQLiteDatabase dbDao = helper.getWritableDatabase();
-        DaoMaster daoMaster = new DaoMaster(dbDao);
-        final DaoSession daoSession = daoMaster.newSession();
+        final DaoSession daoSession = ((App) getApplication()).getDaoSession();
         final Fuel tempFuel = daoSession.getFuelDao().load(index);
 
         if (tempFuel != null) {

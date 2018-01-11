@@ -105,10 +105,7 @@ public class BaseActivity extends ParentActivity {
     }
 
     private void init() {
-        helper = new DaoMaster.DevOpenHelper(getApplicationContext(), "carhelper-db", null);
-        dbDao = helper.getWritableDatabase();
-        daoMaster = new DaoMaster(dbDao);
-        daoSession = daoMaster.newSession();
+        daoSession = ((App) getApplication()).getDaoSession();
         if (daoSession.getCarDao().count() == 0) {
             Car car = new Car();
             car.setName("پراید");

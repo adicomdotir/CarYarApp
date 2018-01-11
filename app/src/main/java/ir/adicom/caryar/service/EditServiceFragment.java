@@ -20,6 +20,7 @@ import java.text.ParseException;
 import java.util.Calendar;
 import java.util.Locale;
 
+import ir.adicom.caryar.App;
 import ir.adicom.caryar.AppDialog;
 import ir.adicom.caryar.CalendarTool;
 import ir.adicom.caryar.CustomTextWatcher;
@@ -85,10 +86,7 @@ public class EditServiceFragment extends Fragment {
         });
 
         // Database initalize
-        DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(getContext(), "carhelper-db", null);
-        SQLiteDatabase dbDao = helper.getWritableDatabase();
-        DaoMaster daoMaster = new DaoMaster(dbDao);
-        DaoSession daoSession = daoMaster.newSession();
+        DaoSession daoSession = ((App) getActivity().getApplication()).getDaoSession();
         final ServiceDao serviceDao = daoSession.getServiceDao();
         Service service = serviceDao.load(globalId);
 

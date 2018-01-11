@@ -14,6 +14,7 @@ import android.widget.ListView;
 
 import java.util.List;
 
+import ir.adicom.caryar.App;
 import ir.adicom.caryar.HelperUI;
 import ir.adicom.caryar.R;
 import ir.adicom.caryar.models.DaoMaster;
@@ -45,10 +46,7 @@ public class ListServiceFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         // Database initalize
-        DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(getContext(), "carhelper-db", null);
-        SQLiteDatabase dbDao = helper.getWritableDatabase();
-        DaoMaster daoMaster = new DaoMaster(dbDao);
-        DaoSession daoSession = daoMaster.newSession();
+        DaoSession daoSession = ((App) getActivity().getApplication()).getDaoSession();
         ServiceDao serviceDao = daoSession.getServiceDao();
 
         services = serviceDao.queryBuilder().where(ServiceDao.Properties.CarId.eq(HelperUI.CAR_ID))

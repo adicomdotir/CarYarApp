@@ -14,6 +14,7 @@ import android.widget.ListView;
 
 import java.util.List;
 
+import ir.adicom.caryar.App;
 import ir.adicom.caryar.R;
 import ir.adicom.caryar.engineoil.EditEngineOilFragment;
 import ir.adicom.caryar.engineoil.EngineOilAdapter;
@@ -47,10 +48,7 @@ public class ListCarFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         // Database initalize
-        DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(getContext(), "carhelper-db", null);
-        SQLiteDatabase dbDao = helper.getWritableDatabase();
-        DaoMaster daoMaster = new DaoMaster(dbDao);
-        DaoSession daoSession = daoMaster.newSession();
+        DaoSession daoSession = ((App) getActivity().getApplication()).getDaoSession();
         CarDao carDao = daoSession.getCarDao();
 
         carList = carDao.queryBuilder().orderDesc(CarDao.Properties.Id).list();
