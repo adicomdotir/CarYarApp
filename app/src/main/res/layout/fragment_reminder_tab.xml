@@ -3,12 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/deep_light"
+    android:id="@+id/base_layout"
     tools:context="ir.adicom.caryar.other.ReminderTabFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:text="@string/reminder_fragment" />
 
 </FrameLayout>

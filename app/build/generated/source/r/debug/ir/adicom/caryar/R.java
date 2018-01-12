@@ -3013,10 +3013,10 @@ containing a value of this type.
         public static final int bottom_sheet_behavior=0x7f060018;
         public static final int character_counter_pattern=0x7f060019;
         public static final int gus=0x7f06001a;
-        public static final int hello_blank_fragment=0x7f06001b;
-        public static final int hello_world=0x7f06001c;
-        public static final int insurance=0x7f06001d;
-        public static final int reminder=0x7f06001e;
+        public static final int hello_world=0x7f06001b;
+        public static final int insurance=0x7f06001c;
+        public static final int reminder=0x7f06001d;
+        public static final int reminder_fragment=0x7f06001e;
         public static final int status_bar_notification_info_overflow=0x7f060013;
         public static final int title_activity_car=0x7f06001f;
     }
@@ -3030,8 +3030,6 @@ containing a value of this type.
  API 14 theme customizations can go here. 
          */
         public static final int AppBaseTheme=0x7f09000c;
-        /**  All customizations that are NOT specific to a particular API-level can go here. 
-         */
         public static final int AppTheme=0x7f09008d;
         public static final int Base_AlertDialog_AppCompat=0x7f09008e;
         public static final int Base_AlertDialog_AppCompat_Light=0x7f09008f;
