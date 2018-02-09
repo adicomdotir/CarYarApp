@@ -46,7 +46,7 @@ public class ServiceAdapter extends ArrayAdapter<Service> {
         sb.append("هزینه قطعه: " + NumberFormat.getNumberInstance(Locale.US).format(services.get(position).getPartPrice()) + " تومان");
 
         textView.setText(sb);
-        Typeface custom_font = Typeface.createFromAsset(context.getAssets(), "Vazir_Light.ttf");
+        Typeface custom_font = Typeface.createFromAsset(context.getAssets(), "Samim.ttf");
         textView.setTypeface(custom_font);
 
         return rowView;

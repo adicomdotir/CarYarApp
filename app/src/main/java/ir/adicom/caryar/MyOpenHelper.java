@@ -24,6 +24,7 @@ public class MyOpenHelper extends DaoMaster.DevOpenHelper {
 
     @Override
     public void onUpgrade(Database db, int oldVersion, int newVersion) {
+        BaseActivity.backupDataBase();
         switch(oldVersion) {
             case 6:
                 InsuranceDao.createTable(db, false);

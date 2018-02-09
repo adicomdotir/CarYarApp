@@ -69,7 +69,7 @@ public class MainActivity extends Activity {
                 btnDate.setText(appDialog1.date);
             }
         });
-        custom_font = Typeface.createFromAsset(getAssets(), "Vazir_Light.ttf");
+        custom_font = Typeface.createFromAsset(getAssets(), "Samim.ttf");
 
         HelperUI.setFont((ViewGroup) getWindow().getDecorView(), custom_font);
 

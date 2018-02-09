@@ -105,6 +105,8 @@ public class BaseActivity extends ParentActivity {
     }
 
     private void init() {
+        // backupDataBase();
+
         daoSession = ((App) getApplication()).getDaoSession();
         if (daoSession.getCarDao().count() == 0) {
             Car car = new Car();
@@ -124,7 +126,7 @@ public class BaseActivity extends ParentActivity {
         HelperUI.CAR_ID = prefs.getLong("CARID", 0);
 
         HelperUI.setFont((ViewGroup) findViewById(R.id.base_layout),
-                Typeface.createFromAsset(getAssets(), "Vazir_Medium.ttf"));
+                Typeface.createFromAsset(getAssets(), "Samim.ttf"));
 
         LinearLayout linearLayout = (LinearLayout) findViewById(R.id.fuel_layer);
         linearLayout.setOnClickListener(new View.OnClickListener() {
@@ -191,7 +193,7 @@ public class BaseActivity extends ParentActivity {
         txtCarName.setText(carName);
     }
 
-    public void copyFile() {
+    public static void backupDataBase() {
         try {
             File sd = Environment.getExternalStorageDirectory();
             File data = Environment.getDataDirectory();

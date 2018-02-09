@@ -52,7 +52,7 @@ public class AddCarFragment extends Fragment {
 
         // Set font All activity element
         HelperUI.setFont((ViewGroup) view.findViewById(R.id.base_layout),
-                Typeface.createFromAsset(getActivity().getAssets(), "Vazir_Light.ttf"));
+                Typeface.createFromAsset(getActivity().getAssets(), "Samim.ttf"));
 
         // Database initalize
         DaoSession daoSession = ((App) getActivity().getApplication()).getDaoSession();

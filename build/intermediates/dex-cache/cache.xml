@@ -156,21 +156,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/io.reactivex.rxjava2/rxandroid/2.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="4119ea97a7191ff9b8f33b534ea220448f62f491">
-        <dex dex="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/pre-dexed/debug/io.reactivex.rxjava2-rxandroid-2.0.1_5586b7581852c63b928f8abe35ded5812be63f7a.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.2"
         sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
         <dex dex="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.4.0_fa2791f96b1ce62af4dc4921fa13eb954340bd42.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/io.reactivex.rxjava2/rxandroid/2.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="4119ea97a7191ff9b8f33b534ea220448f62f491">
+        <dex dex="/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/pre-dexed/debug/io.reactivex.rxjava2-rxandroid-2.0.1_5586b7581852c63b928f8abe35ded5812be63f7a.jar" />
     </item>
     <item
         is-multidex="false"

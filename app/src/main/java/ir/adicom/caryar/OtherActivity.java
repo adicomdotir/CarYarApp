@@ -56,7 +56,7 @@ public class OtherActivity extends FragmentActivity implements MaterialTabListen
 
         // Set font All activity element
         HelperUI.setFont((ViewGroup) findViewById(R.id.tabHost),
-                Typeface.createFromAsset(getAssets(), "Vazir_Light.ttf"));
+                Typeface.createFromAsset(getAssets(), "Samim.ttf"));
 
 
 //        getSupportFragmentManager()

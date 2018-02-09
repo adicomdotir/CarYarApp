@@ -47,7 +47,7 @@ public class CarAdapter extends ArrayAdapter<Car> {
         sb.append("سال ساخت: " + cars.get(position).getYear());
 
         textView.setText(sb);
-        Typeface custom_font = Typeface.createFromAsset(context.getAssets(), "Vazir_Light.ttf");
+        Typeface custom_font = Typeface.createFromAsset(context.getAssets(), "Samim.ttf");
         textView.setTypeface(custom_font);
 
         return rowView;

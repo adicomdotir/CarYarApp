@@ -46,7 +46,7 @@ public class EngineOilAdapter extends ArrayAdapter<EngineOil> {
         sb.append("هزینه: " + NumberFormat.getNumberInstance(Locale.US).format(engineOils.get(position).getPrice()) + " تومان");
 
         textView.setText(sb);
-        Typeface custom_font = Typeface.createFromAsset(context.getAssets(), "Vazir_Light.ttf");
+        Typeface custom_font = Typeface.createFromAsset(context.getAssets(), "Samim.ttf");
         textView.setTypeface(custom_font);
 
         return rowView;

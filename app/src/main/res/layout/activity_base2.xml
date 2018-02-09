@@ -46,11 +46,10 @@
             <TextView
                 android:id="@+id/carName"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:text="پراید"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textStyle="bold"
                 android:gravity="center" />
         </LinearLayout>
 
@@ -109,11 +108,10 @@
 
                 <TextView
                     android:textColor="#FFFFFF"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     android:text="سوخت"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textStyle="bold"
                     android:gravity="center" />
             </LinearLayout>
 
@@ -169,11 +167,10 @@
 
             <TextView
                 android:textColor="#FFFFFF"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:text="روغن موتور"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textStyle="bold"
                 android:gravity="center" />
         </LinearLayout>
 
@@ -228,11 +225,10 @@
 
             <TextView
                 android:textColor="#FFFFFF"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:text="تعمیرات"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textStyle="bold"
                 android:gravity="center" />
         </LinearLayout>
 
@@ -286,11 +282,10 @@
 
             <TextView
                 android:textColor="#FFFFFF"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:text="گزارش"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textStyle="bold"
                 android:gravity="center" />
         </LinearLayout>
 
@@ -344,11 +339,10 @@
 
             <TextView
                 android:textColor="#FFFFFF"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:text="سایر"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textStyle="bold"
                 android:gravity="center" />
         </LinearLayout>
 
