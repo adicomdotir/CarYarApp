@@ -121,6 +121,10 @@ ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifes
 	android:name
 		ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:40:13-40
 activity#ir.adicom.caryar.OtherActivity
-ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:42:9-43:20
+ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:42:9-60
 	android:name
 		ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:42:19-48
+activity#ir.adicom.caryar.ContactUsActivity
+ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:43:9-64
+	android:name
+		ADDED from /home/adicom/AndroidStudioProjects/CarYar/app/src/main/AndroidManifest.xml:43:19-52

@@ -176,6 +176,14 @@ public class BaseActivity extends ParentActivity {
                 overridePendingTransition(R.anim.enter, R.anim.exit);
             }
         });
+        linearLayout = (LinearLayout) findViewById(R.id.contact_us_layer);
+        linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(BaseActivity.this, ContactUsActivity.class));
+                overridePendingTransition(R.anim.enter, R.anim.exit);
+            }
+        });
 
         txtCarName = (TextView) findViewById(R.id.carName);
         getName();
