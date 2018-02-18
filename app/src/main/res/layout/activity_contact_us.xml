@@ -55,5 +55,6 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_margin="5dp"
-        android:text="درباره اپلیکیشن نظر دهید" />
+        android:text="درباره اپلیکیشن نظر دهید"
+        android:id="@+id/btn_cm" />
 </LinearLayout>
