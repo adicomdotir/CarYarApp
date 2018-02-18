@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ir.adicom.caryar"
-    android:versionCode="15"
-    android:versionName="1.8.3">
+    android:versionCode="16"
+    android:versionName="1.8.4">
 
     <uses-sdk
         android:minSdkVersion="15"
@@ -39,8 +39,8 @@
         <activity
             android:name=".CarActivity"
             android:label="@string/title_activity_car" />
-        <activity android:name=".OtherActivity">
-        </activity>
+        <activity android:name=".OtherActivity"></activity>
+        <activity android:name=".ContactUsActivity"></activity>
     </application>
 
 </manifest>
