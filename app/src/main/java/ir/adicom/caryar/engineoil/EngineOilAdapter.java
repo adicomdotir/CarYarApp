@@ -12,6 +12,7 @@ import java.text.NumberFormat;
 import java.util.List;
 import java.util.Locale;
 
+import ir.adicom.caryar.App;
 import ir.adicom.caryar.R;
 import ir.adicom.caryar.models.EngineOil;
 
@@ -46,7 +47,7 @@ public class EngineOilAdapter extends ArrayAdapter<EngineOil> {
         sb.append("هزینه: " + NumberFormat.getNumberInstance(Locale.US).format(engineOils.get(position).getPrice()) + " تومان");
 
         textView.setText(sb);
-        Typeface custom_font = Typeface.createFromAsset(context.getAssets(), "Samim.ttf");
+        Typeface custom_font = Typeface.createFromAsset(context.getAssets(), App.FONT_NAME);
         textView.setTypeface(custom_font);
 
         return rowView;

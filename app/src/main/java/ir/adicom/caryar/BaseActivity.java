@@ -126,7 +126,7 @@ public class BaseActivity extends ParentActivity {
         HelperUI.CAR_ID = prefs.getLong("CARID", 0);
 
         HelperUI.setFont((ViewGroup) findViewById(R.id.base_layout),
-                Typeface.createFromAsset(getAssets(), "Samim.ttf"));
+                Typeface.createFromAsset(getAssets(), App.FONT_NAME));
 
         LinearLayout linearLayout = (LinearLayout) findViewById(R.id.fuel_layer);
         linearLayout.setOnClickListener(new View.OnClickListener() {

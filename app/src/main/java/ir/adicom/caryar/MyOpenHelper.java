@@ -12,7 +12,7 @@ import ir.adicom.caryar.models.InsuranceDao;
  * Created by adicom on 1/11/18.
  */
 
-public class MyOpenHelper extends DaoMaster.DevOpenHelper {
+public class MyOpenHelper extends DaoMaster.OpenHelper {
 
     public MyOpenHelper(Context context, String name) {
         super(context, name);

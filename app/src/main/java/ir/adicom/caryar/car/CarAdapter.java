@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import ir.adicom.caryar.App;
 import ir.adicom.caryar.R;
 import ir.adicom.caryar.models.Car;
 
@@ -47,7 +48,7 @@ public class CarAdapter extends ArrayAdapter<Car> {
         sb.append("سال ساخت: " + cars.get(position).getYear());
 
         textView.setText(sb);
-        Typeface custom_font = Typeface.createFromAsset(context.getAssets(), "Samim.ttf");
+        Typeface custom_font = Typeface.createFromAsset(context.getAssets(), App.FONT_NAME);
         textView.setTypeface(custom_font);
 
         return rowView;

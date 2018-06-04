@@ -61,7 +61,7 @@ public class EditServiceFragment extends Fragment {
 
         // Set font All activity element
         HelperUI.setFont((ViewGroup) view.findViewById(R.id.base_layout),
-                Typeface.createFromAsset(getActivity().getAssets(), "Samim.ttf"));
+                Typeface.createFromAsset(getActivity().getAssets(), App.FONT_NAME));
 
         calendar = Calendar.getInstance();
         int mYear = calendar.get(Calendar.YEAR);

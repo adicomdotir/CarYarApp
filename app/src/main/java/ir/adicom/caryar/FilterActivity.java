@@ -36,7 +36,7 @@ public class FilterActivity extends Activity {
         setContentView(R.layout.activity_filter);
 
         HelperUI.setFont((ViewGroup) findViewById(R.id.base_layout),
-                Typeface.createFromAsset(getAssets(), "Samim.ttf"));
+                Typeface.createFromAsset(getAssets(), App.FONT_NAME));
 
         final DaoSession daoSession = ((App) getApplication()).getDaoSession();
 

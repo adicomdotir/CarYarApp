@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import ir.adicom.caryar.App;
 import ir.adicom.caryar.HelperUI;
 import ir.adicom.caryar.R;
 
@@ -38,7 +39,7 @@ public class OtherFragment extends Fragment {
 
         // Set font All activity element
         HelperUI.setFont((ViewGroup) view.findViewById(R.id.base_layout),
-                Typeface.createFromAsset(getActivity().getAssets(), "Samim.ttf"));
+                Typeface.createFromAsset(getActivity().getAssets(), App.FONT_NAME));
 
         Button btnReminder = (Button) view.findViewById(R.id.btn_reminder);
         btnReminder.setOnClickListener(new View.OnClickListener() {

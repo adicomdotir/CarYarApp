@@ -25,7 +25,7 @@ public class ChartActivity extends Activity {
         setContentView(R.layout.activity_chart);
 
         HelperUI.setFont((ViewGroup) findViewById(R.id.base_layout),
-                Typeface.createFromAsset(getAssets(), "Samim.ttf"));
+                Typeface.createFromAsset(getAssets(), App.FONT_NAME));
 
         DaoSession daoSession = ((App) getApplication()).getDaoSession();
 

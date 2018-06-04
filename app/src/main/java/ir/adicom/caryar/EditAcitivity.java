@@ -62,7 +62,7 @@ public class EditAcitivity extends Activity {
             }
         });
 
-        Typeface custom_font = Typeface.createFromAsset(getAssets(), "Samim.ttf");
+        Typeface custom_font = Typeface.createFromAsset(getAssets(), App.FONT_NAME);
         HelperUI.setFont((ViewGroup) getWindow().getDecorView(), custom_font);
 
         edtCost = (EditText) findViewById(R.id.edtCost);

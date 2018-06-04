@@ -12,12 +12,13 @@ import ir.adicom.caryar.models.DaoSession;
 
 public class App extends Application {
 
+    public static String FONT_NAME = "Samim.ttf";
     private DaoSession daoSession;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        DaoMaster.DevOpenHelper helper = new MyOpenHelper(this, "carhelper-db");
+        DaoMaster.OpenHelper helper = new ir.adicom.caryar.MyOpenHelper(this, "carhelper-db");
         SQLiteDatabase db = helper.getWritableDatabase();
         daoSession = new DaoMaster(db).newSession();
     }
