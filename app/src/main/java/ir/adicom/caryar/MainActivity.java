@@ -19,11 +19,13 @@ import android.widget.Toast;
 
 import com.cengalabs.flatui.FlatUI;
 
+import java.math.BigDecimal;
 import java.text.NumberFormat;
 import java.text.ParseException;
 import java.util.Calendar;
 import java.util.Locale;
 
+import ir.adicom.caryar.Utility.Helper;
 import ir.adicom.caryar.models.DaoMaster;
 import ir.adicom.caryar.models.DaoSession;
 import ir.adicom.caryar.models.Fuel;
@@ -109,7 +111,7 @@ public class MainActivity extends Activity {
                     Toast.makeText(getApplicationContext(), "هر دو فیلد را پر کنید", Toast.LENGTH_SHORT).show();
                 } else {
                     Fuel fuel = new Fuel();
-                    fuel.setDate(btnDate.getText().toString());
+                    fuel.setDate(Helper.convertToEnglishDigits(btnDate.getText().toString()));
                     fuel.setKilometer(Integer.valueOf(edtKilo.getText().toString()));
                     NumberFormat nf = NumberFormat.getInstance(Locale.US);
                     Number myNumber = null;

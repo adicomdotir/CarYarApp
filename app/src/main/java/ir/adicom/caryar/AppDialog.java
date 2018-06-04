@@ -42,7 +42,6 @@ public class AppDialog extends Dialog {
             customBtn3.setUp();
 
             Button button = (Button) mainView.findViewById(R.id.button);
-            button.setTypeface(Typeface.createFromAsset(context.getAssets(), App.FONT_NAME));
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -52,6 +51,7 @@ public class AppDialog extends Dialog {
                     dismiss();
                 }
             });
+            button.setTypeface(Typeface.createFromAsset(context.getAssets(), App.FONT_NAME));
         } catch (Exception e) {
             Log.e(TAG, e.getMessage());
         }

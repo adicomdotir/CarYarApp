@@ -20,6 +20,7 @@ import java.text.ParseException;
 import java.util.Calendar;
 import java.util.Locale;
 
+import ir.adicom.caryar.Utility.Helper;
 import ir.adicom.caryar.models.DaoMaster;
 import ir.adicom.caryar.models.DaoSession;
 import ir.adicom.caryar.models.Fuel;
@@ -173,7 +174,7 @@ public class EditAcitivity extends Activity {
 //                                    startTime/1000L, strTime)
 //                    );
                     tempFuel.setType(rbtn.getText().toString());
-                    tempFuel.setDate(btnDate.getText().toString());
+                    tempFuel.setDate(Helper.convertToEnglishDigits(btnDate.getText().toString()));
                     NumberFormat nf = NumberFormat.getInstance(Locale.US);
                     Number myNumber = null;
                     try {
