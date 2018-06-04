@@ -39,8 +39,8 @@
         <activity
             android:name=".CarActivity"
             android:label="@string/title_activity_car" />
-        <activity android:name=".OtherActivity">
-        </activity>
+        <activity android:name=".OtherActivity"></activity>
+        <activity android:name=".ContactUsActivity"></activity>
     </application>
 
 </manifest>
