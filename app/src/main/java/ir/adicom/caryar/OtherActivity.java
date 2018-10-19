@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 import com.cengalabs.flatui.FlatUI;
 
 import ir.adicom.caryar.other.InsuranceTabFragment;
-import ir.adicom.caryar.other.OtherFragment;
 import ir.adicom.caryar.other.ReminderTabFragment;
 import it.neokree.materialtabs.MaterialTab;
 import it.neokree.materialtabs.MaterialTabHost;

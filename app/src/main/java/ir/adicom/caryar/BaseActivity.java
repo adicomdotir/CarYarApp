@@ -26,6 +26,7 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Action;
 import io.reactivex.functions.Function;
 import io.reactivex.functions.Predicate;
+import ir.adicom.caryar.Utility.ImportExportDatabase;
 import ir.adicom.caryar.Utility.ParentActivity;
 import ir.adicom.caryar.Utility.PermissionHandler;
 import ir.adicom.caryar.models.Car;
@@ -67,7 +68,7 @@ public class BaseActivity extends ParentActivity {
     }
 
     public void myTest() {
-        Integer[] numbers = new Integer[] {1, 2, 3, 4, 5};
+        Integer[] numbers = new Integer[]{1, 2, 3, 4, 5};
         Observable<Integer> observable = io.reactivex.Observable.fromArray(numbers);
         observable = observable.map(new Function<Integer, Integer>() {
             @Override
@@ -105,7 +106,14 @@ public class BaseActivity extends ParentActivity {
     }
 
     private void init() {
-        // backupDataBase();
+        File direct = new File(Environment.getExternalStorageDirectory() + "/caryar");
+        if (!direct.exists()) {
+            if (direct.mkdir()) {
+                //directory is created;
+            }
+        }
+//        backupDataBase();
+        ImportExportDatabase.exportDB();
 
         daoSession = ((App) getApplication()).getDaoSession();
         if (daoSession.getCarDao().count() == 0) {
@@ -208,7 +216,7 @@ public class BaseActivity extends ParentActivity {
 
             if (sd.canWrite()) {
                 String currentDBPath = "/data/ir.adicom.caryar/databases/carhelper-db";
-                String backupDBPath = "database_name";
+                String backupDBPath = "CarYar.bak";
                 File currentDB = new File(data, currentDBPath);
                 File backupDB = new File(sd, backupDBPath);
 
@@ -220,8 +228,7 @@ public class BaseActivity extends ParentActivity {
                     dst.close();
                 }
             }
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             Log.w("Settings Backup", e);
         }
     }

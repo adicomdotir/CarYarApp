@@ -11,50 +11,91 @@
     android:orientation="vertical"
     android:gravity="center">
 
-    <com.cengalabs.flatui.views.FlatTextView
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_height="match_parent"
         android:gravity="center"
-        android:text="شرکت رایانه صنعت آذر پاد"
-        android:textSize="16sp"/>
+        android:layout_weight="1">
 
-    <com.cengalabs.flatui.views.FlatTextView
+        <com.cengalabs.flatui.views.FlatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="ADICOM CO"
+            android:textSize="16sp"/>
+
+        <com.cengalabs.flatui.views.FlatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="site : www.adicom.ir"
+            android:textSize="16sp"
+            android:id="@+id/flatTextView" />
+
+        <com.cengalabs.flatui.views.FlatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="email : info@adicom.ir"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView5" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView6" />
+
+        <com.cengalabs.flatui.views.FlatButton
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            app:fl_touchEffect="fl_ripple"
+            app:fl_blockButtonEffectHeight="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_margin="5dp"
+            android:text="درباره اپلیکیشن نظر دهید"
+            android:id="@+id/btn_cm" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:text="site : www.rsatm.ir"
-        android:textSize="16sp"
-        android:id="@+id/flatTextView" />
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center">
 
-    <com.cengalabs.flatui.views.FlatTextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:text="email : info@rsatm.ir"
-        android:textSize="16sp"/>
+        <com.cengalabs.flatui.views.FlatButton
+            android:id="@+id/btn_import"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            app:fl_touchEffect="fl_ripple"
+            app:fl_blockButtonEffectHeight="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_margin="5dp"
+            android:text="بازیابی"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView5" />
+        <com.cengalabs.flatui.views.FlatButton
+            android:id="@+id/btn_export"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            app:fl_touchEffect="fl_ripple"
+            app:fl_blockButtonEffectHeight="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_margin="5dp"
+            android:text="پشتیبان گیری"/>
+    </LinearLayout>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView6" />
-
-    <com.cengalabs.flatui.views.FlatButton
-        android:textSize="16sp"
-        android:layout_width="wrap_content"
-        android:layout_height="44dp"
-        app:fl_touchEffect="fl_ripple"
-        app:fl_blockButtonEffectHeight="1dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_margin="5dp"
-        android:text="درباره اپلیکیشن نظر دهید"
-        android:id="@+id/btn_cm" />
 </LinearLayout>

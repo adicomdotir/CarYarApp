@@ -48,12 +48,12 @@
         "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/drawable/street.png"
     },
     {
-        "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/drawable/button_shape.xml",
-        "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/drawable/button_shape.xml"
-    },
-    {
         "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_light.xml",
         "source": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/drawable/abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/drawable/button_shape.xml",
+        "source": "/home/adicom/AndroidStudioProjects/CarYar/app/src/main/res/drawable/button_shape.xml"
     },
     {
         "merged": "/home/adicom/AndroidStudioProjects/CarYar/app/build/intermediates/res/merged/debug/drawable/oil.png",
